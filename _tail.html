@@ -1,0 +1,328 @@
+</div><!-- /stage -->
+
+<style>
+  .guide{position:absolute;top:0;width:1px;background:rgba(56,138,254,.30);pointer-events:none;z-index:1}
+  .guide-full{position:absolute;top:0;width:1px;background:rgba(70,90,130,.10);pointer-events:none;z-index:120}
+  .gicon{position:absolute;z-index:3}
+  #topbar{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(247,246,246,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.07);transform:translateY(-100%);transition:transform .35s ease}
+  #topbar.show{transform:none}
+  #topbar .tb-in{max-width:1440px;margin:0 auto;height:60px;display:flex;align-items:center;padding:0 26px}
+  #topbar .tb-logo{display:flex;align-items:center;gap:10px}
+  #topbar .tb-logo img{width:26px;height:26px;display:block}
+  #topbar .tb-logo b{font-family:'Almarai';font-weight:800;font-size:20px;letter-spacing:-.01em;color:#0f0f0f}
+  #topbar .tb-nav{display:flex;gap:26px;margin-left:40px}
+  #topbar .tb-nav a{font-size:14px;color:#0f0f0f;text-decoration:none;cursor:pointer;transition:color .2s}
+  #topbar .tb-nav a:hover{color:#388afe}
+  #topbar .tb-cta{margin-left:auto;font-size:14px;padding:9px 18px}
+  @media(max-width:820px){#topbar .tb-nav{display:none}}
+  /* cases */
+  .cases{padding-top:64px;padding-bottom:36px}
+  .cases-row{display:flex;gap:34px;align-items:flex-start}
+  .cases-head{width:300px;flex:none;padding-top:6px}
+  .cases-head h2{font:700 28px/1.15 'Inter',sans-serif;letter-spacing:-.02em;color:#0f0f0f}
+  .cases-head p{margin-top:20px;font-size:17px;line-height:1.45;color:#515151}
+  .cases-head .lnk{display:inline-flex;gap:8px;margin-top:26px;font-size:15px;color:#080707;text-decoration:none}
+  .cards{display:flex;gap:10px;flex:1}
+  .cards img{width:146px;height:320px;object-fit:cover;border-radius:14px;flex:none;box-shadow:0 18px 40px rgba(0,0,0,.14);cursor:pointer}
+  .logos{display:block;width:1208px;margin:40px auto 0;height:auto}
+  /* Lösungen substage */
+  .substage{position:relative;width:1440px;height:832px;background:#fff;margin-top:20px}
+  /* reviews carousel */
+  .rev2{padding-top:70px;padding-bottom:64px}
+  .rev2-grid{display:flex;gap:40px;align-items:center}
+  .rev2-head{width:300px;flex:none}
+  .rev2-head h2{font:700 40px/1.05 'Inter',sans-serif;letter-spacing:-.02em;color:#0f0f0f;margin-top:18px}
+  .rev2-head p{margin-top:18px;color:#8a8a8a;font-size:15px;line-height:1.5}
+  .rev2-stage{flex:1;display:flex;align-items:center;gap:20px}
+  .navb{width:52px;height:52px;flex:none;border-radius:50%;border:1px solid #e2e2e2;background:#fff;color:#0f0f0f;font-size:20px;cursor:pointer;transition:.2s}
+  .navb:hover{background:#0f0f0f;color:#fff;border-color:#0f0f0f}
+  .rev2-card{flex:1;background:#fbfbfa;border-radius:4px;padding:48px 56px;min-height:340px;position:relative}
+  .rev2-card .qmark{font-family:Georgia,serif;font-size:96px;line-height:.6;color:#d5d5d3;position:absolute;top:44px;left:44px}
+  .rev2-card .quote{font-size:22px;line-height:1.5;color:#1a1a1a;max-width:640px;margin:70px 0 0 60px;transition:opacity .35s}
+  .rev2-who{display:flex;align-items:center;gap:16px;margin:36px 0 0 60px}
+  .rev2-who .av{width:56px;height:56px;border-radius:50%;flex:none;background:#141414;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
+  .rev2-who .nm{font-weight:700;font-size:16px;color:#0f0f0f}
+  .rev2-who .rl{font-size:13px;color:#8a8a8a;margin-top:2px}
+  .rev2-who .rev2-logo{margin-left:auto;font-weight:800;font-size:26px;letter-spacing:.04em;color:#0f0f0f}
+  .dots{display:flex;gap:8px;justify-content:center;margin-top:28px}
+  .dots i{width:8px;height:8px;border-radius:50%;background:#d0d0ce;cursor:pointer;transition:.2s}
+  .dots i.on{background:#141414;width:22px;border-radius:4px}
+  @media(max-width:1000px){.cases-row,.rev2-grid{flex-direction:column}.cards{flex-wrap:wrap}.chat-grid{grid-template-columns:1fr}}
+</style>
+
+<!-- ===== Кейсы ===== -->
+<section class="sec cases">
+  <div class="cases-row">
+    <div class="cases-head">
+      <h2>Projekte,<br>die für sich sprechen.</h2>
+      <p>Jedes Unternehmen. Jede Branche.<br>Individuelle Lösungen.</p>
+      <a class="lnk" href="#">Unsere Projekte sehen →</a>
+    </div>
+    <div class="cards">
+      <img src="assets/img/cases/atrea.png" alt="Atrea">
+      <img src="assets/img/cases/donau.png" alt="Donau Höfe">
+      <img src="assets/img/cases/witzighausen.png" alt="Witzighausen">
+      <img src="assets/img/cases/edelhaus.png" alt="Edelhaus">
+      <img src="assets/img/cases/ewig.png" alt="ewig.me">
+      <img src="assets/img/cases/aletia.png" alt="Aletia">
+    </div>
+  </div>
+  <img class="logos" src="assets/img/cases/logos.png" alt="Kunden">
+</section>
+
+<!-- ===== Lösungen (Preise) — sticky Intro + Karten ===== -->
+<section class="sec loes">
+  <div class="loes-grid">
+    <div class="loes-intro">
+      <h2>Lösungen, die zu Ihrem Unternehmen passen.</h2>
+      <p>Ob Website, KI-Integration oder individuelle Systeme – wir entwickeln digitale Lösungen, die genau zu Ihren Zielen passen.</p>
+      <a href="#">Projekt besprechen →</a>
+    </div>
+    <div class="loes-cards">
+      <div class="loes-card brk">
+        <img class="lc-img" src="assets/img/66_166.png" alt="">
+        <div class="lc-body">
+          <div class="num">01</div>
+          <h3>Website &amp; Branding</h3>
+          <div class="desc">Ein professioneller Auftritt, der Vertrauen schafft und Ihre Marke stärkt.</div>
+          <div class="feats">
+            <ul><li>+ Strategie &amp; Beratung</li><li>+ Webdesign (UI/UX)</li><li>+ Responsive Entwicklung</li></ul>
+            <ul><li>+ SEO-Grundoptimierung</li><li>+ Kontaktformulare</li><li>+ Branding (optional)</li></ul>
+          </div>
+          <div class="price-row"><span class="price">ab 3.000 €</span><span class="pnote">Je nach Umfang und Anforderungen.</span></div>
+        </div>
+      </div>
+      <div class="loes-card brk">
+        <img class="lc-img" src="assets/img/66_204.png" alt="">
+        <div class="lc-body">
+          <div class="num">02</div>
+          <h3>AI &amp; Automatisierung</h3>
+          <div class="desc">Prozesse automatisieren, Zeit sparen und Kundenerlebnisse verbessern.</div>
+          <div class="feats">
+            <ul><li>+ AI-Integration</li><li>+ Chatbots &amp; Assistenten</li><li>+ Prozessautomatisierung</li></ul>
+            <ul><li>+ CRM &amp; Workflows</li><li>+ Schnittstellen (API)</li><li>+ Datenanalyse</li></ul>
+          </div>
+          <div class="price-row"><span class="price">ab 2.000 €</span><span class="pnote">Je nach Anforderungen.</span></div>
+        </div>
+      </div>
+      <div class="loes-card brk">
+        <img class="lc-img" src="assets/img/66_214.png" alt="">
+        <div class="lc-body">
+          <div class="num">03</div>
+          <h3>Individuelle Systeme</h3>
+          <div class="desc">Skalierbare Plattformen und Anwendungen – exakt auf Ihre Prozesse zugeschnitten.</div>
+          <div class="feats">
+            <ul><li>+ Webplattformen &amp; Portale</li><li>+ Kunden- &amp; Partnerbereiche</li><li>+ SaaS &amp; Webanwendungen</li></ul>
+            <ul><li>+ Individuelle Entwicklung</li><li>+ KI &amp; Datenlösungen</li><li>+ Langfristige Betreuung</li></ul>
+          </div>
+          <div class="price-row"><span class="price">Individuelles Angebot</span><span class="pnote">Nach Projektumfang.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Kundenstimmen (Karussell) ===== -->
+<section class="sec rev2">
+  <div class="rev2-grid">
+    <div class="rev2-head">
+      <div class="eyebrow">Kundenstimmen</div>
+      <h2>Vertrauen, das<br>für sich spricht.</h2>
+      <p>Erfolgsgeschichten unserer Kunden und Partner.</p>
+    </div>
+    <div class="rev2-stage">
+      <button class="navb" id="revPrev">←</button>
+      <div class="rev2-card brk">
+        <div class="qmark">&ldquo;</div>
+        <p class="quote" id="revQuote"></p>
+        <div class="rev2-who">
+          <div class="av" id="revAv"></div>
+          <div><div class="nm" id="revName"></div><div class="rl" id="revRole"></div></div>
+          <div class="rev2-logo" id="revLogo"></div>
+        </div>
+      </div>
+      <button class="navb" id="revNext">→</button>
+    </div>
+  </div>
+  <div class="dots" id="revDots"></div>
+</section>
+
+<!-- ===== KI-Assistent: volle dunkle Leiste ===== -->
+<section class="sec chat-sec">
+  <div class="chat-grid">
+    <div class="chat-copy">
+      <div class="eyebrow">KI &amp; Automatisierung</div>
+      <h2 style="margin-top:18px">Beispiel für KI-Integration —<br>jetzt live erleben.</h2>
+      <p>Testen Sie den Assistenten direkt hier: Er erstellt ein <b>Audit Ihrer Website</b>, <b>berechnet die Kosten</b> oder schickt Ihnen ein <b>unverbindliches Angebot</b> — automatisch, rund um die Uhr.</p>
+      <div class="chat-feats">
+        <div><span>+</span> Audit Ihrer Website in Sekunden</div>
+        <div><span>+</span> Kostenkalkulation &amp; Angebot</div>
+        <div><span>+</span> Angebunden per n8n an Ihre Systeme</div>
+      </div>
+    </div>
+    <div class="chat-win">
+      <div class="chat-head">
+        <div class="dot">B</div>
+        <div><b>BUUQ KI-Assistent</b><small>Digitale Produkte · Antwort in Sekunden</small></div>
+        <div class="on">Online</div>
+      </div>
+      <div class="chat-body" id="chatBody"></div>
+      <div class="chat-input">
+        <input placeholder="Schreiben Sie eine Nachricht…" id="chatInput">
+        <button id="chatSend">&#8593;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div></div><!-- /scaler /scaleWrap -->
+
+<script>
+(function(){
+  var stage=document.getElementById('stage');
+  var scaler=document.getElementById('scaler'), wrap=document.getElementById('scaleWrap');
+  // сквозные направляющие через весь сайт («чертёж в процессе»)
+  var fullGuides=[122,690,1318].map(function(x){var g=document.createElement('div');g.className='guide-full';g.style.left=x+'px';scaler.appendChild(g);return g;});
+  // уголки на .brk-блоках
+  [].forEach.call(document.querySelectorAll('.brk'),function(e){['tl','tr','bl','br'].forEach(function(p){var c=document.createElement('span');c.className='brkc '+p;e.appendChild(c);});});
+
+  function icon(x,y,w,svg){var d=document.createElement('div');d.className='gicon';d.style.left=x+'px';d.style.top=y+'px';d.style.width=w+'px';d.innerHTML=svg;stage.appendChild(d);}
+  var IK='stroke="#0f0f0f" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"';
+  icon(119,823,18,'<svg viewBox="0 0 18 18" width="18" height="18"><circle cx="9" cy="9" r="7.5" '+IK+'/><path d="M1.5 9h15M9 1.5c3 3 3 12 0 15M9 1.5c-3 3-3 12 0 15" '+IK+'/></svg>');
+  icon(286,823,18,'<svg viewBox="0 0 18 18" width="18" height="18"><path d="M9 1.5l1.7 4.8 4.8 1.7-4.8 1.7L9 16.5l-1.7-4.8L2.5 9l4.8-1.7z" '+IK+'/></svg>');
+  icon(465,819,22,'<svg viewBox="0 0 22 22" width="22" height="22"><circle cx="11" cy="11" r="3.2" '+IK+'/><path d="M11 1.8v2.4M11 17.8v2.4M1.8 11h2.4M17.8 11h2.4M4.4 4.4l1.7 1.7M15.9 15.9l1.7 1.7M17.6 4.4l-1.7 1.7M6.1 15.9l-1.7 1.7" '+IK+'/></svg>');
+
+  // «1440 px» — стрелки размера по бокам
+  icon(650,168,16,'<svg width="16" height="12" viewBox="0 0 16 12"><path d="M15 6H1M5 2 1 6l4 4" stroke="#a2a2a4" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  icon(1312,168,16,'<svg width="16" height="12" viewBox="0 0 16 12"><path d="M1 6h14M11 2l4 4-4 4" stroke="#a2a2a4" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+  /* липкое меню с крутящимся чёрным логотипом (без кольца, без белого круга, без синего) */
+  var bar=document.createElement('div'); bar.id='topbar';
+  bar.innerHTML='<div class="tb-in"><span class="tb-logo"><img id="tbLogo" src="assets/img/logo.png" alt=""><b>BUUQ</b></span>'
+    +'<nav class="tb-nav"><a>Leistungen</a><a>Projekte</a><a>Über uns</a><a>Prozess</a><a>Kontakt</a></nav>'
+    +'<a class="pill tb-cta" href="#">kostenloses Erstgespräch</a></div>';
+  document.body.appendChild(bar);
+  var tbLogo=document.getElementById('tbLogo');
+  function onScroll(){var y=window.scrollY; bar.classList.toggle('show',y>240); tbLogo.style.transform='rotate('+(y*0.28)+'deg)';}
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  function fit(){var s=Math.min(1,window.innerWidth/1440);scaler.style.transform='scale('+s+')';wrap.style.height=(scaler.offsetHeight*s)+'px';
+    fullGuides.forEach(function(g){g.style.height=scaler.offsetHeight+'px';}); onScroll();}
+  window.addEventListener('resize',fit); fit(); setTimeout(fit,600);
+
+  /* кнопки: белая стрелка → + синяя подсветка при наведении */
+  [].forEach.call(document.querySelectorAll('#stage .t'),function(t){
+    if(/kontenloses ertgespräch|mehr über das Projekt|Exposé/.test(t.textContent) && /255, ?255, ?255/.test(t.style.color||'')){
+      if(t.textContent.indexOf('→')<0){ t.textContent=t.textContent.replace(/\s+$/,'')+'  →'; t.style.whiteSpace='nowrap'; t.style.width='auto'; }
+    }
+  });
+  [].forEach.call(document.querySelectorAll('#stage div'),function(d){
+    var bg=(d.style.background||''), h=parseFloat(d.style.height)||0;
+    if(/rgba?\((8, ?7, ?7|15, ?15, ?15|0, ?0, ?0)/.test(bg) && h>=34 && h<=44){
+      d.style.cursor='pointer'; d.style.transition='box-shadow .2s,transform .18s';
+      d.addEventListener('mouseenter',function(){d.style.boxShadow='0 8px 22px rgba(56,138,254,.5), 0 0 0 1px rgba(56,138,254,.7) inset';d.style.transform='translateY(-1px)';});
+      d.addEventListener('mouseleave',function(){d.style.boxShadow='';d.style.transform='';});
+    }
+  });
+
+  /* H1 per-letter colour follows cursor */
+  var h1=document.getElementById('n31_634');
+  if(h1){var full=h1.textContent; h1.textContent='';
+    full.split(/(nach vorne)/).forEach(function(seg){var host=h1;
+      if(seg==='nach vorne'){var sp=document.createElement('span');sp.className='script';h1.appendChild(sp);host=sp;}
+      seg.split('').forEach(function(c){var e=document.createElement('span');e.className='ch';e.textContent=c;host.appendChild(e);});});
+    var chars=h1.querySelectorAll('.ch');
+    h1.addEventListener('mousemove',function(e){chars.forEach(function(ch){var r=ch.getBoundingClientRect();var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);ch.style.color=Math.sqrt(dx*dx+dy*dy)<58?'#388afe':'';});});
+    h1.addEventListener('mouseleave',function(){chars.forEach(function(c){c.style.color='';});});}
+
+  /* hero visual runs away from mouse */
+  var vis=document.getElementById('n36_5');
+  if(vis&&stage){stage.addEventListener('mousemove',function(e){var r=stage.getBoundingClientRect();var mx=(e.clientX-r.left)/r.width-.5,my=(e.clientY-r.top)/r.height-.5;vis.style.transform='translate('+(-mx*38)+'px,'+(-my*26)+'px)';});
+    stage.addEventListener('mouseleave',function(){vis.style.transform='translate(0,0)';});}
+
+  /* block-2 project cards: 3D tilt + wind ONLY on hover */
+  var tilts=[].slice.call(document.querySelectorAll('.tilt-img')); var mouse={x:-9999,y:-9999};
+  window.addEventListener('mousemove',function(e){mouse.x=e.clientX;mouse.y=e.clientY;});
+  tilts.forEach(function(el,i){el._phase=i*1.3;el._hover=false;el.style.transition='transform .5s ease';
+    el.addEventListener('mouseenter',function(){el._hover=true;el.style.transition='none';});
+    el.addEventListener('mouseleave',function(){el._hover=false;el.style.transition='transform .55s ease';el.style.transform='';});});
+  function tframe(t){var time=t/1000;
+    tilts.forEach(function(el){ if(!el._hover) return;
+      var r=el.getBoundingClientRect();var cx=r.left+r.width/2,cy=r.top+r.height/2;
+      var rx=Math.cos(time*0.9+el._phase)*2.4 - (mouse.y-cy)/r.height*12;
+      var ry=Math.sin(time*1.1+el._phase)*2.4 + (mouse.x-cx)/r.width*12;
+      el.style.transform='perspective(800px) rotateX('+rx.toFixed(2)+'deg) rotateY('+ry.toFixed(2)+'deg)';});
+    requestAnimationFrame(tframe);}
+  requestAnimationFrame(tframe);
+
+  /* cases (6 cards): wind-chime sway */
+  var chimes=[].slice.call(document.querySelectorAll('.cards img'));
+  var actx=null;
+  function chime(freq){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume();
+    var t0=actx.currentTime,o=actx.createOscillator(),o2=actx.createOscillator(),g=actx.createGain();
+    o.type='sine';o.frequency.value=freq;o2.type='sine';o2.frequency.value=freq*2.01;
+    g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(0.05,t0+0.008);g.gain.exponentialRampToValueAtTime(0.0001,t0+1.4);
+    o.connect(g);o2.connect(g);g.connect(actx.destination);o.start(t0);o2.start(t0);o.stop(t0+1.4);o2.stop(t0+1.4);
+  }catch(e){}}
+  var PENT=[523.25,587.33,659.25,783.99,880.0,1046.5]; // C D E G A C
+  chimes.forEach(function(c,i){c.style.transformOrigin='50% 0%';c._phase=i*0.9;c._tilt=0;c._v=0;c._target=0;
+    c.addEventListener('mouseenter',function(){chime(PENT[i%PENT.length]);});
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c._target=((e.clientX-r.left)/r.width-0.5)*11;});
+    c.addEventListener('pointerleave',function(){c._target=0;});});
+  function chimeFrame(t){var time=t/1000;
+    chimes.forEach(function(c){c._v+=(c._target-c._tilt)*0.10;c._v*=0.84;c._tilt+=c._v;
+      var idle=Math.sin(time*1.3+c._phase)*0.7; c.style.transform='rotate('+(c._tilt+idle).toFixed(2)+'deg)';});
+    requestAnimationFrame(chimeFrame);}
+  requestAnimationFrame(chimeFrame);
+
+  /* reviews carousel */
+  var REV=[
+    {q:'BUUQ hat unsere digitale Präsenz komplett auf ein neues Level gehoben. Die Zusammenarbeit war professionell, schnell und auf Augenhöhe. Seit dem Launch haben wir 47% mehr qualifizierte Leads generiert.',n:'Max Mustermann',r:'Geschäftsführer · ATREA GmbH',a:'AT',l:'ATREA'},
+    {q:'Der Investoren-Auftritt für die Witzighausen Residenz wirkt endlich hochwertig. Präzise Umsetzung, exakt nach Vorlage — und pünktlich geliefert.',n:'WR Residenz',r:'Immobilienentwickler',a:'WR',l:'WR'},
+    {q:'Der KI-Assistent beantwortet Kundenfragen rund um die Uhr und qualifiziert Anfragen automatisch. Das spart uns täglich Stunden.',n:'Edelhaus',r:'Immobilienagentur',a:'ED',l:'edelhaus'},
+    {q:'Schnell, mitdenkend, verlässlich. Von der Idee bis zum Launch hat einfach alles gepasst — wir empfehlen BUUQ uneingeschränkt weiter.',n:'ewig.me',r:'Digitale Gedächtniskonservierung',a:'EW',l:'ewig.me'}
+  ];
+  var ri=0, dots=document.getElementById('revDots');
+  REV.forEach(function(_,i){var d=document.createElement('i');if(i===0)d.className='on';d.onclick=function(){go(i);};dots.appendChild(d);});
+  function go(i){ri=(i+REV.length)%REV.length;var it=REV[ri];
+    var q=document.getElementById('revQuote'); q.style.opacity=0;
+    setTimeout(function(){
+      q.textContent=it.q; q.style.opacity=1;
+      document.getElementById('revName').textContent=it.n;
+      document.getElementById('revRole').textContent=it.r;
+      document.getElementById('revAv').textContent=it.a;
+      document.getElementById('revLogo').textContent=it.l;
+      [].forEach.call(dots.children,function(d,j){d.className=j===ri?'on':'';});
+    },200);
+  }
+  document.getElementById('revPrev').onclick=function(){go(ri-1);};
+  document.getElementById('revNext').onclick=function(){go(ri+1);};
+  go(0); setInterval(function(){go(ri+1);},6000);
+
+  /* KI chat demo — statisch (Fenster wächst nicht) */
+  var body=document.getElementById('chatBody');
+  var script=[
+    {who:'bot',text:'Hallo! Ich bin der BUUQ KI-Assistent. Was möchten Sie ausprobieren?'},
+    {who:'chips',opts:['Website-Audit','Kosten berechnen','Angebot erhalten']},
+    {who:'usr',text:'Machen Sie ein Audit meiner Website.'},
+    {who:'typing'},
+    {who:'bot',text:'Gern! Nennen Sie mir Ihre URL — ich prüfe Design, Ladezeit, SEO und KI-Potenzial.'},
+    {who:'usr',text:'www.meine-firma.de'},
+    {who:'typing'},
+    {who:'bot',text:'Fertig ✅ Ergebnis: Performance 72/100, klares KI-Potenzial. Soll ich direkt ein Angebot berechnen?'}
+  ];
+  var idx=0;
+  function step(){
+    if(!body) return;
+    if(idx>=script.length){setTimeout(function(){body.innerHTML='';idx=0;setTimeout(step,900);},4500);return;}
+    var it=script[idx++];
+    if(it.who==='typing'){var tp=document.createElement('div');tp.className='typing';tp.innerHTML='<i></i><i></i><i></i>';body.appendChild(tp);body.scrollTop=body.scrollHeight;setTimeout(function(){tp.remove();step();},1100);return;}
+    if(it.who==='chips'){var c=document.createElement('div');c.className='chips';it.opts.forEach(function(o){var b=document.createElement('button');b.className='chip';b.textContent=o;c.appendChild(b);});body.appendChild(c);}
+    else{var m=document.createElement('div');m.className='msg '+it.who;m.textContent=it.text;body.appendChild(m);}
+    body.scrollTop=body.scrollHeight; setTimeout(step,it.who==='usr'?700:1000);
+  }
+  step();
+})();
+</script>
+</body>
+</html>
