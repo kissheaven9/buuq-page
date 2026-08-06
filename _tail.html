@@ -309,7 +309,13 @@
     {who:'bot',text:'Gern! Zwei kurze Fragen: Wie viele Zimmer brauchen Sie — und ab wann möchten Sie einziehen?'},
     {who:'usr',text:'3 Zimmer, Einzug im nächsten Jahr.'},
     {who:'typing'},
-    {who:'bot',text:'Das passt gut: Aktuell sind 4 Wohnungen mit 3 Zimmern und Gartenblick frei, ab 465.000 €. Mit 30 % Eigenkapital steht die Finanzierung solide. Soll ich Ihnen die Grundrisse senden und einen Besichtigungstermin vorschlagen?'}
+    {who:'bot',text:'Gute Nachricht: Zwei Wohnungen passen genau zu Ihren Kriterien — beide mit Gartenblick, bezugsfertig im nächsten Jahr:'},
+    {who:'cards',items:[
+      {img:'assets/img/grundriss-elysium.webp',t:'Wohnung 07 · Elysium',s:'3 Zi · 78 m² · 465.000 €'},
+      {img:'assets/img/grundriss-klangraum.webp',t:'Wohnung 12 · Klangraum',s:'3 Zi · 84 m² · 489.000 €'}
+    ]},
+    {who:'bot',text:'Mit 30 % Eigenkapital liegt Ihre Finanzierung im sehr soliden Bereich. Soll ich Ihnen beide Grundrisse per E-Mail senden und einen Besichtigungstermin vorschlagen?'},
+    {who:'chips',opts:['Termin vorschlagen','Grundrisse per E-Mail']}
   ];
   var idx=0;
   function step(){
@@ -317,7 +323,8 @@
     if(idx>=script.length){setTimeout(function(){body.innerHTML='';idx=0;setTimeout(step,900);},4500);return;}
     var it=script[idx++];
     if(it.who==='typing'){var tp=document.createElement('div');tp.className='typing';tp.innerHTML='<i></i><i></i><i></i>';body.appendChild(tp);body.scrollTop=body.scrollHeight;setTimeout(function(){tp.remove();step();},1100);return;}
-    if(it.who==='chips'){var c=document.createElement('div');c.className='chips';it.opts.forEach(function(o){var b=document.createElement('button');b.className='chip';b.textContent=o;c.appendChild(b);});body.appendChild(c);}
+    if(it.who==='cards'){var pc=document.createElement('div');pc.className='pcards';it.items.forEach(function(o){var d=document.createElement('div');d.className='pcard';d.innerHTML='<img src="'+o.img+'" alt="Grundriss"><div class="pc-b"><div class="pc-t">'+o.t+'</div><div class="pc-s">'+o.s+'</div><button>Details ansehen</button></div>';pc.appendChild(d);});body.appendChild(pc);}
+    else if(it.who==='chips'){var c=document.createElement('div');c.className='chips';it.opts.forEach(function(o){var b=document.createElement('button');b.className='chip';b.textContent=o;c.appendChild(b);});body.appendChild(c);}
     else{var m=document.createElement('div');m.className='msg '+it.who;m.textContent=it.text;body.appendChild(m);}
     body.scrollTop=body.scrollHeight; setTimeout(step,it.who==='usr'?700:1000);
   }
