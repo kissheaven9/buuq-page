@@ -153,17 +153,17 @@
     <div class="chat-copy">
       <div class="eyebrow">KI &amp; Automatisierung</div>
       <h2 style="margin-top:18px">Beispiel für KI-Integration —<br>jetzt live erleben.</h2>
-      <p>Testen Sie den Assistenten direkt hier: Er erstellt ein <b>Audit Ihrer Website</b>, <b>berechnet die Kosten</b> oder schickt Ihnen ein <b>unverbindliches Angebot</b> — automatisch, rund um die Uhr.</p>
+      <p>So arbeitet der Assistent auf der Website Ihres Projekts: Ein Interessent beschreibt seine <b>Wunschwohnung</b>, der Assistent stellt Rückfragen, prüft das <b>Angebot des Projekts</b> und führt zum <b>Besichtigungstermin</b> — automatisch, rund um die Uhr.</p>
       <div class="chat-feats">
-        <div><span>+</span> Audit Ihrer Website in Sekunden</div>
-        <div><span>+</span> Kostenkalkulation &amp; Angebot</div>
+        <div><span>+</span> Qualifiziert Anfragen rund um die Uhr</div>
+        <div><span>+</span> Kennt Preise, Grundrisse &amp; Verfügbarkeit</div>
         <div><span>+</span> Angebunden per n8n an Ihre Systeme</div>
       </div>
     </div>
     <div class="chat-win">
       <div class="chat-head">
         <div class="dot">B</div>
-        <div><b>BUUQ KI-Assistent</b><small>Digitale Produkte · Antwort in Sekunden</small></div>
+        <div><b>BUUQ KI-Assistent</b><small>Immobilien-Demo · Antwort in Sekunden</small></div>
         <div class="on">Online</div>
       </div>
       <div class="chat-body" id="chatBody"></div>
@@ -302,14 +302,14 @@
   /* KI chat demo — statisch (Fenster wächst nicht) */
   var body=document.getElementById('chatBody');
   var script=[
-    {who:'bot',text:'Hallo! Ich bin der BUUQ KI-Assistent. Was möchten Sie ausprobieren?'},
-    {who:'chips',opts:['Website-Audit','Kosten berechnen','Angebot erhalten']},
-    {who:'usr',text:'Machen Sie ein Audit meiner Website.'},
+    {who:'bot',text:'Hallo! Ich bin der Projekt-Assistent. Beschreiben Sie einfach, was Sie suchen — ich prüfe, was im Projekt zu Ihnen passt.'},
+    {who:'chips',opts:['Wohnung bis 500.000 €','2–3 Zimmer','Mit Gartenblick']},
+    {who:'usr',text:'Ich suche eine Wohnung bis 500.000 €, Neubau, gern mit Blick in den Garten. Eigenkapital: 30 %.'},
     {who:'typing'},
-    {who:'bot',text:'Gern! Nennen Sie mir Ihre URL — ich prüfe Design, Ladezeit, SEO und KI-Potenzial.'},
-    {who:'usr',text:'www.meine-firma.de'},
+    {who:'bot',text:'Gern! Zwei kurze Fragen: Wie viele Zimmer brauchen Sie — und ab wann möchten Sie einziehen?'},
+    {who:'usr',text:'3 Zimmer, Einzug im nächsten Jahr.'},
     {who:'typing'},
-    {who:'bot',text:'Fertig ✅ Ergebnis: Performance 72/100, klares KI-Potenzial. Soll ich direkt ein Angebot berechnen?'}
+    {who:'bot',text:'Das passt gut: Aktuell sind 4 Wohnungen mit 3 Zimmern und Gartenblick frei, ab 465.000 €. Mit 30 % Eigenkapital steht die Finanzierung solide. Soll ich Ihnen die Grundrisse senden und einen Besichtigungstermin vorschlagen?'}
   ];
   var idx=0;
   function step(){
