@@ -322,7 +322,7 @@ für Investoren</div>
       <a class="ccard" href="https://witzighausen-residenz.de" target="_blank" rel="noopener"><img src="assets/img/cases/witzighausen.png?v=2" alt="Witzighausen"><div class="ccap"><b>Witzighausen</b><span>Entwickler</span></div><div class="carrow">→</div></a>
       <a class="ccard" href="https://edelhaus.de" target="_blank" rel="noopener"><img src="assets/img/cases/edelhaus.png?v=2" alt="Edelhaus"><div class="ccap"><b>Edelhaus</b><span>Immobilienagentur</span></div><div class="carrow">→</div></a>
       <a class="ccard" href="https://ewig.me" target="_blank" rel="noopener"><img src="assets/img/cases/ewig.png?v=2" alt="ewig.me"></a>
-      <a class="ccard" style="background:#35343c;border-radius:14px" href="#" data-project="aletia"><img src="assets/img/cases/aletia.png?v=2" alt="Aletia"></a>
+      <a class="ccard" style="background:#35343c;border-radius:14px" href="https://kissheaven9.github.io/aletia/" target="_blank" rel="noopener" data-project="aletia"><img src="assets/img/cases/aletia.png?v=2" alt="Aletia"></a>
     </div>
   </div>
   <img class="logos" src="assets/img/cases/logos.png" alt="Kunden">
@@ -374,6 +374,17 @@ für Investoren</div>
       d.addEventListener('mouseenter',function(){d.style.boxShadow='0 8px 22px rgba(56,138,254,.5), 0 0 0 1px rgba(56,138,254,.7) inset';d.style.transform='translateY(-1px)';});
       d.addEventListener('mouseleave',function(){d.style.boxShadow='';d.style.transform='';});
     }
+  });
+
+  /* кнопки «mehr über das Projekt» → кликабельные ссылки на проекты (прозрачный <a> поверх пилюли) */
+  [['n46_39','https://edelhaus.de'],['n46_43','https://atrea.org'],['n46_47','https://kissheaven9.github.io/aletia/']].forEach(function(m){
+    var bg=document.getElementById(m[0]); if(!bg) return;
+    var a=document.createElement('a');
+    a.href=m[1]; a.target='_blank'; a.rel='noopener'; a.setAttribute('aria-label','mehr über das Projekt');
+    a.style.cssText='position:absolute;left:'+parseFloat(bg.style.left)+'px;top:'+parseFloat(bg.style.top)+'px;width:'+parseFloat(bg.style.width)+'px;height:'+parseFloat(bg.style.height)+'px;z-index:200;border-radius:100px;cursor:pointer;';
+    a.addEventListener('mouseenter',function(){bg.style.boxShadow='0 8px 22px rgba(56,138,254,.5), 0 0 0 1px rgba(56,138,254,.7) inset';bg.style.transform='translateY(-1px)';});
+    a.addEventListener('mouseleave',function(){bg.style.boxShadow='';bg.style.transform='';});
+    stage.appendChild(a);
   });
 
   /* H1 per-letter colour follows cursor */
