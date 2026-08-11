@@ -39,7 +39,7 @@
   html,body{background:#f7f6f6;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
   #scaleWrap{width:100%;overflow-x:hidden}
   #scaler{width:1440px;transform-origin:top left;position:relative;background:#f7f6f6}
-  #stage{position:relative;width:1440px;height:2456px;background:#f7f6f6;overflow:hidden}
+  #stage{position:relative;width:1440px;height:1760px;background:#f7f6f6;overflow:hidden}
   #stage .t{pointer-events:auto}
   /* H1 interactive */
   #n31_634{cursor:default;user-select:none}
@@ -273,7 +273,12 @@ für Investoren</div>
   .cases-head p{margin-top:20px;font-size:17px;line-height:1.45;color:#515151}
   .cases-head .lnk{display:inline-flex;gap:8px;margin-top:26px;font-size:15px;color:#080707;text-decoration:none}
   .cards{display:flex;gap:10px;flex:1}
-  .cards img{width:146px;height:320px;object-fit:cover;border-radius:14px;flex:none;box-shadow:0 18px 40px rgba(0,0,0,.14);cursor:pointer}
+  .ccard{position:relative;flex:none;transform-origin:50% 0%;cursor:pointer}
+  .cards img{display:block;width:146px;height:320px;object-fit:cover;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.14)}
+  .ccap{position:absolute;left:20px;top:20px;pointer-events:none}
+  .ccap b{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:16px;color:#0f0f0f;letter-spacing:-.01em;line-height:1.1}
+  .ccap span{display:block;margin-top:5px;font-family:'Inter',sans-serif;font-weight:400;font-size:11.5px;color:#515151;line-height:1.3;max-width:112px}
+  .carrow{position:absolute;right:16px;bottom:16px;width:39px;height:39px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:#141414;font-size:17px;box-shadow:0 4px 14px rgba(0,0,0,.14);pointer-events:none}
   .logos{display:block;width:1208px;margin:40px auto 0;height:auto}
   /* Lösungen substage */
   .substage{position:relative;width:1440px;height:832px;background:#fff;margin-top:20px}
@@ -309,12 +314,12 @@ für Investoren</div>
       <a class="lnk" href="#">Unsere Projekte sehen →</a>
     </div>
     <div class="cards">
-      <img src="assets/img/cases/atrea.png" alt="Atrea">
-      <img src="assets/img/cases/donau.png" alt="Donau Höfe">
-      <img src="assets/img/cases/witzighausen.png" alt="Witzighausen">
-      <img src="assets/img/cases/edelhaus.png" alt="Edelhaus">
-      <img src="assets/img/cases/ewig.png" alt="ewig.me">
-      <img src="assets/img/cases/aletia.png" alt="Aletia">
+      <div class="ccard"><img src="assets/img/cases/atrea.png" alt="Atrea"><div class="ccap"><b>Atrea</b><span>Internationales Geschäft</span></div><div class="carrow">→</div></div>
+      <div class="ccard"><img src="assets/img/cases/donau.png" alt="Donau Höfe"></div>
+      <div class="ccard"><img src="assets/img/cases/witzighausen.png" alt="Witzighausen"><div class="ccap"><b>Witzighausen</b><span>Entwickler</span></div><div class="carrow">→</div></div>
+      <div class="ccard"><img src="assets/img/cases/edelhaus.png" alt="Edelhaus"><div class="ccap"><b>Edelhaus</b><span>Immobilienagentur</span></div><div class="carrow">→</div></div>
+      <div class="ccard"><img src="assets/img/cases/ewig.png" alt="ewig.me"></div>
+      <div class="ccard"><img src="assets/img/cases/aletia.png" alt="Aletia"></div>
     </div>
   </div>
   <img class="logos" src="assets/img/cases/logos.png" alt="Kunden">
@@ -399,12 +404,12 @@ für Investoren</div>
   requestAnimationFrame(tframe);
 
   /* cases (6 cards): wind-chime sway */
-  var chimes=[].slice.call(document.querySelectorAll('.cards img'));
+  var chimes=[].slice.call(document.querySelectorAll('.cards .ccard'));
   var actx=null;
   function chime(freq){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume();
     var t0=actx.currentTime,o=actx.createOscillator(),o2=actx.createOscillator(),g=actx.createGain();
     o.type='sine';o.frequency.value=freq;o2.type='sine';o2.frequency.value=freq*2.01;
-    g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(0.05,t0+0.008);g.gain.exponentialRampToValueAtTime(0.0001,t0+1.4);
+    g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(0.09,t0+0.008);g.gain.exponentialRampToValueAtTime(0.0001,t0+1.4);
     o.connect(g);o2.connect(g);g.connect(actx.destination);o.start(t0);o2.start(t0);o.stop(t0+1.4);o2.stop(t0+1.4);
   }catch(e){}}
   var PENT=[523.25,587.33,659.25,783.99,880.0,1046.5]; // C D E G A C
@@ -413,7 +418,8 @@ für Investoren</div>
     c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c._target=((e.clientX-r.left)/r.width-0.5)*11;});
     c.addEventListener('pointerleave',function(){c._target=0;});});
   /* звук ветра требует жеста пользователя (autoplay-policy) — разблокируем AudioContext на первом клике/тапе */
-  document.addEventListener('pointerdown',function _unlock(){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx&&actx.state==='suspended')actx.resume();}catch(e){}document.removeEventListener('pointerdown',_unlock);});
+  function _unlock(){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx&&actx.state==='suspended')actx.resume();}catch(e){}['pointerdown','touchstart','keydown','click'].forEach(function(ev){document.removeEventListener(ev,_unlock);});}
+  ['pointerdown','touchstart','keydown','click'].forEach(function(ev){document.addEventListener(ev,_unlock,{passive:true});});
   function chimeFrame(t){var time=t/1000;
     chimes.forEach(function(c){c._v+=(c._target-c._tilt)*0.10;c._v*=0.84;c._tilt+=c._v;
       var idle=Math.sin(time*1.3+c._phase)*0.7; c.style.transform='rotate('+(c._tilt+idle).toFixed(2)+'deg)';});
