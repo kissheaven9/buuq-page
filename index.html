@@ -256,7 +256,7 @@ für Investoren</div>
 <div id="n41_13" style="position:absolute;left:362.0px;top:98.0px;width:102.0px;height:21.0px;background:rgba(246,243,255,1.0);border:2.0px solid rgba(228,217,255,1.0);box-sizing:border-box;"></div>
 <div id="n41_17" class="t" style="position:absolute;left:388.0px;top:103.0px;width:67.0px;font-family:'Inter',sans-serif;font-size:10.91px;font-weight:400;color:rgba(191,172,238,1.0);letter-spacing:0.00px;text-align:left;line-height:12.2px;white-space:pre-wrap;">Auto Layout</div>
 <img id="n41_20" class="" src="assets/img/41_20.png" style="position:absolute;left:1094.0px;top:195.0px;width:311.0px;height:35.0px;object-fit:cover;display:none;"></div><!-- /stage -->
-<img src="assets/img/blocks/qualitaet.png" style="display:block;width:1440px;height:auto;margin:100px auto 0"><img src="assets/img/blocks/emotion.png" style="display:block;width:1440px;height:auto;margin:100px auto 0"><img src="assets/img/blocks/auftreten.png" style="display:block;width:1440px;height:auto;margin:100px auto 0">
+<img src="assets/img/blocks/qualitaet.png" style="display:block;width:1440px;height:auto;margin:100px auto 0"><div style="position:relative;width:1440px;margin:100px auto 0"><img src="assets/img/blocks/emotion.png" style="display:block;width:1440px;height:auto"><video src="assets/quartier-video.mp4" autoplay muted loop playsinline style="position:absolute;left:720px;top:81px;width:550px;height:438px;object-fit:cover;border-radius:10px"></video></div><img src="assets/img/blocks/auftreten.png" style="display:block;width:1440px;height:auto;margin:100px auto 0">
 
 <style>
   .guide{position:absolute;top:0;width:1px;background:rgba(56,138,254,.30);pointer-events:none;z-index:1}
@@ -366,7 +366,7 @@ für Investoren</div>
 
   function fit(){var s=Math.min(1,window.innerWidth/1440);scaler.style.transform='scale('+s+')';wrap.style.height=(scaler.offsetHeight*s)+'px';
     fullGuides.forEach(function(g){g.style.height=scaler.offsetHeight+'px';}); onScroll();}
-  window.addEventListener('resize',fit); fit(); setTimeout(fit,600);
+  window.addEventListener('resize',fit); window.addEventListener('load',fit); if(window.ResizeObserver){try{new ResizeObserver(fit).observe(scaler);}catch(e){}} fit(); setTimeout(fit,600); setTimeout(fit,1600);
 
   /* кнопки: белая стрелка → + синяя подсветка при наведении */
   [].forEach.call(document.querySelectorAll('#stage .t'),function(t){
