@@ -75,4 +75,19 @@
       }
     });
   });
+
+  /* Logo-Icon dreht sich beim Scrollen wie ein Ladeindikator */
+  var icons = Array.prototype.slice.call(document.querySelectorAll('.brand-ic svg'));
+  if(icons.length){
+    var ticking=false;
+    function spin(){
+      var deg = window.pageYOffset * 0.35;
+      for(var i=0;i<icons.length;i++){ icons[i].style.transform='rotate('+deg+'deg)'; }
+      ticking=false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){ window.requestAnimationFrame(spin); ticking=true; }
+    }, {passive:true});
+    spin();
+  }
 })();
