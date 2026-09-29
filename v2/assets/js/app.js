@@ -5,17 +5,16 @@
   /* mobile nav */
   var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
+  var navClose = document.getElementById('navClose');
   if(burger && nav){
+    function closeNav(){ nav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+    function openNav(){ nav.classList.add('open'); burger.setAttribute('aria-expanded','true'); }
     burger.addEventListener('click', function(){
-      var open = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if(nav.classList.contains('open')) closeNav(); else openNav();
     });
-    nav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        nav.classList.remove('open');
-        burger.setAttribute('aria-expanded','false');
-      });
-    });
+    if(navClose){ navClose.addEventListener('click', closeNav); }
+    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeNav(); });
   }
 
   /* cookie banner (technical-only notice) */
