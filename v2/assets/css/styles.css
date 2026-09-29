@@ -63,6 +63,7 @@ a{color:inherit;text-decoration:none}
 
 /* ===================== hero ===================== */
 .hero{position:relative;text-align:center;padding:150px var(--pad) 40px;background:transparent}
+.hero picture{display:contents}
 .hero-glass{
   position:absolute;left:50%;top:clamp(-120px,-1vw,30px);transform:translateX(-50%);
   width:min(1680px,138vw);height:auto;z-index:0;pointer-events:none;
@@ -250,10 +251,10 @@ a{color:inherit;text-decoration:none}
   .hero{padding-top:110px;display:flex;flex-direction:column;padding-bottom:0}
   .hero-in{order:1}
   .hero-glass{order:2;position:static;left:auto;top:auto;transform:none;
-    width:150vw;max-width:920px;height:64vw;max-height:400px;object-fit:cover;object-position:50% 60%;
-    margin:6px auto 4px;align-self:center}
+    width:min(780px,126vw);height:auto;max-width:none;max-height:none;object-fit:fill;
+    margin:8px auto 12px;align-self:center}
   .hero::after{display:none}
-  .projekte{padding-top:18px}
+  .projekte{padding-top:16px}
   .pill.big{width:100%;min-width:0}
   .hero-btns{width:100%;max-width:360px;margin-inline:auto}
   .cards{grid-template-columns:1fr;gap:16px}
