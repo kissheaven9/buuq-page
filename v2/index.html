@@ -23,7 +23,7 @@
 <meta name="twitter:image" content="https://kissheaven9.github.io/buuq-page/v2/assets/img/og-image.jpg">
 <link rel="preload" href="assets/fonts/fonts.css" as="style">
 <link rel="stylesheet" href="assets/fonts/fonts.css?v=1">
-<link rel="stylesheet" href="assets/css/styles.css?v=1">
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -132,11 +132,11 @@
 
     <!-- logos -->
     <div class="logos" aria-label="Referenzen und Marken">
-      <img class="lg" src="assets/img/logo-ewig.png" alt="ewig.me" loading="lazy">
+      <img class="lg lg-ewig" src="assets/img/logo-ewig.png" alt="ewig.me" loading="lazy">
       <span class="lg lg-edelhaus">edelhaus</span>
-      <img class="lg" src="assets/img/logo-donau.png" alt="Donau Höfe" loading="lazy">
-      <img class="lg" src="assets/img/logo-atrea2.png" alt="ATREA" loading="lazy">
-      <img class="lg" src="assets/img/logo-aletia.png" alt="aletia" loading="lazy">
+      <img class="lg lg-donau" src="assets/img/logo-donau.png" alt="Donau Höfe" loading="lazy">
+      <img class="lg lg-atrea" src="assets/img/logo-atrea2.png" alt="ATREA" loading="lazy">
+      <img class="lg lg-aletia" src="assets/img/logo-aletia.png" alt="aletia" loading="lazy">
       <span class="lg lg-wr"><b>WR</b><small>WITZIGHAUSEN<br><i>RESIDENZ</i></small></span>
       <span class="lg lg-da">design apartments</span>
     </div>
@@ -156,7 +156,7 @@
       <article class="bcard vid">
         <div class="bmedia r1">
           <video src="assets/img/wb-frosty.mp4" poster="assets/img/wb-frosty.png" autoplay muted loop playsinline preload="none" aria-label="Werbevideo für eine Getränkemarke"></video>
-          <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <button class="wave" type="button" aria-label="Ton einschalten" aria-pressed="false"><i></i><i></i><i></i><i></i><i></i></button>
         </div>
         <h3 class="bcap">Werbevideo für eine Getränkemarke</h3>
       </article>
@@ -164,17 +164,17 @@
         <div class="bmedia r1"><img src="assets/img/wb-expose.png" alt="Exposé-Broschüren – Print-Design" loading="lazy"></div>
         <h3 class="bcap">Exposé <span class="arw">↗</span></h3>
       </article>
-      <!-- row 2 -->
-      <article class="bcard vid tall">
-        <div class="bmedia r2">
-          <video src="assets/img/wb-donau.mp4" poster="assets/img/wb-donau.png" autoplay muted loop playsinline preload="none" aria-label="Imagefilm für ein Wohnquartier"></video>
-          <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-        </div>
-        <h3 class="bcap">Imagefilm für ein Wohnquartier</h3>
-      </article>
+      <!-- row 2 (diagonal: Bild links, Video rechts) -->
       <article class="bcard link tall">
         <div class="bmedia r2"><img src="assets/img/wb-investor.png" alt="Investorenpräsentation für aletia" loading="lazy"></div>
         <h3 class="bcap">Investorenpräsentation <span class="arw">↗</span></h3>
+      </article>
+      <article class="bcard vid tall">
+        <div class="bmedia r2">
+          <video src="assets/img/wb-donau.mp4" poster="assets/img/wb-donau.png" autoplay muted loop playsinline preload="none" aria-label="Imagefilm für ein Wohnquartier"></video>
+          <button class="wave" type="button" aria-label="Ton einschalten" aria-pressed="false"><i></i><i></i><i></i><i></i><i></i></button>
+        </div>
+        <h3 class="bcap">Imagefilm für ein Wohnquartier</h3>
       </article>
       <!-- row 3 -->
       <article class="bcard link sm3">
@@ -265,6 +265,6 @@
   </div>
 </div>
 
-<script src="assets/js/app.js?v=1"></script>
+<script src="assets/js/app.js?v=2"></script>
 </body>
 </html>
