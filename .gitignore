@@ -3,3 +3,11 @@ _test_*.html
 .DS_Store
 *.pyc
 _serve.py
+
+# Kundenunterlagen, Werkzeuge und Vorlagen – nie veröffentlichen
+_unterlagen/
+_werkzeug/
+_vorlagen/
+*.MOV
+Website-Audit*.pdf
+.DS_Store
