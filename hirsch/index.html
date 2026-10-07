@@ -31,12 +31,11 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <meta name="theme-color" content="#2a211c">
+  <meta name="theme-color" content="#1c2f25">
 
-  <link rel="preload" href="assets/fonts/Vollkorn-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/AlbertSans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/schild-320.webp 317w, assets/img/schild-640.webp 634w" imagesizes="(min-width: 900px) 340px, 62vw">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="preload" href="assets/fonts/InstrumentSans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/schild-640.webp 640w, assets/img/schild-960.webp 960w, assets/img/schild-1280.webp 1280w" imagesizes="(min-width: 900px) 50vw, 100vw" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 
   <script type="application/ld+json">
   {
@@ -71,16 +70,11 @@
 <body>
 
 <svg xmlns="http://www.w3.org/2000/svg" hidden>
-  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 15h18M3 18v2M21 18v2M6 9V6.5A1.5 1.5 0 0 1 7.5 5h9A1.5 1.5 0 0 1 18 6.5V9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <!-- Geweih: eigene Zeichnung für die Vorschau -->
-  <symbol id="i-geweih" viewBox="0 0 64 44"><path d="M32 42V30M32 30c-2-7-7-11-14-12M32 30c2-7 7-11 14-12M18 18C11 17 6 12 4 4M18 18c-1-5-4-9-8-12M18 18c1-5 1-9-1-14M46 18c7-1 12-6 14-14M46 18c1-5 4-9 8-12M46 18c-1-5-1-9 1-14M24.500 21.500c-1-3-1-6 .5-9M39.500 21.500c1-3 1-6-.5-9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 8h18M3 16h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </svg>
 
 <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
@@ -88,15 +82,12 @@
 
 <header class="header" id="header">
   <div class="header__in">
-    <a class="brand" href="#top" aria-label="Gasthof Hirsch Heimenkirch">
-      <svg class="brand__mark" aria-hidden="true"><use href="#i-geweih"/></svg>
-      <span class="brand__name">Gasthof Hirsch</span>
-    </a>
+    <a class="brand" href="#top" aria-label="Gasthof Hirsch Heimenkirch">Gasthof Hirsch</a>
     <nav class="nav" aria-label="Hauptnavigation" data-i18n-aria="nav.aria">
       <a href="#kueche" data-i18n="nav.1">Küche</a>
-      <a href="#haus" data-i18n="nav.2">Das Haus</a>
-      <a href="#zimmer" data-i18n="nav.3">Übernachten</a>
-      <a href="#umgebung" data-i18n="nav.4">Umgebung</a>
+      <a href="#zeiten" data-i18n="nav.2">Zeiten</a>
+      <a href="#haus" data-i18n="nav.3">Haus</a>
+      <a href="#zimmer" data-i18n="nav.4">Zimmer</a>
       <a href="#anreise" data-i18n="nav.5">Anfahrt</a>
     </nav>
     <div class="header__right">
@@ -105,7 +96,7 @@
         <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
       </div>
       <a class="header__tel" href="tel:+4983817601">08381 7601</a>
-      <button class="btn btn--primary btn--small header__table" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
+      <button class="btn btn--light btn--small header__table" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
       <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü" data-i18n-aria="menu">
         <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
       </button>
@@ -114,197 +105,180 @@
   <div class="menu" id="menu" hidden>
     <nav class="menu__nav" aria-label="Hauptnavigation" data-i18n-aria="nav.aria">
       <a href="#kueche" data-i18n="nav.1">Küche</a>
-      <a href="#haus" data-i18n="nav.2">Das Haus</a>
-      <a href="#zimmer" data-i18n="nav.3">Übernachten</a>
-      <a href="#umgebung" data-i18n="nav.4">Umgebung</a>
+      <a href="#zeiten" data-i18n="nav.2">Zeiten</a>
+      <a href="#haus" data-i18n="nav.3">Haus</a>
+      <a href="#zimmer" data-i18n="nav.4">Zimmer</a>
       <a href="#anreise" data-i18n="nav.5">Anfahrt</a>
     </nav>
     <div class="menu__cta">
-      <button class="btn btn--primary" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
-      <button class="btn" type="button" data-book data-i18n="cta.room">Zimmer anfragen</button>
-      <a class="menu__tel" href="tel:+4983817601"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>08381 7601</a>
+      <button class="btn btn--light" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
+      <button class="btn btn--ghost-light" type="button" data-book data-i18n="cta.room">Zimmer anfragen</button>
+      <a class="menu__tel" href="tel:+4983817601">08381 7601</a>
     </div>
   </div>
 </header>
 
-<main id="main" class="blatt">
+<main id="main">
 
-<!-- Deckblatt: die Visitenkarte des Hauses, neu gesetzt – Schild links, Name und Wochentabelle rechts -->
-<section class="deck" id="top">
-  <figure class="deck__bild">
+<!-- Erster Bildschirm: links Tannengrün mit Name, Status und zwei Knöpfen – rechts das Schild, randlos -->
+<section class="hero" id="top">
+  <div class="hero__panel">
+    <div class="hero__top">
+      <h1 class="hero__title">Gasthof<br>Hirsch</h1>
+      <p class="hero__line" data-i18n="hero.line">Gut bürgerliche Küche<span class="sep"> · </span><span class="nw">Mittwoch bis Sonntag</span></p>
+    </div>
+    <div class="hero__bottom">
+      <p class="hero__state" aria-live="polite"><span class="dot" id="openDot" aria-hidden="true"></span><span id="openText">Mittwoch bis Sonntag geöffnet</span></p>
+      <div class="hero__cta">
+        <button class="btn btn--light" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
+        <button class="btn btn--ghost-light" type="button" data-book data-i18n="cta.room">Zimmer anfragen</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero__img">
     <picture>
-      <source type="image/webp" srcset="assets/img/schild-320.webp 317w, assets/img/schild-640.webp 634w" sizes="(min-width: 900px) 340px, 62vw">
-      <img src="assets/img/schild-640.jpg" srcset="assets/img/schild-320.jpg 317w, assets/img/schild-640.jpg 634w" sizes="(min-width: 900px) 340px, 62vw"
-           width="634" height="826" fetchpriority="high" alt="Schmiedeeisernes Wirtshausschild «Gasthof Hirsch» mit kupfernem Hirsch und Laterne vor blauem Himmel" data-i18n-alt="deck.alt">
+      <source type="image/webp" srcset="assets/img/schild-640.webp 640w, assets/img/schild-960.webp 960w, assets/img/schild-1280.webp 1280w" sizes="(min-width: 900px) 50vw, 100vw">
+      <img src="assets/img/schild-960.jpg" srcset="assets/img/schild-640.jpg 640w, assets/img/schild-960.jpg 960w, assets/img/schild-1280.jpg 1280w" sizes="(min-width: 900px) 50vw, 100vw"
+           width="960" height="1253" fetchpriority="high" decoding="async" alt="Schmiedeeisernes Wirtshausschild «Gasthof Hirsch» mit kupfernem Hirsch und Laterne vor blauem Himmel" data-i18n-alt="hero.alt">
     </picture>
-    <figcaption data-i18n="deck.cap">Unser Schild an der Lindauer Straße</figcaption>
-  </figure>
-  <div class="deck__text">
-    <h1 class="deck__title">Gasthof <span>Hirsch</span></h1>
-    <p class="deck__lead" data-i18n="deck.lead">Gut bürgerliches Essen. Mittwoch bis Sonntag, mitten in Heimenkirch.</p>
-    <p class="deck__adr" data-i18n="deck.adr">Familie Gaul · Lindauer Straße 1 · 88178 Heimenkirch</p>
+  </div>
+</section>
 
-    <div class="heute" aria-live="polite">
-      <p class="heute__state"><span class="dot" id="openDot" aria-hidden="true"></span><span id="openText">Mittwoch bis Sonntag geöffnet</span></p>
-      <p class="heute__hours" id="openHours">Montag und Dienstag Ruhetag</p>
+<!-- Küche: Gerichte als große Typo-Liste, Gästezitate klein daneben -->
+<section class="sec" id="kueche">
+  <div class="sec__in sec__in--split">
+    <div class="sec__aside">
+      <h2 data-i18n="ku.title">Aus der Küche</h2>
+      <p class="sec__note"><b class="note__num">4,7</b><span data-i18n="ku.rate">von 5 Sternen bei rund 240 Rezensionen auf Google, Stand 5. Oktober 2026.</span></p>
     </div>
-
-    <table class="woche" id="woche">
-      <caption data-i18n="ze.cap">Öffnungszeiten</caption>
-      <thead class="sr-only"><tr><th scope="col" data-i18n="ze.th1">Tag</th><th scope="col" data-i18n="ze.th2">Tagsüber</th><th scope="col" data-i18n="ze.th3">Abends</th></tr></thead>
-      <tbody>
-        <tr data-wd="1"><th scope="row" data-i18n="wd.1">Montag</th><td colspan="2" class="woche__zu" data-i18n="ze.zu">Ruhetag</td></tr>
-        <tr data-wd="2"><th scope="row" data-i18n="wd.2">Dienstag</th><td colspan="2" class="woche__zu" data-i18n="ze.zu">Ruhetag</td></tr>
-        <tr data-wd="3"><th scope="row" data-i18n="wd.3">Mittwoch</th><td>9:30–14:00</td><td>17:30–22:00</td></tr>
-        <tr data-wd="4"><th scope="row" data-i18n="wd.4">Donnerstag</th><td>9:30–14:00</td><td class="woche__leer">–</td></tr>
-        <tr data-wd="5"><th scope="row" data-i18n="wd.5">Freitag</th><td>9:30–14:00</td><td>17:30–24:00</td></tr>
-        <tr data-wd="6"><th scope="row" data-i18n="wd.6">Samstag</th><td>9:30–14:00</td><td>17:30–24:00</td></tr>
-        <tr data-wd="0"><th scope="row" data-i18n="wd.0">Sonntag</th><td>9:30–14:00</td><td class="woche__leer">–</td></tr>
-      </tbody>
-    </table>
-
-    <div class="deck__cta">
-      <button class="btn btn--primary" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
-      <button class="btn" type="button" data-book data-i18n="cta.room">Zimmer anfragen</button>
-      <a class="deck__tel" href="tel:+4983817601"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>08381 7601</a>
+    <div class="sec__main">
+      <p class="lead" data-i18n="ku.lead">«Gut bürgerliches Essen» – so steht es bei uns, und mehr Worte machen wir darum nicht. Was auf den Teller kommt, beschreiben die Gäste.</p>
+      <ol class="speisen">
+        <li>
+          <h3 data-i18n="ku.1t">Hirschgulasch mit Spätzle</h3>
+          <blockquote><p>«Wir haben hier das beste Hirschgulasch seit langem gegessen. Absolut zart, einer tollen Sauce und mit herlichen, selbstgemachten Spätzle.»</p><footer>Thomas N. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></footer></blockquote>
+        </li>
+        <li>
+          <h3 data-i18n="ku.2t">Zwiebelrostbraten</h3>
+          <blockquote><p>«Super Essen, insbesondere der Zwiebelrostbraten.»</p><footer>Dave · <span data-i18n="src.g2019">Google-Rezension, 2019</span></footer></blockquote>
+        </li>
+        <li>
+          <h3 data-i18n="ku.3t">Currywurst mit Pommes</h3>
+          <blockquote><p>«Beste Curry Wurst mit Pommes in der Gegend. Beilagen Salat super ich liebe ihn»</p><footer>Joooy G. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></footer></blockquote>
+        </li>
+        <li>
+          <h3 data-i18n="ku.4t">Und die Portionen</h3>
+          <blockquote><p>«Immer wieder prima, und riesige Portionen.»</p><footer>Marcus K. · <span data-i18n="src.g2020">Google-Rezension, 2020</span></footer></blockquote>
+        </li>
+      </ol>
+      <p class="small" data-i18n="ku.note">Hinweis zur Vorschau: Hier zeigt die fertige Website die aktuelle Karte – Tagesgerichte, Saisonkarte, Getränke. Das Haus hat online bisher keine Speisekarte veröffentlicht, darum bleibt der Platz bewusst frei.</p>
+      <div class="row">
+        <button class="btn btn--dark" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
+        <p data-i18n="ku.feier">Familienfeier oder größere Runde? Am besten kurz anrufen: <a href="tel:+4983817601">08381 7601</a></p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 1 · Aus der Küche: Gerichte wie auf der Karte, statt Preis die Stimme eines Gastes -->
-<section class="teil" id="kueche">
-  <header class="teil__rand">
-    <h2 data-i18n="ku.title">Aus der Küche</h2>
-    <p class="rand__note"><b>4,7</b> <span data-i18n="ku.rate">von 5 Sternen bei rund 240 Rezensionen auf Google. Stand: 5. Oktober 2026.</span></p>
-  </header>
-  <div class="teil__inhalt">
-    <p class="vorspann" data-i18n="ku.lead">«Gut bürgerliches Essen» – so steht es bei uns, und mehr Worte machen wir darum nicht. Was auf den Teller kommt, beschreiben die Gäste.</p>
-    <ul class="karte">
-      <li>
-        <h3 data-i18n="ku.1t">Hirschgulasch mit Spätzle</h3>
-        <blockquote>«Wir haben hier das beste Hirschgulasch seit langem gegessen. Absolut zart, einer tollen Sauce und mit herlichen, selbstgemachten Spätzle.»</blockquote>
-        <p class="karte__src">Thomas N. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></p>
-      </li>
-      <li>
-        <h3 data-i18n="ku.2t">Zwiebelrostbraten</h3>
-        <blockquote>«Super Essen, insbesondere der Zwiebelrostbraten.»</blockquote>
-        <p class="karte__src">Dave · <span data-i18n="src.g2019">Google-Rezension, 2019</span></p>
-      </li>
-      <li>
-        <h3 data-i18n="ku.3t">Currywurst mit Pommes</h3>
-        <blockquote>«Beste Curry Wurst mit Pommes in der Gegend. Beilagen Salat super ich liebe ihn»</blockquote>
-        <p class="karte__src">Joooy G. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></p>
-      </li>
-      <li>
-        <h3 data-i18n="ku.4t">Und die Portionen</h3>
-        <blockquote>«Immer wieder prima, und riesige Portionen.»</blockquote>
-        <p class="karte__src">Marcus K. · <span data-i18n="src.g2020">Google-Rezension, 2020</span></p>
-      </li>
-    </ul>
-    <aside class="hinweis">
-      <h3 data-i18n="ku.note.t">Hier steht bald die Speisekarte</h3>
-      <p data-i18n="ku.note">Hinweis zur Vorschau: An dieser Stelle zeigt die fertige Website die aktuelle Karte – Tagesgerichte, Saisonkarte und Getränke, leicht zu pflegen. Das Haus hat online bisher keine Speisekarte veröffentlicht; darum bleibt der Platz in der Vorschau bewusst leer.</p>
-    </aside>
-    <p class="zeile">
-      <button class="btn btn--primary" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
-      <span data-i18n="ku.feier">Familienfeier oder größere Runde? Am besten kurz anrufen: <a href="tel:+4983817601">08381 7601</a></span>
-    </p>
+<!-- Öffnungszeiten: kompakte zweispaltige Liste auf Grün -->
+<section class="sec sec--dark" id="zeiten">
+  <div class="sec__in sec__in--split">
+    <div class="sec__aside">
+      <h2 data-i18n="ze.title">Öffnungszeiten</h2>
+      <p class="sec__note" id="openHours">Montag und Dienstag Ruhetag</p>
+    </div>
+    <div class="sec__main">
+      <dl class="zeiten">
+        <div><dt data-i18n="wd.1">Montag</dt><dd data-i18n="ze.zu">Ruhetag</dd></div>
+        <div><dt data-i18n="wd.2">Dienstag</dt><dd data-i18n="ze.zu">Ruhetag</dd></div>
+        <div><dt data-i18n="wd.3">Mittwoch</dt><dd><span class="nw">9:30–14:00</span> <span class="und" data-i18n="ze.und">und</span> <span class="nw">17:30–22:00</span></dd></div>
+        <div><dt data-i18n="wd.4">Donnerstag</dt><dd>9:30–14:00</dd></div>
+        <div><dt data-i18n="wd.5">Freitag</dt><dd><span class="nw">9:30–14:00</span> <span class="und" data-i18n="ze.und">und</span> <span class="nw">17:30–24:00</span></dd></div>
+        <div><dt data-i18n="wd.6">Samstag</dt><dd><span class="nw">9:30–14:00</span> <span class="und" data-i18n="ze.und">und</span> <span class="nw">17:30–24:00</span></dd></div>
+        <div><dt data-i18n="wd.0">Sonntag</dt><dd>9:30–14:00</dd></div>
+      </dl>
+      <div class="row">
+        <button class="btn btn--light" type="button" data-table data-i18n="cta.table">Tisch anfragen</button>
+        <p data-i18n="ze.tel">Oder telefonisch: <a href="tel:+4983817601">08381 7601</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- 2 · Das Haus -->
-<section class="teil teil--haus" id="haus">
-  <header class="teil__rand">
-    <h2 data-i18n="haus.title">Das Haus</h2>
-  </header>
-  <div class="teil__inhalt haus">
-    <figure class="haus__fig">
+<!-- Das Haus: ein großes Foto, schmaler Text, Gästestimmen, Umgebung -->
+<section class="sec" id="haus">
+  <div class="sec__in">
+    <figure class="fassade">
       <picture>
-        <source type="image/webp" srcset="assets/img/haus-800.webp 800w, assets/img/haus-1200.webp 1200w" sizes="(min-width: 900px) 600px, 100vw">
-        <img src="assets/img/haus-800.jpg" srcset="assets/img/haus-800.jpg 800w, assets/img/haus-1200.jpg 1200w" sizes="(min-width: 900px) 600px, 100vw"
-             width="800" height="600" loading="lazy" alt="Gasthof Hirsch in Heimenkirch: dunkles Schindelhaus mit grünen Fensterläden und Wirtshausschild am Giebel" data-i18n-alt="haus.alt">
+        <source type="image/webp" srcset="assets/img/haus-800.webp 800w, assets/img/haus-1200.webp 1200w, assets/img/haus-1600.webp 1600w" sizes="(min-width: 1360px) 1280px, 100vw">
+        <img src="assets/img/haus-1200.jpg" srcset="assets/img/haus-800.jpg 800w, assets/img/haus-1200.jpg 1200w, assets/img/haus-1600.jpg 1600w" sizes="(min-width: 1360px) 1280px, 100vw"
+             width="1200" height="900" loading="lazy" decoding="async" alt="Gasthof Hirsch in Heimenkirch: dunkles Schindelhaus mit grünen Fensterläden und Wirtshausschild am Giebel" data-i18n-alt="haus.alt">
       </picture>
       <figcaption data-i18n="haus.cap">Lindauer Straße 1 · Foto: Markt Heimenkirch</figcaption>
     </figure>
-    <div class="haus__text">
-      <p data-i18n="haus.1">Der Hirsch steht in der Mitte von Heimenkirch: ein dunkles Schindelhaus mit grünen Fensterläden, am Giebel das schmiedeeiserne Schild mit dem kupfernen Hirsch.</p>
-      <p data-i18n="haus.2">Familie Gaul führt hier ein Traditions-Gasthaus mit gut bürgerlicher Küche, Bierterrasse und einfachen, originellen Gästezimmern.</p>
-    </div>
-    <div class="buch">
-      <h3 data-i18n="buch.title">Aus dem Gästebuch</h3>
-      <figure>
-        <blockquote>«Das Essen ist gut bürgerlich, mit reichhaltigen Portionen. Das Ambiente ist urig und rustikal. Super nette Inhaber. Wir kommen immer wieder gern.»</blockquote>
-        <figcaption>Carmen M. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></figcaption>
-      </figure>
-      <figure>
-        <blockquote>«Wir kommen seit Jahren in dieses Lokal, urig voller Herzlichkeit!! Als die Kinder noch klein waren und nicht immer leise, kein Problem.»</blockquote>
-        <figcaption>Sabine P. · <span data-i18n="src.g2020">Google-Rezension, 2020</span></figcaption>
-      </figure>
-      <figure>
-        <blockquote>«Gut bürgerliche Küche, mit dem Scharm einer alt würdigen Dorfwirtschaft. Super.»</blockquote>
-        <figcaption>Thomas F. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></figcaption>
-      </figure>
-      <p class="buch__foot"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Gasthof+Hirsch+Lindauer+Str.+1+Heimenkirch" target="_blank" rel="noopener noreferrer" data-i18n="rev.link">Alle Rezensionen auf Google lesen</a>
-        <span data-i18n="rev.src">Zitate aus Google-Rezensionen, Stand 5. Oktober 2026</span></p>
-    </div>
-  </div>
-</section>
+    <div class="sec__in--split haus__grid">
+      <div class="sec__aside">
+        <h2 data-i18n="haus.title">Das Haus</h2>
+      </div>
+      <div class="sec__main">
+        <p class="lead" data-i18n="haus.1">Der Hirsch steht in der Mitte von Heimenkirch: ein dunkles Schindelhaus mit grünen Fensterläden, am Giebel das schmiedeeiserne Schild mit dem kupfernen Hirsch. Familie Gaul führt hier ein Traditions-Gasthaus mit gut bürgerlicher Küche, Bierterrasse und einfachen, originellen Gästezimmern.</p>
+        <ul class="stimmen">
+          <li><blockquote><p>«Das Essen ist gut bürgerlich, mit reichhaltigen Portionen. Das Ambiente ist urig und rustikal. Super nette Inhaber. Wir kommen immer wieder gern.»</p><footer>Carmen M. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></footer></blockquote></li>
+          <li><blockquote><p>«Wir kommen seit Jahren in dieses Lokal, urig voller Herzlichkeit!! Als die Kinder noch klein waren und nicht immer leise, kein Problem.»</p><footer>Sabine P. · <span data-i18n="src.g2020">Google-Rezension, 2020</span></footer></blockquote></li>
+          <li><blockquote><p>«Gut bürgerliche Küche, mit dem Scharm einer alt würdigen Dorfwirtschaft. Super.»</p><footer>Thomas F. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></footer></blockquote></li>
+        </ul>
+        <p class="small"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Gasthof+Hirsch+Lindauer+Str.+1+Heimenkirch" target="_blank" rel="noopener noreferrer" data-i18n="rev.link">Alle Rezensionen auf Google lesen</a> · <span data-i18n="rev.src">Zitate aus Google-Rezensionen, Stand 5. Oktober 2026</span></p>
 
-<!-- 3 · Übernachten: Zimmer als Preisliste, Anfrageleiste nur hier -->
-<section class="teil" id="zimmer">
-  <header class="teil__rand">
-    <h2 data-i18n="zi.title">Übernachten</h2>
-    <p class="rand__note rand__note--zitat">«Super nett und zuvorkommend. Spitzen Frühstück und günstiger Preis.» <span>Jörg B. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></span></p>
-  </header>
-  <div class="teil__inhalt">
-    <p class="vorspann" data-i18n="zi.lead">Im Haus gibt es einfache, originelle Einzel- und Doppelzimmer – für eine Nacht auf der Durchreise oder ein paar Tage im Westallgäu. Morgens gibt es ein reichhaltiges Frühstück.</p>
-    <div id="rooms"></div>
-    <div class="bw" data-bw role="group" aria-label="Zimmer anfragen" data-i18n-aria="bw.aria"></div>
-    <aside class="hinweis">
-      <h3 data-i18n="zi.note.t">Preise und Fotos folgen</h3>
-      <p data-i18n="zi.note">Hinweis zur Vorschau: Zimmerzahl, Ausstattung, aktuelle Preise und Fotos der Zimmer ergänzt das Haus. Bis dahin läuft die Anfrage ohne Preisangabe – den Preis nennt Familie Gaul mit der Antwort.</p>
-    </aside>
-  </div>
-</section>
-
-<!-- 4 · Rund um Heimenkirch: Verzeichnis -->
-<section class="teil" id="umgebung">
-  <header class="teil__rand">
-    <h2 data-i18n="um.title">Rund um Heimenkirch</h2>
-  </header>
-  <div class="teil__inhalt">
-    <p class="vorspann" data-i18n="um.lead">Grüne Wiesen, stille Wälder und sanft geschwungene Hügel: Die Landschaft rund um Heimenkirch ist ein Paradies für Wanderer und Radfahrer.</p>
-    <dl class="verz">
-      <div><dt data-i18n="um.1t">Meckatzer Löwenbräu</dt><dd data-i18n="um.1">Die Brauerei ist als Familienbetrieb in Heimenkirch verwurzelt. Brauereibesichtigungen gibt es im Ortsteil Meckatz.</dd></div>
-      <div><dt data-i18n="um.2t">Wandern und Radfahren</dt><dd data-i18n="um.2">Zahlreiche Wanderwege führen durch die 20 Ortsteile mit ihren Bauernhöfen. Im Sommer: Freibad und Tennisplätze.</dd></div>
-      <div><dt data-i18n="um.3t">Im Winter</dt><dd data-i18n="um.3">Gespurte Langlaufloipen, Rodeln, Eisstockschießen und Winterwanderungen.</dd></div>
-      <div><dt data-i18n="um.4t">Sehenswert</dt><dd data-i18n="um.4">Schloss Syrgenstein, die Pfarrkirche St. Margaretha, die Heimatstube und vier Kapellen in den Ortsteilen.</dd></div>
-    </dl>
-    <p class="klein" data-i18n="um.src">Angaben: Markt Heimenkirch und Gastgeberverzeichnis Westallgäu.</p>
-  </div>
-</section>
-
-<!-- 5 · Der Weg zu uns -->
-<section class="teil" id="anreise">
-  <header class="teil__rand">
-    <h2 data-i18n="arr.title">Der Weg zu&nbsp;uns</h2>
-    <address class="rand__adr">
-      <span>Gasthof Hirsch</span><span>Lindauer Straße 1</span><span>88178 Heimenkirch</span>
-      <a href="tel:+4983817601">08381 7601</a>
-      <a href="mailto:info@gasthaushirsch-heimenkirch.de">info@gasthaushirsch-heimenkirch.de</a>
-    </address>
-  </header>
-  <div class="teil__inhalt">
-    <p class="vorspann" data-i18n="arr.1">Der Hirsch liegt in der Ortsmitte von Heimenkirch im Landkreis Lindau, im bayerischen Westallgäu. Sie erkennen das Haus an der dunklen Schindelfassade und am Schild mit dem Hirsch.</p>
-    <div class="map" id="map">
-      <div class="map__ask">
-        <p data-i18n="map.text">Die Karte wird von OpenStreetMap geladen. Dabei wird Ihre IP-Adresse an die Server der OpenStreetMap Foundation übertragen.</p>
-        <button class="btn btn--primary" type="button" id="mapLoad" data-i18n="map.btn">Karte laden</button>
-        <a class="link" href="datenschutz.html" data-i18n="map.more">Mehr in der Datenschutzerklärung</a>
+        <h3 class="h3" data-i18n="um.title">Rund um Heimenkirch</h3>
+        <dl class="umgebung">
+          <div><dt data-i18n="um.1t">Meckatzer Löwenbräu</dt><dd data-i18n="um.1">Die Brauerei ist als Familienbetrieb in Heimenkirch verwurzelt. Brauereibesichtigungen gibt es im Ortsteil Meckatz.</dd></div>
+          <div><dt data-i18n="um.2t">Wandern und Radfahren</dt><dd data-i18n="um.2">Zahlreiche Wanderwege führen durch die 20 Ortsteile mit ihren Bauernhöfen. Im Sommer: Freibad und Tennisplätze.</dd></div>
+          <div><dt data-i18n="um.3t">Im Winter</dt><dd data-i18n="um.3">Gespurte Langlaufloipen, Rodeln, Eisstockschießen und Winterwanderungen.</dd></div>
+          <div><dt data-i18n="um.4t">Sehenswert</dt><dd data-i18n="um.4">Schloss Syrgenstein, die Pfarrkirche St. Margaretha, die Heimatstube und vier Kapellen in den Ortsteilen.</dd></div>
+        </dl>
+        <p class="small" data-i18n="um.src">Angaben: Markt Heimenkirch und Gastgeberverzeichnis Westallgäu.</p>
       </div>
     </div>
-    <p class="zeile"><a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=47.62948,9.90274" target="_blank" rel="noopener noreferrer" data-i18n="arr.route">Route planen</a>
-      <span data-i18n="arr.coord">Koordinaten: 47.62948, 9.90274</span></p>
+  </div>
+</section>
+
+<!-- Zimmer: zwei Kategorien, Preis auf Anfrage, Dialog -->
+<section class="sec" id="zimmer">
+  <div class="sec__in sec__in--split">
+    <div class="sec__aside">
+      <h2 data-i18n="zi.title">Übernachten</h2>
+      <blockquote class="sec__quote"><p>«Super nett und zuvorkommend. Spitzen Frühstück und günstiger Preis.»</p><footer>Jörg B. · <span data-i18n="src.g2019">Google-Rezension, 2019</span></footer></blockquote>
+    </div>
+    <div class="sec__main">
+      <p class="lead" data-i18n="zi.lead">Im Haus gibt es einfache, originelle Einzel- und Doppelzimmer – für eine Nacht auf der Durchreise oder ein paar Tage im Westallgäu. Morgens gibt es ein reichhaltiges Frühstück.</p>
+      <div id="rooms"></div>
+      <p class="small" data-i18n="zi.note">Hinweis zur Vorschau: Zimmerzahl, Ausstattung, aktuelle Preise und Fotos der Zimmer ergänzt das Haus. Bis dahin läuft die Anfrage ohne Preisangabe – den Preis nennt Familie Gaul mit der Antwort.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Anfahrt: Adresse, Karte nach Klick -->
+<section class="sec" id="anreise">
+  <div class="sec__in sec__in--split">
+    <div class="sec__aside">
+      <h2 data-i18n="arr.title">Anfahrt</h2>
+      <address class="adr">
+        <span>Gasthof Hirsch</span><span>Lindauer Straße 1</span><span>88178 Heimenkirch</span>
+        <a href="tel:+4983817601">08381 7601</a>
+        <a href="mailto:info@gasthaushirsch-heimenkirch.de">info@gasthaushirsch-heimenkirch.de</a>
+      </address>
+    </div>
+    <div class="sec__main">
+      <p class="lead" data-i18n="arr.1">Der Hirsch liegt in der Ortsmitte von Heimenkirch im Landkreis Lindau, im bayerischen Westallgäu. Sie erkennen das Haus an der dunklen Schindelfassade und am Schild mit dem Hirsch.</p>
+      <div class="map" id="map">
+        <div class="map__ask">
+          <p data-i18n="map.text">Die Karte wird von OpenStreetMap geladen. Dabei wird Ihre IP-Adresse an die Server der OpenStreetMap Foundation übertragen.</p>
+          <button class="btn btn--dark" type="button" id="mapLoad" data-i18n="map.btn">Karte laden</button>
+          <a class="link" href="datenschutz.html" data-i18n="map.more">Mehr in der Datenschutzerklärung</a>
+        </div>
+      </div>
+      <p class="small"><a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=47.62948,9.90274" target="_blank" rel="noopener noreferrer" data-i18n="arr.route">Route planen</a> · <span data-i18n="arr.coord">Koordinaten: 47.62948, 9.90274</span></p>
+    </div>
   </div>
 </section>
 
@@ -312,7 +286,8 @@
 
 <footer class="footer">
   <div class="footer__in">
-    <p class="footer__name"><svg class="brand__mark" aria-hidden="true"><use href="#i-geweih"/></svg>Gasthof Hirsch · Familie Gaul · Lindauer Straße 1 · 88178 Heimenkirch</p>
+    <p class="footer__name">Gasthof Hirsch</p>
+    <p class="footer__adr">Familie Gaul · Lindauer Straße 1 · 88178 Heimenkirch · <a href="tel:+4983817601">08381 7601</a></p>
     <nav class="footer__nav" aria-label="Rechtliches" data-i18n-aria="foot.legal">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html" data-i18n="foot.privacy">Datenschutz</a>
@@ -356,7 +331,7 @@
   </div>
 </div>
 
-<script src="assets/js/i18n.js?v=2"></script>
-<script src="assets/js/app.js?v=1"></script>
+<script src="assets/js/i18n.js?v=4"></script>
+<script src="assets/js/app.js?v=4"></script>
 </body>
 </html>

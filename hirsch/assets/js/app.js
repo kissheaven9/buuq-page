@@ -69,7 +69,6 @@
     var md = $('meta[name="description"]');
     if (md) md.content = meta.desc;
     renderRooms();
-    renderWidgets();
     renderOpen();
     if (!$('#bookModal').hidden) renderBook();
     if (!$('#tableModal').hidden) renderTable();
@@ -147,7 +146,6 @@
       var name = new Intl.DateTimeFormat(LOCALE[lang], { weekday: 'long' }).format(addDays(TODAY, d));
       line.textContent = t('open.next').replace('{d}', name);
     }
-    $$('#woche tr[data-wd]').forEach(function (tr) { tr.classList.toggle('is-today', +tr.getAttribute('data-wd') === wd); });
   }
 
   /* ---------- Demo-Verfügbarkeit (deterministisch, ohne Backend) ---------- */
@@ -176,34 +174,17 @@
   function nightsLabel(n) { return n + '\u00a0' + (n === 1 ? t('night1') : t('nightN')); }
   function roomById(id) { return ROOMS.filter(function (r) { return r.id === id; })[0]; }
 
-  /* ---------- Zimmerkarten (ohne Fotos und ohne Preise: beides hat das Haus nicht veröffentlicht) ---------- */
+  /* ---------- Zimmer: zwei Zeilen (ohne Fotos und ohne Preise: beides hat das Haus nicht veröffentlicht) ---------- */
   function renderRooms() {
-    $('#rooms').innerHTML = '<table class="zt"><thead><tr><th scope="col">' + t('zt.room') + '</th><th scope="col">' + t('zt.for') +
-      '</th><th scope="col">' + t('zt.incl') + '</th><th scope="col">' + t('zt.price') + '</th><td></td></tr></thead><tbody>' +
-      ROOMS.map(function (r) {
-        var l = L(r);
-        return '<tr><th scope="row"><span class="zt__name">' + esc(l.name) + '</span><span class="zt__short">' + esc(l.short) + '</span></th>' +
-          '<td data-l="' + t('zt.for') + '">' + esc(l.cap) + '</td><td data-l="' + t('zt.incl') + '">' + esc(l.points[0]) + '</td>' +
-          '<td data-l="' + t('zt.price') + '" class="zt__preis">' + t('room.price') + '</td>' +
-          '<td class="zt__btn"><button class="btn btn--small" type="button" data-book data-room="' + r.id + '" aria-label="' +
-          esc(l.name + ': ' + t('bw.btn')) + '">' + t('room.ask') + '</button></td></tr>';
-      }).join('') + '</tbody></table>';
-  }
-
-  /* ---------- Buchungsleiste ---------- */
-  function renderWidgets() {
-    var html =
-      '<button class="bw__field" type="button" data-book><span class="bw__label">' + t('bw.in') + '</span>' +
-      '<span class="bw__value' + (state.from ? '' : ' is-empty') + '">' +
-      (state.from ? fmtDate(state.from, true) : t('bw.pick')) + '</span></button>' +
-      '<button class="bw__field" type="button" data-book><span class="bw__label">' + t('bw.out') + '</span>' +
-      '<span class="bw__value' + (state.to ? '' : ' is-empty') + '">' +
-      (state.to ? fmtDate(state.to, true) : t('bw.pick')) + '</span></button>' +
-      '<button class="bw__field" type="button" data-book><span class="bw__label">' + t('bw.guests') + '</span>' +
-      '<span class="bw__value">' + personsLabel(state.persons) + '</span></button>' +
-      '<button class="btn btn--primary bw__btn" type="button" data-book>' + t('bw.btn') +
-      '<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>';
-    $$('[data-bw]').forEach(function (el) { el.innerHTML = html; });
+    var box = $('#rooms');
+    if (!box) return;
+    box.innerHTML = '<ul class="rooms">' + ROOMS.map(function (r) {
+      var l = L(r);
+      return '<li class="room"><div><h3 class="room__name">' + esc(l.name) + '</h3><p class="room__cap">' + esc(l.cap) + ' · ' + esc(l.points.join(' · ')) + '</p></div>' +
+        '<div><p class="room__text">' + esc(l.short) + '</p><div class="room__right"><p class="room__price">' + t('room.price') + '</p>' +
+        '<button class="btn btn--ghost-dark btn--small" type="button" data-book data-room="' + r.id + '" aria-label="' +
+        esc(l.name + ': ' + t('bw.btn')) + '">' + t('room.ask') + '</button></div></div></li>';
+    }).join('') + '</ul>';
   }
 
   /* ---------- Modale Fenster ---------- */
@@ -252,7 +233,6 @@
     }
     if (!state.month) state.month = new Date((state.from || TODAY).getFullYear(), (state.from || TODAY).getMonth(), 1);
     renderBook();
-    renderWidgets();
     openModal($('#bookModal'));
   }
 
@@ -330,7 +310,7 @@
     } else {
       state.to = d;
     }
-    renderCal(); renderRoomList(); renderWidgets();
+    renderCal(); renderRoomList();
     typo($('#bookBody'));
     refocusIn('#bookBody', '[data-day="' + s + '"]');
   }
@@ -364,10 +344,9 @@
       else {
         anyFree = true;
         right = '<p class="bkr__price"><b>' + t('bk.free') + '</b><span>' + nightsLabel(nights) + ' · ' + t('room.price') + '</span></p>' +
-          '<button class="btn btn--primary btn--small" type="button" data-pick="' + r.id + '">' + t('bk.select') + '</button>';
+          '<button class="btn btn--dark btn--small" type="button" data-pick="' + r.id + '">' + t('bk.select') + '</button>';
       }
       return '<li class="bkr' + (off ? ' is-off' : '') + '">' +
-        '<span class="bkr__img"><svg class="ico" aria-hidden="true"><use href="#i-bed"/></svg></span>' +
         '<div class="bkr__info"><h4>' + esc(l.name) + '</h4><p>' + esc(l.cap) + '</p></div>' +
         '<div class="bkr__right">' + right + '</div></li>';
     }).join('');
@@ -417,7 +396,7 @@
       field('f', state.form, 'msg', 'textarea', t('f.msg'), 'off', false) +
       checkbox('f', 'consent', t('f.consent'), false, '', true) +
       '<div class="form__actions"><button class="link" type="button" data-back>' + t('bk.back') + '</button>' +
-      '<button class="btn btn--primary" type="submit">' + t('f.submit') + '</button></div></form>' +
+      '<button class="btn btn--dark" type="submit">' + t('f.submit') + '</button></div></form>' +
       summaryHtml() + '</div>';
   }
   function step3Html() {
@@ -427,7 +406,7 @@
       '<p>' + esc(t('ok.text').replace('{email}', state.form.email)) + '</p>' +
       '<p class="ok__no">' + t('ok.no') + ': <b>' + no + '</b></p>' + summaryHtml() +
       '<p class="ok__demo">' + t('ok.demo') + '</p>' +
-      '<button class="btn btn--primary" type="button" data-close>' + t('ok.close') + '</button></div>';
+      '<button class="btn btn--dark" type="button" data-close>' + t('ok.close') + '</button></div>';
   }
 
   function checker(form, pfx) {
@@ -471,7 +450,7 @@
         '<h3 class="ok__title">' + esc(t('tok.title').replace('{name}', f.name.split(' ')[0])) + '</h3>' +
         '<p>' + esc(t('tok.text').replace('{persons}', personsLabel(+f.persons)).replace('{date}', fmtDate(d, true)).replace('{time}', f.time)) + '</p>' +
         '<p class="ok__demo">' + t('tok.demo') + '</p>' +
-        '<button class="btn btn--primary" type="button" data-close>' + t('ok.close') + '</button></div>';
+        '<button class="btn btn--dark" type="button" data-close>' + t('ok.close') + '</button></div>';
       typo(body);
       return;
     }
@@ -496,7 +475,7 @@
       field('t', f, 'msg', 'textarea', t('t.msg'), 'off', false) +
       '<p class="form__note">' + t('t.note') + '</p>' +
       '<div class="form__actions"><a class="link" href="tel:+4983817601">' + TEL + '</a>' +
-      '<button class="btn btn--primary" type="submit">' + t('t.submit') + '</button></div></form>';
+      '<button class="btn btn--dark" type="submit">' + t('t.submit') + '</button></div></form>';
     typo(body);
   }
   function validateTable(form) {
@@ -565,12 +544,12 @@
     }
     if (e.target.closest('[data-cal-reset]')) {
       state.from = state.to = null;
-      renderCal(); renderRoomList(); renderWidgets(); typo($('#bookBody')); return;
+      renderCal(); renderRoomList(); typo($('#bookBody')); return;
     }
     if ((el = e.target.closest('[data-step]'))) {
       var d = +el.getAttribute('data-step');
       state.persons = Math.min(MAX_PERSONS, Math.max(1, state.persons + d));
-      renderGuests(); renderRoomList(); renderWidgets(); typo($('#bookBody'));
+      renderGuests(); renderRoomList(); typo($('#bookBody'));
       refocusIn('#bookBody', '[data-step="' + d + '"]');
       return;
     }
@@ -620,7 +599,7 @@
   });
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', function () { if (window.innerWidth >= 1180) toggleMenu(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 1100) toggleMenu(false); });
 
   /* ---------- Start ---------- */
   rememberGerman();
