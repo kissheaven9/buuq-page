@@ -41,7 +41,7 @@ window.AZ = {
   MENU: [
     {
       id: 'vorweg', tab: 'Vorweg', title: 'Vorspeisen, Suppen & Salate',
-      photos: [['salat', 'Salat vom Buffet – soviel und sooft Sie mögen'], ['suppe', 'Curry-Chili-Suppe mit Riesengarnele']],
+      photos: [['buffet', 'Salatbuffet unter dem Gewölbe'], ['salat', 'Salat vom Buffet – soviel und sooft Sie mögen'], ['suppe', 'Curry-Chili-Suppe mit Riesengarnele']],
       groups: [
         { h: 'Vorspeisen', items: [
           { n: 'Carpaccio', d: 'Hauchdünne Scheiben vom Rind, Kirschtomate, Trüffelöl, Rucola, frische Champignons, Parmesan und Knoblauchbrot', p: 15.3 },
@@ -79,7 +79,7 @@ window.AZ = {
     },
     {
       id: 'steaks', tab: 'Steaks', title: 'Von der Weide',
-      photos: [['ribeye', 'Rib-Eye-Steak, medium, mit Knoblauchbrot und Kräuterbutter'], ['filet', 'Filetsteak']],
+      photos: [['ribeye', 'Rib-Eye-Steak, medium, mit Knoblauchbrot und Kräuterbutter'], ['filet', 'Filetsteak'], ['steak-ofenkartoffel', 'Steak mit Ofenkartoffel und Sour-Cream']],
       intro: 'Unsere Steaks stammen von ganzjährig freilaufenden Rindern aus den besten Gegenden Südamerikas. Die Grammangaben beziehen sich auf das Frischgewicht. Wir grillen über Lavasteinen, ganz nach Ihrem Wunsch: englisch, medium oder durch. Dazu Knoblauchbrot und hausgemachte Kräuterbutter.',
       foot: '* Ab Garstufe medium/durch erlauben wir uns, das Fleisch zu teilen (Butterfly).',
       groups: [
@@ -96,7 +96,7 @@ window.AZ = {
     },
     {
       id: 'mehr', tab: 'Burger & mehr', title: 'Burger & Co., Pfanne und Grill',
-      photos: [['burger', 'New York Burger mit Süßkartoffel-Sticks'], ['mixed-grill', 'Mixed Grill mit Ofenkartoffel und Sour-Cream']],
+      photos: [['burger', 'New York Burger mit Süßkartoffel-Sticks'], ['cheeseburger', 'Cheeseburger mit Kartoffelecken'], ['mixed-grill', 'Mixed Grill mit Ofenkartoffel und Sour-Cream']],
       groups: [
         { h: 'Burger & Co.', note: 'Patties vom täglich frisch gewolften reinen Black-Angus-Rind, medium-durch gegrillt, im Brioche-Brötchen. Dazu Pommes frites.', items: [
           { n: 'Hamburger', d: 'Salatblätter, Salatgurke, hausgemachte Burgersauce', p: 16.9 },
@@ -130,6 +130,7 @@ window.AZ = {
     },
     {
       id: 'veggie', tab: 'Vegetarisch & vegan', title: 'Vegetarisch & vegan',
+      photos: [['veggie-burger', 'Veggie Italy-Burger mit Pommes']],
       groups: [
         { h: 'Specials', items: [
           { n: 'Veggie Italy-Burger', d: 'Gemüsepatty, Cheddarcheese, Basilikumpesto, Salat, Salatgurke · mit Salt & Vinegar Chips', p: 15.5, t: ['veg'] },
@@ -168,6 +169,7 @@ window.AZ = {
     },
     {
       id: 'beilagen', tab: 'Beilagen & Saucen', title: 'Beilagen, Gemüse & Saucen',
+      photos: [['gratin', 'Kartoffelgratin, hausgemacht'], ['burger-ecken', 'Kartoffelecken mit Sour-Cream']],
       groups: [
         { h: 'Beilagen', items: [
           { n: 'Ofenkartoffel', d: 'mit Sour-Cream', p: 6.5, t: ['veg'] },

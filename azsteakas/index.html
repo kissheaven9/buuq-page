@@ -28,7 +28,7 @@
   <link rel="preload" href="assets/fonts/BarlowCondensed-600-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/steak-800.webp 800w, assets/img/steak-1180.webp 1180w" imagesizes="(max-width: 760px) 100vw, 50vw">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5">
 
   <script type="application/ld+json">
   {
@@ -79,7 +79,7 @@
     <a href="#kontakt">Kontakt</a>
   </nav>
   <div class="header__now">
-    <span class="status" data-status aria-live="polite"></span>
+    <span class="status" data-status="short" aria-live="polite"></span>
     <a class="btn btn--primary" href="#reservieren">Tisch reservieren</a>
   </div>
   <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menü öffnen">
@@ -126,9 +126,9 @@
   </section>
 
   <section class="menu" id="karte">
-    <div class="section__head">
+    <div class="menu__head">
       <h2>Speisekarte</h2>
-      <p>Alle Preise in Euro, inkl. gesetzlicher Mehrwertsteuer und Service. Stand Oktober 2026.</p>
+      <p>Acht Kategorien, rund 100 Gerichte. Alle Preise in Euro inkl. Mehrwertsteuer und Service, Stand Oktober 2026. Mittagsgerichte stehen weiter unten in der <a href="#mittag">Mittagskarte</a>.</p>
     </div>
     <div class="menu__bar">
       <div class="tabs" role="tablist" aria-label="Speisekarte nach Kategorien" data-tabs></div>
@@ -139,6 +139,10 @@
       </div>
     </div>
     <div class="menu__panel" data-panel role="tabpanel"></div>
+    <div class="menu__end">
+      <p>Ende der Speisekarte. Zutaten und Allergene erklärt Ihnen das Team am Tisch.</p>
+      <a class="btn btn--primary" href="#reservieren">Tisch reservieren</a>
+    </div>
   </section>
 
   <section class="lunch" id="mittag">
@@ -147,7 +151,13 @@
       <p class="lunch__meta">Montag bis Freitag, 11:30–14:30 Uhr · täglich wechselnd · gültig ab <span data-lunch-from></span></p>
       <p class="lunch__price"><span>Mittagsgericht <b data-lunch-price></b></span><span>vegetarisch / vegan <b data-lunch-price-veg></b></span><span>Tagessuppe gratis von der Suppenstation</span></p>
     </div>
-    <ol class="lunch__days" data-lunch></ol>
+    <div class="lunch__body">
+      <ol class="lunch__days" data-lunch></ol>
+      <figure class="pic lunch__pic">
+        <picture><source type="image/webp" srcset="assets/img/buffet.webp"><img src="assets/img/buffet.jpg" width="750" height="562" alt="Buffetstation unter dem Gewölbe" loading="lazy"></picture>
+        <figcaption>Suppenstation und Salatbuffet unter dem Gewölbe<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="book" id="reservieren">
@@ -237,11 +247,8 @@
       </a>
     </div>
     <div class="stars">
-      <div>
-        <p class="stars__lead">Drei von vier Gästen geben <b>fünf Sterne</b></p>
-        <p>Verteilung der 2.189 Google-Rezensionen. Nur zehn Gäste haben ein oder zwei Sterne vergeben.</p>
-      </div>
-      <ul class="bars" aria-label="Sterneverteilung bei Google">
+      <p class="stars__lead">Drei von vier Gästen geben <b>fünf Sterne</b></p>
+      <ul class="bars" aria-label="Sterneverteilung der 2.189 Google-Rezensionen">
         <li><span>5</span><i style="--w: 73%"></i><span>73 %</span></li>
         <li><span>4</span><i style="--w: 21%"></i><span>21 %</span></li>
         <li><span>3</span><i style="--w: 6%"></i><span>6 %</span></li>
@@ -249,24 +256,31 @@
         <li><span>1</span><i style="--w: 1%"></i><span>&lt; 1 %</span></li>
       </ul>
     </div>
-    <div class="praise">
-      <div><h3>Fleischqualität</h3><p>Zartheit, Geschmack und Garstufe auf den Punkt – das loben Gäste nahezu einhellig.</p></div>
-      <div><h3>Service</h3><p>Freundlich, aufmerksam, schnell: Speisen kommen zügig, auch wenn das Haus voll ist.</p></div>
-      <div><h3>Atmosphäre</h3><p>Gewölbe, warmes Licht, zwei Etagen – „gemütlich und einladend“.</p></div>
-      <div><h3>Preis-Leistung</h3><p>Faire Preise für die Qualität, besonders mittags mit Suppe inklusive.</p></div>
-      <p class="praise__src">Auswertung von über 3.000 Bewertungen auf neun Portalen, werkenntdenbesten.de, Oktober 2026. Kritik gibt es vereinzelt bei Wartezeiten an vollen Abenden – darum: <a href="#reservieren">reservieren</a>.</p>
-    </div>
-    <ul class="quotes quotes--4">
+    <ul class="tiles">
+      <li class="tile">
+        <picture><source type="image/webp" srcset="assets/img/hueftsteak.webp"><img src="assets/img/hueftsteak.jpg" width="750" height="562" alt="Hüftsteak mit grünen Bohnen" loading="lazy"></picture>
+        <h3>Fleisch</h3><p>„Auf den Punkt“ – zart, würzig, richtig gegart.</p>
+      </li>
+      <li class="tile">
+        <picture><source type="image/webp" srcset="assets/img/team-bar.webp"><img src="assets/img/team-bar.jpg" width="708" height="398" alt="Service an der Bar" loading="lazy"></picture>
+        <h3>Service</h3><p>Freundlich und schnell, auch am vollen Abend.</p>
+      </li>
+      <li class="tile">
+        <picture><source type="image/webp" srcset="assets/img/gewoelbe.webp"><img src="assets/img/gewoelbe.jpg" width="641" height="427" alt="Gewölbe mit roten Lampen" loading="lazy"></picture>
+        <h3>Atmosphäre</h3><p>Gewölbe, warmes Licht, zwei Etagen.</p>
+      </li>
+      <li class="tile">
+        <picture><source type="image/webp" srcset="assets/img/burger-ecken.webp"><img src="assets/img/burger-ecken.jpg" width="750" height="562" alt="Burger mit Kartoffelecken" loading="lazy"></picture>
+        <h3>Preis-Leistung</h3><p>Große Portionen, mittags mit Suppe inklusive.</p>
+      </li>
+    </ul>
+    <ul class="quotes quotes--3">
       <li class="quote">
         <blockquote>„Sehr gut! Das Essen war super lecker, der Service ausgesprochen freundlich und aufmerksam.“</blockquote>
         <footer>A.E. Design · August 2026 · Google</footer>
       </li>
       <li class="quote">
-        <blockquote>„Man hat super essen und einen schönen Abend!“</blockquote>
-        <footer>Martin Heigemeir · August 2026 · Google</footer>
-      </li>
-      <li class="quote">
-        <blockquote>„Wir waren hier, um ein Firmenevent abzuschließen, und haben es sehr genossen. Die Steaks waren alle auf den Punkt und sehr lecker!“</blockquote>
+        <blockquote>„Wir waren hier, um ein Firmenevent abzuschließen. Die Steaks waren alle auf den Punkt und sehr lecker!“</blockquote>
         <footer>Gaumenfreund1555134 · Juli 2026 · <a href="https://www.speisekarte.de/augsburg/restaurant/steakhaus_azsteakas/bewertung" target="_blank" rel="noopener noreferrer">speisekarte.de</a></footer>
       </li>
       <li class="quote">
@@ -274,13 +288,31 @@
         <footer>Heiner Anwander · 2024 · Google</footer>
       </li>
     </ul>
+    <p class="reviews__src">Themen aus der Auswertung von über 3.000 Bewertungen (werkenntdenbesten.de, Oktober 2026). An vollen Abenden kann es Wartezeit geben – <a href="#reservieren">reservieren Sie</a>.</p>
+  </section>
+
+  <section class="meat" id="metzgerei">
+    <div class="meat__text">
+      <h2>Eigene Metzgerei</h2>
+      <p>Wir zerlegen unser Fleisch selbst – in der eigenen Metzgerei, aus der auch andere Steakhäuser beliefert werden. Die besten Stücke bleiben im Haus: ganzjährig freilaufende Rinder aus Argentinien und Südamerika, ausgewählte Teile reifen im Reifeschrank im Restaurant.</p>
+      <ul class="meat__facts">
+        <li><b>Zerlegt im Haus</b><span>eigene Metzgerei, tägliche Auswahl</span></li>
+        <li><b>Lavasteingrill</b><span>englisch, medium oder durch – nach Wunsch</span></li>
+        <li><b>Reifeschrank</b><span>Azsteakas Prime Beef nach Verfügbarkeit</span></li>
+        <li><b>Frischgewicht</b><span>Grammangaben vor dem Grillen, Butterfly ab medium</span></li>
+      </ul>
+      <button class="btn btn--primary" type="button" data-goto-tab="steaks">Steaks in der Karte</button>
+    </div>
+    <figure class="pic meat__pic">
+      <picture><source type="image/webp" srcset="assets/img/ribeye.webp"><img src="assets/img/ribeye.jpg" width="750" height="562" alt="Rib-Eye-Steak medium mit Knoblauchbrot" loading="lazy"></picture>
+      <figcaption>Rib-Eye vom Lavasteingrill<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
+    </figure>
   </section>
 
   <section class="house" id="haus">
     <div class="house__text">
       <h2>Das Haus</h2>
-      <p>Steakhaus im Herzen von Augsburg, Ludwigstraße 19, auf zwei Etagen unter alten Gewölben. Die Steaks stammen von ganzjährig freilaufenden Rindern aus Argentinien und Südamerika und kommen über Lavasteinen auf den Grill – englisch, medium oder durch. Ausgewählte Stücke reifen im Reifeschrank im Restaurant.</p>
-      <p>Dazu das Salatbuffet: soviel und sooft Sie mögen, mit vier hausgemachten Dressings. Mittags gibt es Montag bis Freitag ein wechselndes Gericht mit Tagessuppe von der Suppenstation.</p>
+      <p>Steakhaus im Herzen von Augsburg, Ludwigstraße 19, auf zwei Etagen unter alten Gewölben. Unten die Bar und das Salatbuffet, oben der ruhigere Gastraum. Mittags wechselndes Gericht mit Tagessuppe, abends Steaks, Burger und Fisch vom Lavasteingrill.</p>
       <ul class="facts">
         <li><b>Lage</b><span>Innenstadt, 5 Gehminuten vom Rathausplatz</span></li>
         <li><b>Plätze</b><span>zwei Etagen, Hochstühle für Kinder</span></li>
@@ -296,20 +328,20 @@
         <figcaption>Eingang Ludwigstraße 19<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
       </figure>
       <figure class="pic">
-        <picture><source type="image/webp" srcset="assets/img/gewoelbe.webp"><img src="assets/img/gewoelbe.jpg" width="641" height="427" alt="Gastraum unter Gewölbe mit roten Lampen und Lederbänken" loading="lazy"></picture>
-        <figcaption>Gewölbe im Erdgeschoss<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
-      </figure>
-      <figure class="pic">
         <picture><source type="image/webp" srcset="assets/img/gastraum.webp"><img src="assets/img/gastraum.jpg" width="999" height="666" alt="Gäste an Holztischen im Gastraum" loading="lazy"></picture>
         <figcaption>Gastraum<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
+      </figure>
+      <figure class="pic">
+        <picture><source type="image/webp" srcset="assets/img/kinderstuhl.webp"><img src="assets/img/kinderstuhl.jpg" width="750" height="562" alt="Gedeckter Tisch mit Hochstuhl" loading="lazy"></picture>
+        <figcaption>Tische mit Hochstuhl<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
       </figure>
     </div>
   </section>
 
   <section class="bar" id="bar">
     <figure class="pic">
-      <picture><source type="image/webp" srcset="assets/img/bar.webp"><img src="assets/img/bar.jpg" width="1000" height="750" alt="Holzbar mit Gläserregal und Zapfhahn" loading="lazy"></picture>
-      <figcaption>Die Bar<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
+      <picture><source type="image/webp" srcset="assets/img/lounge.webp"><img src="assets/img/lounge.jpg" width="750" height="562" alt="Lederbänke und rote Lampen im Gewölbe am Abend" loading="lazy"></picture>
+      <figcaption>Abends im Gewölbe<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
     </figure>
     <div class="bar__text">
       <h2>Feierabend an der Bar</h2>
@@ -322,14 +354,17 @@
   <section class="events" id="feiern">
     <div class="events__text">
       <h2>Feiern &amp; Firmenevents</h2>
-      <p>Geburtstag, Teamabend, Abschluss eines Firmenevents: Für Gruppen ab neun Personen stellen wir den Tisch zusammen und stimmen Menü und Ablauf mit Ihnen ab. Das Salatbuffet und der Lavasteingrill funktionieren auch für 30 Gäste.</p>
+      <p>Geburtstag, Teamabend, Abschluss eines Firmenevents: Für Gruppen ab neun Personen stellen wir den Tisch zusammen und stimmen Menü und Ablauf mit Ihnen ab. Salatbuffet, Lavasteingrill und zwei Etagen machen auch größere Runden einfach.</p>
       <p>Für geschlossene Veranstaltungen und die Anmietung von Räumen gelten unsere AGB für Bankette und Veranstaltungen.</p>
+      <div class="events__contact">
+        <a class="btn btn--primary" href="mailto:info@azsteakas.de?subject=Anfrage%20Gruppe%20%2F%20Firmenevent">Anfrage per E-Mail</a>
+        <a class="btn btn--ghost" href="tel:+4982142070936">0821 420 70 936</a>
+      </div>
     </div>
-    <div class="events__contact">
-      <p>Anfrage mit Datum, Personenzahl und Anlass – wir melden uns am selben Tag.</p>
-      <a class="btn btn--primary" href="mailto:info@azsteakas.de?subject=Anfrage%20Gruppe%20%2F%20Firmenevent">Anfrage per E-Mail</a>
-      <a class="btn btn--ghost" href="tel:+4982142070936">0821 420 70 936</a>
-    </div>
+    <figure class="pic">
+      <picture><source type="image/webp" srcset="assets/img/gewoelbe.webp"><img src="assets/img/gewoelbe.jpg" width="641" height="427" alt="Gesellschaft an langen Tischen unter dem Gewölbe" loading="lazy"></picture>
+      <figcaption>Lange Tafeln unter dem Gewölbe<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
+    </figure>
   </section>
 
   <section class="vouchers" id="gutscheine">
@@ -337,7 +372,10 @@
       <h2>Gutscheine</h2>
       <p>Einlösbar in allen vier Restaurants der Gruppe. Betrag frei wählbar.</p>
     </div>
-    <div class="vouchers__grid">
+    <div class="vouchers__grid vouchers__grid--pic">
+      <figure class="pic vouchers__pic">
+        <picture><source type="image/webp" srcset="assets/img/gutschein.webp"><img src="assets/img/gutschein.jpg" width="600" height="400" alt="Geschenkgutschein des Azsteakas" loading="lazy"></picture>
+      </figure>
       <article class="voucher">
         <h3>Selbst ausdrucken</h3>
         <p>Sie erhalten per E-Mail einen einlösbaren QR-Code und einen Gutschein zum Ausdrucken. Zahlbar mit Kreditkarte.</p>
@@ -358,14 +396,22 @@
   <section class="jobs" id="karriere">
     <div class="jobs__text">
       <h2>Karriere</h2>
-      <p>Service oder Küche, Voll- oder Teilzeit, sofort oder später: Wir suchen Menschen, die ihr Handwerk mit Leidenschaft machen, zuverlässig sind und gern im Team arbeiten. Quereinsteiger mit Ehrgeiz sind willkommen – alles andere besprechen wir.</p>
-      <p>Mit vier Restaurants gehören wir zu den größeren Anbietern der gehobenen Gastronomie in Augsburg. Unsere Küche ist mehrfach ausgezeichnet, das Team arbeitet seit Jahren zusammen – das gibt Sicherheit in einem wertebasierten Umfeld.</p>
+      <p>Mit vier Restaurants gehören wir zu den größeren Anbietern der gehobenen Gastronomie in Augsburg. Das Team arbeitet seit Jahren zusammen, die Küche ist mehrfach ausgezeichnet – das gibt Sicherheit in einem wertebasierten Umfeld. Wir suchen Menschen, die ihr Handwerk mit Leidenschaft machen, zuverlässig sind und gern im Team arbeiten.</p>
+      <ul class="jobs__list">
+        <li><b>Service</b><span>Voll- oder Teilzeit, sofort oder später</span></li>
+        <li><b>Küche</b><span>Koch, Jungkoch, Vorbereitung – Voll- oder Teilzeit</span></li>
+        <li><b>Quereinstieg</b><span>mit Ehrgeiz und Begeisterung willkommen</span></li>
+      </ul>
+      <div class="jobs__contact">
+        <p class="jobs__who">Grit Matanda freut sich auf Anruf oder Mail – auch bei Fragen zur Vergütung.</p>
+        <a class="btn btn--primary" href="mailto:info@azsteakas.de?subject=Bewerbung">Bewerbung per E-Mail</a>
+        <a class="btn btn--ghost" href="tel:+4982142070936">0821 420 70 936</a>
+      </div>
     </div>
-    <div class="jobs__contact">
-      <p class="jobs__who">Grit Matanda freut sich auf Anruf oder Mail.</p>
-      <a class="btn btn--ghost" href="tel:+4982142070936">0821 420 70 936</a>
-      <a class="btn btn--ghost" href="mailto:info@azsteakas.de?subject=Bewerbung">Bewerbung per E-Mail</a>
-    </div>
+    <figure class="pic jobs__pic">
+      <picture><source type="image/webp" srcset="assets/img/team-bar.webp"><img src="assets/img/team-bar.jpg" width="708" height="398" alt="Service-Team an der Bar" loading="lazy"></picture>
+      <figcaption>Service an der Bar<span class="pic__src">Foto: Gast auf Yelp</span></figcaption>
+    </figure>
   </section>
 
   <section class="contact" id="kontakt">
@@ -425,7 +471,7 @@
   </div>
 </div>
 
-<script src="assets/js/menu.js?v=4"></script>
-<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/menu.js?v=5"></script>
+<script src="assets/js/app.js?v=5"></script>
 </body>
 </html>

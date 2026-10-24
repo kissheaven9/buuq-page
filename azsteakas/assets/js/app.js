@@ -52,17 +52,19 @@
     var day = now.getDay(), h = D.HOURS[day], m = now.getHours() * 60 + now.getMinutes();
     if (m >= mins(h.open) && m < mins(h.close)) {
       var left = mins(h.close) - m;
-      return { open: true, text: left <= 60 ? 'Jetzt geöffnet · Küche schließt in ' + left + ' Min' : 'Jetzt geöffnet · Küche bis ' + h.close + ' Uhr' };
+      return left <= 60
+        ? { open: true, text: 'Jetzt geöffnet · Küche schließt in ' + left + ' Min', short: 'Küche schließt in ' + left + ' Min' }
+        : { open: true, text: 'Jetzt geöffnet · Küche bis ' + h.close + ' Uhr', short: 'Geöffnet · Küche bis ' + h.close };
     }
-    if (m < mins(h.open)) return { open: false, text: 'Heute geschlossen bis ' + h.open + ' Uhr' };
+    if (m < mins(h.open)) return { open: false, text: 'Heute geschlossen bis ' + h.open + ' Uhr', short: 'Geschlossen · ab ' + h.open };
     var next = D.HOURS[(day + 1) % 7];
-    return { open: false, text: 'Jetzt geschlossen · morgen ab ' + next.open + ' Uhr' };
+    return { open: false, text: 'Jetzt geschlossen · morgen ab ' + next.open + ' Uhr', short: 'Geschlossen · morgen ' + next.open };
   }
 
   function renderStatus() {
     var st = openState(new Date());
     $$('[data-status]').forEach(function (el) {
-      el.textContent = st.text;
+      el.textContent = el.getAttribute('data-status') === 'short' ? st.short : st.text;
       el.classList.toggle('is-open', st.open);
       el.classList.toggle('is-closed', !st.open);
     });
