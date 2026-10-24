@@ -134,7 +134,9 @@
         '<ul class="dishes">' + items.map(dishHtml).join('') + '</ul></div>';
     }).join('');
     var active = Object.keys(menuState.filters).filter(function (k) { return menuState.filters[k]; }).map(function (k) { return TAG_LABEL[k]; });
-    panel.innerHTML = '<div class="menu__title"><h3>' + esc(cat.title) + '</h3>' + (cat.intro ? '<p>' + esc(cat.intro) + '</p>' : '') + '</div>' +
+    var photos = cat.photos && !active.length ? '<div class="menu__photos' + (cat.photos.length === 1 ? ' menu__photos--1' : '') + '">' +
+      cat.photos.map(function (ph) { return pic(ph[0], ph[1], 'Foto: Gast auf Yelp'); }).join('') + '</div>' : '';
+    panel.innerHTML = '<div class="menu__title"><h3>' + esc(cat.title) + '</h3>' + (cat.intro ? '<p>' + esc(cat.intro) + '</p>' : '') + '</div>' + photos +
       (any ? groups : '<p class="menu__empty">In dieser Kategorie gibt es nichts, das „' + esc(active.join(', ')) + '“ ist. Schauen Sie unter „Vegetarisch &amp; vegan“ oder „Vorweg“.</p>') +
       (cat.foot ? '<p class="menu__foot">' + esc(cat.foot) + '</p>' : '');
     typo(panel);
@@ -165,6 +167,31 @@
       renderMenu();
     });
   }
+
+  /* ---------- Gästefotos ---------- */
+  function pic(name, caption, src) {
+    return '<figure class="pic"><picture><source type="image/webp" srcset="assets/img/' + name + '.webp">' +
+      '<img src="assets/img/' + name + '.jpg" alt="' + esc(caption) + '" loading="lazy"></picture>' +
+      '<figcaption>' + esc(caption) + (src ? '<span class="pic__src">' + esc(src) + '</span>' : '') + '</figcaption></figure>';
+  }
+  function gotoTab(id) {
+    menuState.tab = id; renderTabs(); renderMenu();
+    var sec = $('#karte'); if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function renderFavs() {
+    var box = $('[data-favs]'); if (!box) return;
+    box.innerHTML = D.FAVS.map(function (f) {
+      return '<article class="fav"><picture><source type="image/webp" srcset="assets/img/' + f.img + '.webp">' +
+        '<img src="assets/img/' + f.img + '.jpg" alt="' + esc(f.n) + '" loading="lazy" width="800" height="600"></picture>' +
+        '<div><div class="fav__head"><span class="fav__name">' + esc(f.n) + '</span><span class="price">' + esc(f.p) + '</span></div>' +
+        '<p>' + esc(f.d) + '</p></div>' +
+        '<button class="fav__link" type="button" data-goto-tab="' + f.tab + '">In der Karte ansehen</button></article>';
+    }).join('');
+    typo(box);
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-goto-tab]'); if (b) { e.preventDefault(); gotoTab(b.getAttribute('data-goto-tab')); }
+  });
 
   /* ---------- Mittagskarte ---------- */
   function renderLunch() {
@@ -369,7 +396,7 @@
 
   /* ---------- Start ---------- */
   renderStatus(); renderHours(); setInterval(renderStatus, 60000);
-  initMenu(); renderLunch(); initBook(); initNav();
+  initMenu(); renderFavs(); renderLunch(); initBook(); initNav();
   var ml = $('#mapLoad'); if (ml) ml.addEventListener('click', loadMap);
   typo(document.body);
 })();

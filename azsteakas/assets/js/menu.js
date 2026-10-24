@@ -29,9 +29,19 @@ window.AZ = {
         veg: '2 Crispy Soja Taler mit lauwarmem Gurken-Kartoffelsalat', vegTag: 'vegan' }
     ]
   },
+  /* Was Gäste bestellen und fotografieren: aus Rezensionen und Gästefotos (Google, Yelp), Oktober 2026 */
+  FAVS: [
+    { img: 'ribeye', n: 'Rib-Eye-Steak', p: 'ab 29,00', d: 'Das meistfotografierte Gericht: schön durchzogen, vom Lavasteingrill, 220 / 320 / 500 g.', tab: 'steaks' },
+    { img: 'filet', n: 'Filetsteak', p: '33,50', d: '„Perfekt gegart“ – in Rezensionen am häufigsten empfohlen, gern mit Bratkartoffeln.', tab: 'steaks' },
+    { img: 'salat', n: 'Salat vom Buffet', p: 'ab 9,90', d: 'Soviel und sooft Sie mögen, vier hausgemachte Dressings – Gäste nennen es „super Salatbuffet“.', tab: 'vorweg' },
+    { img: 'burger', n: 'New York Burger', p: '18,90', d: 'Black Angus, Blue Cheese, Bacon, Brioche. Dazu Pommes oder Süßkartoffel-Sticks.', tab: 'mehr' },
+    { img: 'suppe', n: 'Curry-Chili-Suppe', p: '9,70', d: 'Mit Sahnetopping und Riesengarnele – der Klassiker zum Einstieg.', tab: 'vorweg' },
+    { img: 'dessert', n: 'Dunkle Schokoladenmousse', p: '11,20', d: 'Mit Jack Daniel’s Old No. 7 – das Dessert, das Gäste fotografieren.', tab: 'desserts' }
+  ],
   MENU: [
     {
       id: 'vorweg', tab: 'Vorweg', title: 'Vorspeisen, Suppen & Salate',
+      photos: [['salat', 'Salat vom Buffet – soviel und sooft Sie mögen'], ['suppe', 'Curry-Chili-Suppe mit Riesengarnele']],
       groups: [
         { h: 'Vorspeisen', items: [
           { n: 'Carpaccio', d: 'Hauchdünne Scheiben vom Rind, Kirschtomate, Trüffelöl, Rucola, frische Champignons, Parmesan und Knoblauchbrot', p: 15.3 },
@@ -69,6 +79,7 @@ window.AZ = {
     },
     {
       id: 'steaks', tab: 'Steaks', title: 'Von der Weide',
+      photos: [['ribeye', 'Rib-Eye-Steak, medium, mit Knoblauchbrot und Kräuterbutter'], ['filet', 'Filetsteak']],
       intro: 'Unsere Steaks stammen von ganzjährig freilaufenden Rindern aus den besten Gegenden Südamerikas. Die Grammangaben beziehen sich auf das Frischgewicht. Wir grillen über Lavasteinen, ganz nach Ihrem Wunsch: englisch, medium oder durch. Dazu Knoblauchbrot und hausgemachte Kräuterbutter.',
       foot: '* Ab Garstufe medium/durch erlauben wir uns, das Fleisch zu teilen (Butterfly).',
       groups: [
@@ -85,6 +96,7 @@ window.AZ = {
     },
     {
       id: 'mehr', tab: 'Burger & mehr', title: 'Burger & Co., Pfanne und Grill',
+      photos: [['burger', 'New York Burger mit Süßkartoffel-Sticks'], ['mixed-grill', 'Mixed Grill mit Ofenkartoffel und Sour-Cream']],
       groups: [
         { h: 'Burger & Co.', note: 'Patties vom täglich frisch gewolften reinen Black-Angus-Rind, medium-durch gegrillt, im Brioche-Brötchen. Dazu Pommes frites.', items: [
           { n: 'Hamburger', d: 'Salatblätter, Salatgurke, hausgemachte Burgersauce', p: 16.9 },
@@ -142,6 +154,7 @@ window.AZ = {
     },
     {
       id: 'kids', tab: 'Kids', title: 'Leckeres für Kids',
+      photos: [['kinderstuhl', 'Hochstühle stehen bereit']],
       intro: 'Für Gäste bis 12 Jahre.',
       groups: [
         { h: 'Kids', items: [
@@ -183,6 +196,7 @@ window.AZ = {
     },
     {
       id: 'desserts', tab: 'Desserts', title: 'Danach',
+      photos: [['dessert', 'Eis, Sahne und Schokolade – zum Abschluss']],
       groups: [
         { h: 'Desserts', items: [
           { n: 'Crème brûlée', d: 'Tonkabohne, heiße Himbeeren', p: 11.2, t: ['veg'] },
