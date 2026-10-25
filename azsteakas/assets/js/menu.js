@@ -31,12 +31,12 @@ window.AZ = {
   },
   /* Was Gäste bestellen und fotografieren: aus Rezensionen und Gästefotos (Google, Yelp), Oktober 2026 */
   FAVS: [
-    { img: 'ribeye', n: 'Rib-Eye-Steak', p: 'ab 29,00', d: 'Das meistfotografierte Gericht: schön durchzogen, vom Lavasteingrill, 220 / 320 / 500 g.', tab: 'steaks' },
-    { img: 'filet', n: 'Filetsteak', p: '33,50', d: '„Perfekt gegart“ – in Rezensionen am häufigsten empfohlen, gern mit Bratkartoffeln.', tab: 'steaks' },
-    { img: 'salat', n: 'Salat vom Buffet', p: 'ab 9,90', d: 'Soviel und sooft Sie mögen, vier hausgemachte Dressings – Gäste nennen es „super Salatbuffet“.', tab: 'vorweg' },
-    { img: 'burger', n: 'New York Burger', p: '18,90', d: 'Black Angus, Blue Cheese, Bacon, Brioche. Dazu Pommes oder Süßkartoffel-Sticks.', tab: 'mehr' },
-    { img: 'suppe', n: 'Curry-Chili-Suppe', p: '9,70', d: 'Mit Sahnetopping und Riesengarnele – der Klassiker zum Einstieg.', tab: 'vorweg' },
-    { img: 'dessert', n: 'Dunkle Schokoladenmousse', p: '11,20', d: 'Mit Jack Daniel’s Old No. 7 – das Dessert, das Gäste fotografieren.', tab: 'desserts' }
+    { img: 'ribeye', n: 'Rib-Eye-Steak', p: 'ab 29,00', d: 'Schön durchzogen, vom Lavasteingrill – 220, 320 oder 500 g.', tab: 'steaks' },
+    { img: 'filet', n: 'Filetsteak', p: '33,50', d: 'Sehr zart, nahezu fettfrei – 160 g.', tab: 'steaks' },
+    { img: 'salat', n: 'Salat vom Buffet', p: 'ab 9,90', d: 'Soviel und sooft Sie mögen, vier hausgemachte Dressings.', tab: 'vorweg' },
+    { img: 'burger', n: 'New York Burger', p: '18,90', d: 'Black Angus, Blue Cheese, Bacon, Brioche, Pommes.', tab: 'mehr' },
+    { img: 'suppe', n: 'Curry-Chili-Suppe', p: '9,70', d: 'Mit Sahnetopping und Riesengarnele.', tab: 'vorweg' },
+    { img: 'dessert', n: 'Dunkle Schokoladenmousse', p: '11,20', d: 'Mit Jack Daniel’s Old No. 7.', tab: 'desserts' }
   ],
   MENU: [
     {

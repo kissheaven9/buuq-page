@@ -116,8 +116,9 @@
   function renderTabs() {
     $('[data-tabs]').innerHTML = D.MENU.map(function (c) {
       var sel = c.id === menuState.tab;
+      var n = c.groups.reduce(function (k, g) { return k + g.items.length; }, 0);
       return '<button type="button" role="tab" id="tab-' + c.id + '" aria-selected="' + sel + '" aria-controls="panel-karte" data-tab="' + c.id + '"' +
-        (sel ? '' : ' tabindex="-1"') + '>' + esc(c.tab) + '</button>';
+        (sel ? '' : ' tabindex="-1"') + '><span>' + esc(c.tab) + '</span><small>' + n + '</small></button>';
     }).join('');
   }
 
@@ -185,7 +186,8 @@
     box.innerHTML = D.FAVS.map(function (f) {
       return '<article class="fav"><picture><source type="image/webp" srcset="assets/img/' + f.img + '.webp">' +
         '<img src="assets/img/' + f.img + '.jpg" alt="' + esc(f.n) + '" loading="lazy" width="800" height="600"></picture>' +
-        '<div><div class="fav__head"><span class="fav__name">' + esc(f.n) + '</span><span class="price">' + esc(f.p) + '</span></div>' +
+        '<span class="fav__tag">Bestseller</span>' +
+        '<div><div class="fav__head"><span class="fav__name">' + esc(f.n) + '</span><span class="price price--tag">' + esc(f.p) + '</span></div>' +
         '<p>' + esc(f.d) + '</p></div>' +
         '<button class="fav__link" type="button" data-goto-tab="' + f.tab + '">In der Karte ansehen</button></article>';
     }).join('');
@@ -236,7 +238,8 @@
     var now = new Date();
     var sameDay = ymd(d) === ymd(TODAY);
     if (sameDay && now.getHours() * 60 + now.getMinutes() >= mins('17:00')) {
-      box.innerHTML = '<p class="slots__msg">Für heute nehmen wir nach 17:00 Uhr Reservierungen nur noch telefonisch an: <a href="tel:+4982142070936">0821 420 70 936</a>.</p>';
+      box.innerHTML = '<p class="slots__msg">Für heute nehmen wir nach 17:00 Uhr Reservierungen nur noch telefonisch an: <a href="tel:+4982142070936">0821 420 70 936</a>. ' +
+        'Online geht es ab morgen: <button class="slots__link" type="button" data-morgen>Morgen wählen</button></p>';
       book.time = null; return;
     }
     if (guests > 8) {
@@ -294,7 +297,12 @@
     dateEl.min = ymd(TODAY);
     var max = new Date(TODAY.getFullYear(), TODAY.getMonth() + 3, TODAY.getDate());
     dateEl.max = ymd(max);
-    dateEl.addEventListener('change', function () { book.date = dateEl.value || null; book.time = null; setErr('date', ''); renderSlots(); });
+    function onDate() { if (book.date === (dateEl.value || null)) return; book.date = dateEl.value || null; book.time = null; setErr('date', ''); renderSlots(); }
+    dateEl.addEventListener('change', onDate); dateEl.addEventListener('input', onDate);
+    $('[data-slots]').addEventListener('click', function (e) {
+      if (!e.target.closest('[data-morgen]')) return;
+      var tm = new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 1); dateEl.value = ymd(tm); onDate();
+    });
     $('#b-guests').addEventListener('change', function () { setErr('guests', ''); renderSlots(); });
     $('[data-slots]').addEventListener('click', function (e) {
       var b = e.target.closest('[data-slot]'); if (!b || b.disabled) return;

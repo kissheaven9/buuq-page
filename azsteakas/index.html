@@ -28,7 +28,7 @@
   <link rel="preload" href="assets/fonts/BarlowCondensed-600-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/steak-800.webp 800w, assets/img/steak-1180.webp 1180w" imagesizes="(max-width: 760px) 100vw, 50vw">
-  <link rel="stylesheet" href="assets/css/styles.css?v=5">
+  <link rel="stylesheet" href="assets/css/styles.css?v=6">
 
   <script type="application/ld+json">
   {
@@ -117,10 +117,10 @@
     </div>
   </section>
 
-  <section class="favs" id="favoriten">
+  <section class="favs" id="bestseller">
     <div class="section__head">
-      <h2>Was Gäste bestellen</h2>
-      <p>Die Gerichte, die in Rezensionen am häufigsten empfohlen und fotografiert werden. Fotos von Gästen, Preise aus der aktuellen Karte.</p>
+      <h2>Bestseller</h2>
+      <p>Die sechs Gerichte, die bei uns am häufigsten bestellt werden.</p>
     </div>
     <div class="favs__grid" data-favs></div>
   </section>
@@ -128,20 +128,25 @@
   <section class="menu" id="karte">
     <div class="menu__head">
       <h2>Speisekarte</h2>
-      <p>Acht Kategorien, rund 100 Gerichte. Alle Preise in Euro inkl. Mehrwertsteuer und Service, Stand Oktober 2026. Mittagsgerichte stehen weiter unten in der <a href="#mittag">Mittagskarte</a>.</p>
+      <p>Acht Kategorien, rund 100 Gerichte. Alle Preise in Euro inkl. Mehrwertsteuer und Service, Stand Oktober 2026. Mittagsgerichte stehen in der <a href="#mittag">Mittagskarte</a>.</p>
     </div>
-    <div class="menu__bar">
-      <div class="tabs" role="tablist" aria-label="Speisekarte nach Kategorien" data-tabs></div>
-      <div class="chips" data-filters>
-        <button class="chip" type="button" data-filter="veg" aria-pressed="false">vegetarisch</button>
-        <button class="chip" type="button" data-filter="vegan" aria-pressed="false">vegan</button>
-        <button class="chip" type="button" data-filter="scharf" aria-pressed="false">scharf</button>
+    <div class="menu__layout">
+      <aside class="menu__side">
+        <p class="menu__side-title">Kategorien</p>
+        <div class="tabs" role="tablist" aria-label="Speisekarte nach Kategorien" data-tabs></div>
+        <div class="chips" data-filters>
+          <button class="chip" type="button" data-filter="veg" aria-pressed="false">vegetarisch</button>
+          <button class="chip" type="button" data-filter="vegan" aria-pressed="false">vegan</button>
+          <button class="chip" type="button" data-filter="scharf" aria-pressed="false">scharf</button>
+        </div>
+      </aside>
+      <div class="menu__main">
+        <div class="menu__panel" data-panel role="tabpanel"></div>
+        <div class="menu__end">
+          <p>Ende der Speisekarte. Zutaten und Allergene erklärt Ihnen das Team am Tisch.</p>
+          <a class="btn btn--primary" href="#reservieren">Tisch reservieren</a>
+        </div>
       </div>
-    </div>
-    <div class="menu__panel" data-panel role="tabpanel"></div>
-    <div class="menu__end">
-      <p>Ende der Speisekarte. Zutaten und Allergene erklärt Ihnen das Team am Tisch.</p>
-      <a class="btn btn--primary" href="#reservieren">Tisch reservieren</a>
     </div>
   </section>
 
@@ -471,7 +476,7 @@
   </div>
 </div>
 
-<script src="assets/js/menu.js?v=5"></script>
-<script src="assets/js/app.js?v=5"></script>
+<script src="assets/js/menu.js?v=6"></script>
+<script src="assets/js/app.js?v=6"></script>
 </body>
 </html>

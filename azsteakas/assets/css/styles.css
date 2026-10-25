@@ -548,3 +548,44 @@ main > section + section { border-top: 2px solid var(--line-strong); }
   .jobs, .lunch__day, .stars { grid-template-columns: 1fr; }
   .jobs__pic { order: -1; }
 }
+
+/* ---------- v6: Bestseller, Karten-Navigation, Header mobil, Sticky ---------- */
+.fav { position: relative; }
+.fav__tag { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 6px 10px; background: var(--red); color: #fff; font: 600 0.75rem/1 var(--text); letter-spacing: 0.08em; text-transform: uppercase; border-radius: 3px; }
+.price--tag { padding: 4px 8px; background: var(--ink); color: var(--bg); border-radius: 3px; font-size: 1.125rem; }
+.menu__layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: calc(var(--sp) * 6); align-items: start; }
+.menu__side { position: sticky; top: calc(var(--header-h) + 16px); display: grid; gap: calc(var(--sp) * 2); }
+.menu__side-title { margin: 0; color: var(--ink-2); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.menu__side .tabs { flex-direction: column; gap: 2px; overflow: visible; margin: 0; padding: 0; border-top: 1px solid var(--line-strong); }
+.menu__side .tabs button { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; width: 100%; padding: 10px 12px; border-radius: 0; border-left: 3px solid transparent; border-bottom: 1px solid var(--line); text-align: left; }
+.menu__side .tabs button small { font-family: var(--text); font-size: 0.8125rem; color: var(--ink-2); letter-spacing: 0; }
+.menu__side .tabs button[aria-selected="true"] { background: transparent; color: var(--ink); border-left-color: var(--red); }
+.menu__side .tabs button[aria-selected="true"] small { color: var(--ink); }
+.menu__side .chips { flex-wrap: wrap; padding-top: calc(var(--sp) * 1); }
+.menu__bar { display: none; }
+.menu__panel { padding-top: 0; }
+.menu__title { grid-template-columns: 1fr; gap: var(--sp); margin-bottom: calc(var(--sp) * 3); padding-bottom: calc(var(--sp) * 2); border-bottom: 3px solid var(--red); }
+.menu__title h3 { font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.5rem); }
+.menu__group { grid-template-columns: minmax(0, 1fr); gap: var(--sp); padding: calc(var(--sp) * 2.5) 0; border-top: 1px solid var(--line-strong); }
+.menu__group h4 { font-size: 1.25rem; color: var(--ink-2); }
+.dishes, .menu__group-note { grid-column: 1; }
+.menu__group-note { margin: 0 0 var(--sp); }
+.menu__head { margin-bottom: calc(var(--sp) * 4); }
+.menu__head h2 { padding-left: calc(var(--sp) * 2); border-left: 6px solid var(--red); }
+.slots__link { background: none; border: 0; padding: 0; color: var(--ink); font: 500 1rem/1.5 var(--text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.contact .map, .jobs__pic { position: sticky; top: calc(var(--header-h) + 24px); }
+@media (max-width: 1100px) {
+  .menu__layout { grid-template-columns: 1fr; gap: calc(var(--sp) * 3); }
+  .menu__side { position: sticky; top: var(--header-h); z-index: 30; background: var(--bg-2); margin: 0 calc(var(--gutter) * -1); padding: 10px var(--gutter); border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); gap: var(--sp); }
+  .menu__side-title { display: none; }
+  .menu__side .tabs { flex-direction: row; gap: 4px; overflow-x: auto; border-top: 0; margin: 0 -4px; padding: 0 4px; }
+  .menu__side .tabs button { width: auto; padding: 9px 12px; border: 1px solid transparent; border-radius: 4px; text-align: center; gap: 6px; }
+  .menu__side .tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-left-color: transparent; }
+  .menu__side .tabs button[aria-selected="true"] small { color: var(--bg); }
+  .menu__side .chips { padding-top: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .contact .map, .jobs__pic { position: static; }
+}
+@media (max-width: 640px) {
+  .header { grid-template-columns: auto 1fr; }
+  .burger { grid-column: 2; justify-self: end; }
+}
