@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прототип · Структура нового сайта — Лавира</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="proto.css?v=2">
+</head>
+<body>
+<div class="pbar"><div class="pbar__in"><b>Прототип · структура без дизайна</b><nav aria-label="Страницы прототипа"><a href="index.html" aria-current=page>Структура сайта</a><a href="katalog.html">Каталог</a><a href="tovar.html">Карточка модели</a><a href="zayavka.html">Заявка</a><a href="opt.html">Условия сотрудничества</a><a href="o-fabrike.html">О фабрике</a><a href="kontakty.html">Контакты</a><a href="razmery.html">Размеры</a><a href="politika.html">Политика ПД</a></nav><a class="back" href="../index.html">← Главная в дизайне</a></div></div>
+<main class="wrap">
+<div class="phead"><div><h1>Структура нового сайта</h1><p>Какие страницы нужны оптовику и фабрике, что на них лежит и в каком порядке. Главная сделана в дизайне, остальные страницы — серые вайрфреймы: они показывают структуру и логику, дизайн делается после согласования.</p></div><div class="meta"><b>Статус</b><span>1 страница в дизайне · 8 в прототипе</span><div class="legend"><span class="l-done">дизайн готов</span><span class="l-proto">прототип</span><span class="l-need">данные фабрики</span></div></div></div>
+<div class="sect"><h2>Карта сайта</h2><ul class="tree">
+<li><div class="node"><a href="../index.html">Главная</a><span class="st st--done">дизайн готов</span><span class="t">первый экран с палитрой модели, как купить оптом, каталог сезона с быстрым просмотром и заявкой, шоу-рум, о фабрике, размеры</span></div>
+<ul>
+<li><div class="node"><a href="katalog.html">Каталог</a><span class="st">прототип</span><span class="t">сезоны → типы; фильтры размер/цвет/новинки; карточка = модель со всеми цветами</span></div>
+<ul><li><div class="node"><a href="tovar.html">Карточка модели</a><span class="st">прототип</span><span class="t">галерея по цветам, состав, размерная сетка с количеством, «в заявку», похожие</span></div></li></ul></li>
+<li><div class="node"><a href="zayavka.html">Заявка</a><span class="st">прототип</span><span class="t">заказной лист без цен → форма → подтверждение; черновик сохраняется в браузере</span></div></li>
+<li><div class="node"><a href="opt.html">Условия сотрудничества</a><span class="st">прототип</span><span class="t">кому продаём, минимальный заказ, ряды, оплата, отгрузка, возврат, документы, FAQ</span></div></li>
+<li><div class="node"><a href="o-fabrike.html">О фабрике</a><span class="st">прототип</span><span class="t">производство, дизайнер, выставки, видео, цифры — доказательства вместо SEO-текста</span></div></li>
+<li><div class="node"><a href="kontakty.html">Контакты</a><span class="st">прототип</span><span class="t">шоу-рум, карта, проезд, менеджеры, мессенджеры, реквизиты, форма</span></div></li>
+<li><div class="node"><a href="razmery.html">Таблица размеров</a><span class="st">прототип</span><span class="t">таблица, как снять мерки, посадка по моделям</span></div></li>
+<li><div class="node"><a href="politika.html">Политика обработки персональных данных</a><span class="st">прототип</span><span class="t">обязательна для всех форм (152-ФЗ) + согласие в каждой форме</span></div></li>
+</ul></li></ul></div><div class="sect"><h2>Три сценария</h2><div class="flows">
+<div class="flow"><h3>Новый оптовик из поиска</h3><ol><li>Главная: понимает за 5 секунд «фабрика · опт · Москва · 42–64»</li><li>Смотрит палитру и каталог сезона</li><li>«Как купить оптом» → запрашивает прайс (форма, согласие)</li><li>Получает прайс на e-mail, менеджер звонит</li></ol></div>
+<div class="flow"><h3>Постоянный клиент (магазин)</h3><ol><li>Сразу в каталог, фильтр «Новинки» + свой размерный ряд</li><li>Открывает модель → количество по размерам в нескольких цветах</li><li>Заявка → отправка; менеджер подтверждает наличие и счёт</li><li>Этап 2: личный кабинет — история, повтор заказа, цены по входу</li></ol></div>
+<div class="flow"><h3>Менеджер фабрики</h3><ol><li>Получает заявку письмом (и в Telegram-бот при желании)</li><li>Видит заказной лист: модель × цвет × размер × количество</li><li>Проверяет наличие, выставляет счёт, меняет статус</li><li>Обновляет каталог: новая модель = фото + цвета + размеры + состав</li></ol></div>
+</div></div><div class="sect"><h2>Что убрано по сравнению с lavira.ru и почему</h2>
+<div class="tscroll"><table class="tbl"><tr><th>Было</th><th>Стало</th><th>Почему</th></tr>
+<tr><td>Сайдбар с 7 видеоблоками «Сенсация! Смотреть обязательно!»</td><td>Два видео в разделе «О фабрике»</td><td>видео — доказательство, а не реклама; первый экран — для продукта</td></tr>
+<tr><td>Статьи 2016 года («Благодаря наряду создаётся образ человека»)</td><td>Нет</td><td>не читает ни оптовик, ни поиск 2026 года; при желании — новости фабрики в «О фабрике»</td></tr>
+<tr><td>«Грамоты» отдельной страницей</td><td>Блок в «О фабрике»</td><td>дипломы 2015–2017 — факт, а не раздел</td></tr>
+<tr><td>Карточка = одна расцветка (607 карточек)</td><td>Карточка = модель с цветами (114)</td><td>оптовик думает моделями и рядами</td></tr>
+<tr><td>Форма «пришлём прайс» без согласия</td><td>Та же цель + согласие и политика</td><td>152-ФЗ</td></tr>
+<tr><td>Четыре сезона одновременно (шапка/сайдбар/каталог)</td><td>Один актуальный сезон + вкладки</td><td>понятно, что сейчас в продаже</td></tr>
+</table></div></div>
+
+<div class="pn"><span></span><span><a href="katalog.html">Каталог</a> →</span></div>
+<div class="foot"><span>Бета-превью сайта фабрики «Лавира» — прототип структуры. Концепция и реализация: Ольга Тихомирова, BUUQ.</span><span>Серые блоки — расположение и смысл, не дизайн. Оранжевые пометки — данные, которые даёт фабрика.</span></div>
+</main>
+</body>
+</html>
