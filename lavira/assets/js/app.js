@@ -181,7 +181,7 @@
         '<div class="field"><label for="zNote">Комментарий</label><textarea id="zNote" name="note" placeholder="Например: нужен счёт на юрлицо, отправка ТК в Казань"></textarea></div>' +
         '<label class="check"><input type="checkbox" name="agree" required><span>Согласен(на) на обработку персональных данных по <a href="prototyp/politika.html" target="_blank">политике</a></span></label>';
       body.appendChild(form);
-      var send = el('button', 'btn btn--accent btn--full', 'Отправить заявку'); send.type = 'submit'; send.setAttribute('form', 'zForm'); form.id = 'zForm'; foot.appendChild(send); foot.appendChild(el('p', 'hint', 'Превью: заявка никуда не отправляется. На рабочем сайте она уйдёт менеджеру и копией на ваш e-mail.'));
+      var send = el('button', 'btn btn--accent btn--full', 'Отправить заявку'); send.type = 'submit'; send.setAttribute('form', 'zForm'); form.id = 'zForm'; foot.appendChild(send); foot.appendChild(el('p', 'hint', 'Менеджер подтвердит наличие и сумму и пришлёт счёт на ваш e-mail.'));
       form.addEventListener('submit', function (e) { e.preventDefault(); if (!validate(form)) return; var data = formData(form); var units = cartUnits(), lines = CART.length; CART = []; save(); done('Заявка сформирована', 'Спасибо, ' + esc(data.name) + '! В заявке ' + plural(units, UNITS) + ' в ' + plural(lines, ['позиции', 'позициях', 'позициях']) + '. Менеджер подтвердит наличие и сумму и пришлёт счёт на ' + esc(data.email) + ' в рабочее время, пн–пт 9:00–18:00.'); });
       typo(body);
     }
@@ -210,7 +210,7 @@
   function done(title, text) {
     var d = el('div', 'dlg'); d.style.width = 'min(600px,100%)'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-modal', 'true'); d.setAttribute('aria-label', title);
     var x = el('button', 'dlg__x'); x.type = 'button'; x.setAttribute('data-close', ''); x.setAttribute('aria-label', 'Закрыть'); d.appendChild(x);
-    var b = el('div', 'done'); b.style.margin = '0 auto'; b.innerHTML = '<span class="ok" aria-hidden="true">✓</span><h2>' + esc(title) + '</h2><p>' + text + '</p><p class="note">Это бета-превью: ничего не отправлено и не сохранено на сервере. На рабочем сайте письмо уходит менеджеру и клиенту автоматически.</p>';
+    var b = el('div', 'done'); b.style.margin = '0 auto'; b.innerHTML = '<span class="ok" aria-hidden="true">✓</span><h2>' + esc(title) + '</h2><p>' + text + '</p><p class="note">Это бета-превью: заявка не отправлена и нигде не сохранена.</p>';
     var c = el('button', 'btn btn--line btn--sm', 'Закрыть'); c.type = 'button'; c.setAttribute('data-close', ''); b.appendChild(c); d.appendChild(b);
     openOv(d);
   }
