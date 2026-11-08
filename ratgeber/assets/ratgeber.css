@@ -1,0 +1,44 @@
+/* ===================== BUUQ Ratgeber — Zusatzstile (zu styles.css) ===================== */
+.legal.artikel{max-width:760px;line-height:1.65}
+.art-kicker{color:var(--muted);font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.legal.artikel h1{line-height:1.12;margin-bottom:14px}
+.art-meta{color:var(--muted);font-size:14.5px;margin-bottom:34px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.1)}
+.art-lead{font-size:clamp(17px,1.4vw,20px);font-weight:300;color:rgba(255,255,255,.92);margin-bottom:10px}
+.legal.artikel h2{font-weight:500;font-size:clamp(21px,2vw,26px);margin:38px 0 12px}
+.legal.artikel p{color:rgba(255,255,255,.78);margin-bottom:14px}
+.legal.artikel p b,.legal.artikel p strong{color:#fff;font-weight:500}
+.legal.artikel a:not(.pill){color:#FFABF8}
+.legal.artikel a:not(.pill):hover{text-decoration:underline}
+
+/* FAQ */
+.faq{margin-top:46px}
+.faq details{border:1px solid rgba(255,255,255,.12);border-radius:14px;background:var(--glass);margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:15px 18px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:#FFABF8;font-size:20px;font-weight:300;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 16px;margin:0;color:rgba(255,255,255,.78)}
+
+/* CTA */
+.art-cta{margin-top:46px;padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:var(--glass);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.art-cta p{margin:0;max-width:46ch;color:rgba(255,255,255,.85)}
+
+/* Autorzeile */
+.art-autor{margin-top:40px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:14.5px}
+.art-autor .dot{width:38px;height:38px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:600;color:#fff;flex:none}
+
+/* ===================== Übersicht ===================== */
+.rg-main{max-width:1100px;margin:0 auto;padding:clamp(40px,6vw,80px) var(--pad) 100px}
+.rg-main>h1{font-weight:500;font-size:clamp(34px,4.6vw,56px);margin-bottom:12px}
+.rg-intro{color:rgba(255,255,255,.72);max-width:62ch;font-weight:300;font-size:clamp(16px,1.3vw,19px);line-height:1.6;margin-bottom:46px}
+.rg-sec{margin-bottom:46px}
+.rg-sec h2{font-weight:500;font-size:clamp(20px,1.8vw,24px);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.rg-sec h2 .cnt{color:var(--muted);font-weight:300;font-size:.75em}
+.rg-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.rg-card{border:1px solid rgba(255,255,255,.12);border-radius:18px;background:var(--glass);padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .18s ease,border-color .2s}
+.rg-card:hover{transform:translateY(-3px);border-color:rgba(255,171,248,.5)}
+.rg-card .k{color:var(--muted);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.rg-card h3{font-weight:500;font-size:19px;line-height:1.3}
+.rg-card p{color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.55;flex:1}
+.rg-card .mehr{color:#FFABF8;font-size:14.5px}
+.rg-card.soon{opacity:.55;pointer-events:none}
