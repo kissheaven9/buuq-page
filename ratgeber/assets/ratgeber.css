@@ -42,3 +42,11 @@
 .rg-card p{color:rgba(255,255,255,.72);font-size:14.5px;line-height:1.55;flex:1}
 .rg-card .mehr{color:#FFABF8;font-size:14.5px}
 .rg-card.soon{opacity:.55;pointer-events:none}
+
+/* ===================== DE/RU-Umschalter (nur Vorschau) ===================== */
+.hdr-right{display:flex;align-items:center;gap:14px}
+.lang-sw{background:transparent;border:1px solid rgba(255,255,255,.3);color:var(--muted);border-radius:999px;padding:5px 13px;font-family:var(--font);font-size:13px;cursor:pointer;transition:border-color .2s,color .2s}
+.lang-sw:hover{color:#fff;border-color:#FFABF8}
+.lang-ru{display:none}
+body.ru .lang-ru{display:block}
+body.ru .lang-de{display:none}
