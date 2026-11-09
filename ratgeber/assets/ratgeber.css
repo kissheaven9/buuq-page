@@ -261,3 +261,12 @@ body.ru .lang-de{display:none}
 .fig.go svg .rb{transform:scaleX(1)}
 .fig svg .box2{transition-delay:.15s}
 @media (prefers-reduced-motion:reduce){.fig svg .box,.fig svg .box2,.fig svg text,.fig svg .arr,.fig svg .arr2,.fig svg .rb{transition:none;opacity:1;transform:none;stroke-dashoffset:0}}
+
+/* v10c: Weiterlesen во всю ширину статьи */
+.legal.artikel .more{max-width:none}
+/* встроенные скриншоты сайтов */
+.shot{margin:26px 0}
+.shot a{display:block}
+.shot img{width:100%;border-radius:14px;border:1px solid rgba(255,255,255,.14);display:block}
+.shot figcaption{font-size:12.5px;color:var(--muted);margin-top:9px;text-align:center}
+.cta2-ex img.doc{aspect-ratio:16/10;object-fit:cover;object-position:top}
