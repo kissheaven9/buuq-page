@@ -43,3 +43,12 @@
   }, { threshold: 0.35 });
   charts.forEach(function (c) { io.observe(c); });
 })();
+
+/* «показать ещё» для рядов карточек */
+(function () {
+  document.querySelectorAll('.more-toggle').forEach(function (b) {
+    var grid = b.closest('.more') && b.closest('.more').querySelector('.rg-cards');
+    if (!grid || !grid.querySelector('.hid')) { b.hidden = true; return; }
+    b.addEventListener('click', function () { grid.classList.add('open'); b.hidden = true; });
+  });
+})();

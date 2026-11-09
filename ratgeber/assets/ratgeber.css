@@ -182,3 +182,27 @@ body.ru .lang-de{display:none}
 .demo-note{max-width:640px}
 .rg-main{max-width:1240px}
 .vtrack{max-width:72px;height:210px}
+
+/* ===================== v8: карточки с фото, «показать ещё» ===================== */
+.rg-card.has-img{padding:0;overflow:hidden}
+.rg-card.has-img .rg-img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-bottom:1px solid rgba(255,255,255,.08)}
+.rg-card.has-img .rg-bd{padding:15px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.rg-card .k{margin:0}
+.more .rg-cards{margin-top:4px}
+.rg-cards .hid{display:none}
+.rg-cards.open .hid{display:flex}
+.more-toggle{margin-top:16px}
+
+/* ===================== v8b: CTA-блок — сетка, кнопка не висит; примеры ===================== */
+.cta2{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(18px,3vw,34px);align-items:center;text-align:left}
+.cta2 h2{margin:0 0 8px}
+.cta2 .sub{margin:0 0 4px;max-width:none}
+.cta2 ul{display:flex;margin:12px 0 0;text-align:left}
+.cta2-act{display:flex;flex-direction:column;align-items:center;gap:12px;justify-self:center}
+.cta2-act .pill{white-space:normal;text-align:center}
+.cta2 .mini{margin-top:0;text-align:center}
+.cta2-ex{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid rgba(255,255,255,.14);padding-top:18px}
+.cta2-ex figure{margin:0}
+.cta2-ex img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:12px;border:1px solid rgba(255,255,255,.12);display:block}
+.cta2-ex figcaption{font-size:12.5px;color:var(--muted);margin-top:8px;text-align:center}
+@media (max-width:760px){.cta2{grid-template-columns:1fr;text-align:center}.cta2 ul{display:inline-flex;text-align:left;margin-inline:auto}.cta2-ex{grid-template-columns:1fr}}
