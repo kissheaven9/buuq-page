@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gasthaus Fluhweid · Konzeptprojekt von BUUQ</title>
+  <meta name="description" content="Konzeptprojekt von BUUQ: Website für ein fiktives Berggasthaus im Berner Oberland – Restaurant mit bemalter Decke, Sonnenterrasse, zwölf Zimmer unter dem Dach und Online-Buchung. Bilder KI-generiert.">
+  <!-- Konzeptprojekt (fiktives Haus): nicht indexieren -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:site_name" content="BUUQ">
+  <meta property="og:title" content="Gasthaus Fluhweid · Konzeptprojekt von BUUQ">
+  <meta property="og:description" content="Website-Konzept für ein fiktives Berggasthaus: Restaurant, Terrasse, zwölf Zimmer, Buchung im Browser. Bilder KI-generiert.">
+  <meta property="og:image" content="https://buuq.de/konzept/gasthaus-fluhweid/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sonnenterrasse eines Berggasthauses mit Blick auf verschneite Gipfel (KI-generiert)">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#f6f2ec">
+
+  <link rel="preload" href="assets/fonts/BricolageGrotesque-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/DMSans-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/terrasse-800.webp 800w, assets/img/terrasse-1200.webp 1200w, assets/img/terrasse-1536.webp 1536w" imagesizes="(max-width: 999px) 100vw, 58vw">
+  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+</svg>
+
+<p class="beta">Konzeptprojekt von <a href="https://buuq.de" target="_blank" rel="noopener">BUUQ</a> · fiktives Haus · Bilder KI‑generiert</p>
+
+<header class="header" id="header">
+  <div class="wrap header__in">
+    <a class="brand" href="#top" id="top">
+      <span class="brand__name">Fluhweid</span>
+      <span class="brand__sub">Gasthaus · Restaurant<br>Berner Oberland</span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul class="nav__links">
+        <li><a href="#restaurant">Restaurant</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#zimmer">Zimmer</a></li>
+        <li><a href="#haus">Das Haus</a></li>
+        <li><a href="#anreise">Anreise</a></li>
+      </ul>
+      <button class="btn btn--primary nav__book" type="button" data-book>Zimmer buchen</button>
+      <button class="menu-btn" type="button" id="menuBtn" aria-controls="menu" aria-expanded="false" aria-label="Menü">
+        <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </nav>
+    <div class="menu" id="menu" hidden>
+      <ul>
+        <li><a href="#restaurant">Restaurant</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#zimmer">Zimmer</a></li>
+        <li><a href="#haus">Das Haus</a></li>
+        <li><a href="#anreise">Anreise</a></li>
+      </ul>
+      <button class="btn btn--primary" type="button" data-book>Zimmer buchen</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Erster Bildschirm: Text links, Terrasse angeschnitten rechts -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero__text">
+      <p class="kicker">Gasthaus seit 1904 · Bergdorf im Berner Oberland, 1200 m</p>
+      <h1 id="h1">Mittagessen auf der Terrasse, mit Blick auf die Berge.</h1>
+      <p>Rösti in der Eisenpfanne, im Herbst Wild aus der Jagd im Tal, dazu Alpkäse vom Nachbarhof – in der Gaststube unter der bemalten Decke, am Kachelofen oder draussen an der Sonne. Darüber zwölf Zimmer unter dem Dach von 1904.</p>
+      <div class="hours">
+        <div class="hours__head">
+          <h2>Öffnungszeiten</h2>
+          <span class="open" id="openNow" aria-live="polite"></span>
+        </div>
+        <dl>
+          <dt>Mittwoch bis Sonntag</dt><dd>9 – 23 Uhr</dd>
+          <dt>Montag und Dienstag</dt><dd>Ruhetag</dd>
+          <dt>10. April – 5. Mai</dt><dd>Betriebsferien</dd>
+        </dl>
+      </div>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#anreise">Tisch reservieren</a>
+        <button class="btn" type="button" data-book>Zimmer buchen</button>
+      </div>
+    </div>
+    <picture class="hero__img">
+      <source type="image/webp" srcset="assets/img/terrasse-800.webp 800w, assets/img/terrasse-1200.webp 1200w, assets/img/terrasse-1536.webp 1536w" sizes="(max-width: 999px) 100vw, 58vw">
+      <img src="assets/img/terrasse-1200.jpg" srcset="assets/img/terrasse-800.jpg 800w, assets/img/terrasse-1200.jpg 1200w, assets/img/terrasse-1536.jpg 1536w" sizes="(max-width: 999px) 100vw, 58vw" width="1536" height="1024" fetchpriority="high" alt="Gedeckter Tisch mit Weisswein auf der Holzterrasse, dahinter Wiesen und verschneite Gipfel">
+    </picture>
+  </section>
+
+  <!-- Restaurant -->
+  <section class="section" id="restaurant" aria-labelledby="h-rest">
+    <div class="wrap">
+      <div class="grid grid--7-5">
+        <figure class="img--4-3">
+          <picture>
+            <source type="image/webp" srcset="assets/img/stube-800.webp 800w, assets/img/stube-1200.webp 1200w" sizes="(max-width: 999px) 100vw, 58vw">
+            <img src="assets/img/stube-1200.jpg" srcset="assets/img/stube-800.jpg 800w, assets/img/stube-1200.jpg 1200w" sizes="(max-width: 999px) 100vw, 58vw" width="1200" height="800" loading="lazy" alt="Gaststube mit bemalter Holzdecke, grünem Kachelofen und gedeckten Holztischen">
+          </picture>
+        </figure>
+        <div class="rest__text">
+          <p class="kicker">Restaurant</p>
+          <h2 id="h-rest">Gaststube, Ofenecke, Terrasse</h2>
+          <p style="margin-top:22px"><b>Gaststube</b> – 45 Plätze unter der bemalten Decke von 1904, Holztische, Wiesenblumen. Schweizer Küche ohne Umwege und offene Weine aus dem Wallis und vom Bielersee.</p>
+          <p><b>Ofenecke</b> – 16 Plätze am grünen Kachelofen, für den langen Abend zu zweit oder den Stammtisch nach der Skitour.</p>
+          <p><b>Terrasse</b> – 50 Plätze an der Sonne, vom Frühling bis in den Oktober. Ein Glas Weisswein, ein Teller Trockenfleisch, die Gipfel gegenüber.</p>
+          <p class="rest__music">Jeden ersten Freitag im Monat spielt im Winter eine Ländlerkapelle in der Gaststube.</p>
+        </div>
+      </div>
+      <div class="rest__row2">
+        <figure class="img--16-9">
+          <picture>
+            <source type="image/webp" srcset="assets/img/haus-detail-800.webp">
+            <img src="assets/img/haus-detail-800.jpg" width="800" height="634" loading="lazy" alt="Terrasse vor dem Holzhaus mit Holztischen, Sonnenschirmen und Geranien an den Fenstern">
+          </picture>
+        </figure>
+        <figure class="img--3-4">
+          <picture>
+            <source type="image/webp" srcset="assets/img/stube-ofen-800.webp">
+            <img src="assets/img/stube-ofen-800.jpg" width="800" height="663" loading="lazy" alt="Ecke der Gaststube mit grünem Kachelofen und Holzbank">
+          </picture>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Karte -->
+  <section class="section" id="karte" aria-labelledby="h-karte">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Aus der Karte · Herbst</p>
+        <h2 id="h-karte">Wild aus dem Tal, Rösti aus der Eisenpfanne</h2>
+        <p>Ein Auszug. Preise in CHF inkl. MwSt. Im Herbst kommt die Wildkarte dazu, solange die Jagd dauert.</p>
+      </div>
+      <div class="karte">
+        <div>
+          <div class="karte__groups">
+            <div class="karte__group"><h3>Wild im Herbst</h3><ul id="menu-wild"></ul></div>
+            <div class="karte__group"><h3>Rösti</h3><ul id="menu-roesti"></ul></div>
+            <div class="karte__group"><h3>Von der Alp</h3><ul id="menu-alp"></ul></div>
+            <div class="karte__group"><h3>Dessert</h3><ul id="menu-dessert"></ul></div>
+          </div>
+          <p class="karte__note">Rösti nature und Gerstensuppe auf Wunsch vegan. Fragen Sie nach Allergenen – die Küche gibt gern Auskunft.</p>
+        </div>
+        <div class="karte__pics">
+          <figure class="img--3-2">
+            <picture>
+              <source type="image/webp" srcset="assets/img/essen-wild-800.webp 800w, assets/img/essen-wild-1100.webp 1100w" sizes="(max-width: 999px) 100vw, 40vw">
+              <img src="assets/img/essen-wild-1100.jpg" srcset="assets/img/essen-wild-800.jpg 800w, assets/img/essen-wild-1100.jpg 1100w" sizes="(max-width: 999px) 100vw, 40vw" width="1100" height="1375" loading="lazy" alt="Rehpfeffer mit Spätzli, Rotkraut und Marroni auf weissem Teller">
+            </picture>
+          </figure>
+          <figure class="img--3-2" style="grid-column:1/-1">
+            <picture>
+              <source type="image/webp" srcset="assets/img/essen-roesti-800.webp 800w, assets/img/essen-roesti-1100.webp 1100w" sizes="(max-width: 999px) 100vw, 40vw">
+              <img src="assets/img/essen-roesti-1100.jpg" srcset="assets/img/essen-roesti-800.jpg 800w, assets/img/essen-roesti-1100.jpg 1100w" sizes="(max-width: 999px) 100vw, 40vw" width="1100" height="1375" loading="lazy" alt="Rösti mit Spiegelei in der gusseisernen Pfanne">
+            </picture>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zimmer -->
+  <section class="section" id="zimmer" aria-labelledby="h-zimmer">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Zimmer · Preise pro Nacht</p>
+        <h2 id="h-zimmer">Zwölf Zimmer unter dem Dach von 1904</h2>
+        <p>Holz an den Wänden, Balken über dem Bett, karierte Vorhänge. Kein Lift – das Haus ist über hundert Jahre alt, die Treppe knarrt. Frühstück mit Brot vom Dorfbäcker, WLAN im ganzen Haus.</p>
+      </div>
+      <table class="ztable">
+        <thead>
+          <tr>
+            <th scope="col">Zimmer</th>
+            <th scope="col" class="col-f">Ausstattung</th>
+            <th scope="col" class="num">Zwischensaison</th>
+            <th scope="col" class="num">Saison</th>
+            <th scope="col" class="act"><span class="sr-only">Buchen</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="main has-sub">
+            <th scope="row"><span>Doppel unter dem Dach</span></th>
+            <td class="col-f">Dusche/WC, Tisch mit zwei Stühlen</td>
+            <td class="num">CHF 170</td><td class="num">CHF 190</td>
+            <td class="act"><button class="btn btn--small" type="button" data-book data-room="standard">Buchen</button></td>
+          </tr>
+          <tr class="sub">
+            <th scope="row">als Einzel</th><td class="col-f"></td>
+            <td class="num">CHF 130</td><td class="num">CHF 145</td><td class="act"></td>
+          </tr>
+          <tr class="main">
+            <th scope="row"><span>Kammer</span></th>
+            <td class="col-f">Französisches Bett, Dusche/WC</td>
+            <td class="num">CHF 95</td><td class="num">CHF 110</td>
+            <td class="act"><button class="btn btn--small" type="button" data-book data-room="kammer">Buchen</button></td>
+          </tr>
+          <tr class="main has-sub">
+            <th scope="row"><span>Bergblick</span></th>
+            <td class="col-f">Dusche/WC, Sitzecke am Fenster</td>
+            <td class="num">CHF 210</td><td class="num">CHF 235</td>
+            <td class="act"><button class="btn btn--small" type="button" data-book data-room="berg">Buchen</button></td>
+          </tr>
+          <tr class="sub">
+            <th scope="row">als Einzel</th><td class="col-f"></td>
+            <td class="num">CHF 170</td><td class="num">CHF 185</td><td class="act"></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="znotes">
+        <li>Preise pro Zimmer und Nacht in CHF, inkl. Frühstück, Taxen und MwSt.</li>
+        <li>Saison: 20. Dezember – 31. März und 15. Juni – 20. Oktober. Sonst Zwischensaison. Betriebsferien 10. April – 5. Mai.</li>
+        <li>Zusatzbett im Doppel unter dem Dach CHF 45 · Hund auf Anfrage · Halbpension ab 3 Nächten.</li>
+        <li>Check-in ab 14 Uhr, Check-out bis 11 Uhr.</li>
+      </ul>
+      <h3 class="tiles__h">Die drei Zimmerarten</h3>
+      <div class="tiles" id="roomTiles"></div>
+    </div>
+  </section>
+
+  <!-- Das Haus -->
+  <section class="section" id="haus" aria-labelledby="h-haus">
+    <div class="wrap">
+      <div class="grid grid--7-5">
+        <div class="haus__pics">
+          <figure class="img--4-3" style="grid-column:1/-1">
+            <picture>
+              <source type="image/webp" srcset="assets/img/haus-fassade-800.webp 800w, assets/img/haus-fassade-1400.webp 1400w" sizes="(max-width: 999px) 100vw, 58vw">
+              <img src="assets/img/haus-fassade-1400.jpg" srcset="assets/img/haus-fassade-800.jpg 800w, assets/img/haus-fassade-1400.jpg 1400w" sizes="(max-width: 999px) 100vw, 58vw" width="1400" height="788" loading="lazy" alt="Das Gasthaus Fluhweid: dunkles Holzhaus mit rot-weissen Fensterläden, Geranien und Terrasse, dahinter Dorf, Kirche und verschneite Berge im Herbst">
+            </picture>
+          </figure>
+        </div>
+        <div class="haus__text">
+          <p class="kicker">Das Haus</p>
+          <h2 id="h-haus">Seit 1904 am Dorfplatz</h2>
+          <p style="margin-top:22px">Gebaut als Säumerherberge am Weg über den Pass, seit 1904 Gasthaus: Holz aus dem eigenen Wald, die Fensterläden jedes Frühjahr frisch gestrichen, die Jahreszahl noch über der Tür.</p>
+          <p>Heute führt die Familie das Haus in vierter Generation. In der Küche steht die Tochter, an der Rezeption der Vater – und die Rösti wird immer noch in derselben Eisenpfanne gebraten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gästestimmen -->
+  <section class="section" id="stimmen" aria-labelledby="h-stimmen">
+    <div class="wrap stimmen">
+      <div>
+        <p class="kicker">Gästestimmen · Beispieltexte</p>
+        <h2 id="h-stimmen">So könnten Gäste schreiben</h2>
+        <p style="margin-top:22px;max-width:360px">Im Konzept stehen hier die echten Bewertungen des Hauses mit Quelle und Datum. Die drei Stimmen rechts sind Beispieltexte.</p>
+      </div>
+      <ul class="quotes">
+        <li><blockquote>«Die Rösti aus der Eisenpfanne, die Sonne auf der Terrasse, der Blick – wir kommen wieder.»</blockquote><cite>Beispieltext</cite></li>
+        <li><blockquote>«Einfaches Zimmer unter dem Dach, sehr sauber, und morgens die Berge im Fenster.»</blockquote><cite>Beispieltext</cite></li>
+        <li><blockquote>«Herzliche Gastgeber, der Rehpfeffer war der beste seit Jahren.»</blockquote><cite>Beispieltext</cite></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Anreise -->
+  <section class="section" id="anreise" aria-labelledby="h-anreise">
+    <div class="wrap">
+      <div class="anreise" style="margin-top:0">
+        <div>
+          <h2 id="h-anreise">Anreise und Kontakt</h2>
+          <address style="margin-top:14px">Gasthaus Fluhweid · Dorfstrasse 1 · Musterdorf · Schweiz</address>
+          <p class="contact"><span>+41 33 000 00 00</span><span>kontakt@gasthaus-fluhweid.example</span></p>
+          <p>Am Dorfplatz, zehn Minuten zu Fuss vom Postauto. Parkplätze hinter dem Haus. Tischreservation telefonisch oder per E-Mail.</p>
+          <h4>Öffnungszeiten</h4>
+          <ul>
+            <li>Mi – So 9 – 23 Uhr</li>
+            <li>Montag und Dienstag Ruhetag</li>
+          </ul>
+        </div>
+        <div class="map">
+          <div class="map__ph">
+            <p style="margin:0;font-size:15px;color:var(--ink)"><b>Fiktives Haus</b></p>
+            <p>In einer echten Website steht hier die Karte mit dem Standort – datenschutzfreundlich erst nach Klick geladen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__in">
+      <a class="brand" href="#top">
+        <span class="brand__name">Fluhweid</span>
+        <span class="brand__sub">Gasthaus · Restaurant<br>Berner Oberland</span>
+      </a>
+      <address>Gasthaus Fluhweid<br>Dorfstrasse 1<br>Musterdorf, Schweiz</address>
+      <p class="footer__contact"><span>+41 33 000 00 00</span><span>kontakt@gasthaus-fluhweid.example</span></p>
+    </div>
+    <p class="footer__legal">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <span>Konzeptprojekt von <a href="https://buuq.de" target="_blank" rel="noopener">BUUQ</a> · Bilder KI-generiert</span>
+    </p>
+  </div>
+</footer>
+
+<!-- Buchung -->
+<div class="modal" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="bookTitle" hidden>
+  <div class="modal__dialog modal__dialog--book" tabindex="-1">
+    <header class="modal__head">
+      <h2 class="modal__title" id="bookTitle">Zimmer buchen <span class="demo-tag">Demo – keine echte Buchung</span></h2>
+      <ol class="steps" id="bookSteps">
+        <li>Zeitraum &amp; Zimmer</li>
+        <li>Ihre Daten</li>
+        <li>Bestätigung</li>
+      </ol>
+      <button class="modal__close" type="button" data-close aria-label="Schliessen">
+        <svg class="ico" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </header>
+    <div class="modal__body" id="bookBody"></div>
+  </div>
+</div>
+
+<!-- Zimmerdetails -->
+<div class="modal" id="roomModal" role="dialog" aria-modal="true" aria-labelledby="roomTitle" hidden>
+  <div class="modal__dialog modal__dialog--room" tabindex="-1">
+    <button class="modal__close modal__close--float" type="button" data-close aria-label="Schliessen">
+      <svg class="ico" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+    <div class="modal__body" id="roomBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/data.js?v=3"></script>
+<script src="assets/js/app.js?v=3"></script>
+</body>
+</html>
