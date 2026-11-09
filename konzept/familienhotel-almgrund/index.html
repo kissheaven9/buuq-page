@@ -27,7 +27,7 @@
 
   <link rel="preload" href="assets/fonts/Manrope-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-960.webp 960w, assets/img/hero-1448.webp 1448w" imagesizes="(min-width: 900px) 60vw, 100vw">
-  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=3">
 </head>
 <body>
 
@@ -39,7 +39,7 @@
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"/></symbol>
 </svg>
 
-<p class="beta">Konzeptprojekt von BUUQ · fiktives Haus · Bilder KI-generiert</p>
+<p class="beta">Konzeptprojekt von BUUQ</p>
 
 <header class="top" id="header">
   <a class="brand" href="#top">
@@ -55,7 +55,7 @@
     <a href="#anreise">Anreise</a>
   </nav>
   <div class="top__right">
-    <span class="top__tel">+49 8000 000000</span>
+    <span class="top__tel">+49 171 3920047</span>
     <button class="btn btn--primary" type="button" data-book>Buchen</button>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü">
       <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
@@ -74,7 +74,7 @@
     <a href="#anreise">Anreise</a>
   </nav>
   <div class="menu__foot">
-    <span class="menu__tel">+49 8000 000000</span>
+    <span class="menu__tel">+49 171 3920047</span>
   </div>
 </div>
 
@@ -289,7 +289,7 @@
   <!-- 9 · Anreise -->
   <section class="section" id="anreise">
     <h2>Anreise</h2>
-    <div class="arrival arrival--solo">
+    <div class="arrival">
       <dl class="arrival__info">
         <div>
           <dt>Mit dem Auto</dt>
@@ -308,6 +308,13 @@
           <dd>Zimmer ab 15 Uhr, Abreise bis 10.30 Uhr. Bei später Ankunft liegt Ihr Schlüssel in der Schlüsselbox am Eingang.</dd>
         </div>
       </dl>
+      <div class="map" id="map" data-lat="47.47620" data-lon="10.42830" data-name="Familienhotel Almgrund" data-adr="Talstraße 38, 87541 Hinterbergtal">
+        <div class="map__consent">
+          <p>Die Karte wird von OpenStreetMap geladen. Dabei wird Ihre IP-Adresse an die Server der OpenStreetMap Foundation übertragen.</p>
+          <button class="btn btn--primary" type="button" id="mapLoad">Karte laden</button>
+          <a href="datenschutz.html">Mehr dazu in der Datenschutzerklärung</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -319,11 +326,11 @@
       <span class="brand__sub">Familienhotel · Bergtal in den Alpen</span>
     </a>
     <address class="footer__addr">
-      Familienhotel Almgrund<br>Dorfstraße 1<br>Musterdorf
+      Familienhotel Almgrund<br>Talstraße 38<br>87541 Hinterbergtal
     </address>
     <p class="footer__contact">
-      +49 8000 000000<br>
-      kontakt@familienhotel-almgrund.example
+      +49 171 3920047<br>
+      info@familienhotel-almgrund.de
     </p>
     <nav class="footer__nav" aria-label="Rechtliches">
       <a href="impressum.html">Impressum</a>
@@ -378,7 +385,8 @@
   </div>
 </div>
 
-<script src="assets/js/data.js?v=2"></script>
-<script src="assets/js/app.js?v=2"></script>
+<script src="assets/js/data.js?v=3"></script>
+<script src="assets/js/app.js?v=3"></script>
+<script src="assets/js/karte.js?v=1"></script>
 </body>
 </html>

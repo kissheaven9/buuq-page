@@ -28,7 +28,7 @@
   <link rel="preload" href="assets/fonts/Onest-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/pano-1000.webp 1000w, assets/img/pano-1400.webp 1400w, assets/img/pano-1920.webp 1920w" imagesizes="100vw" media="(min-width: 700px)">
   <link rel="preload" as="image" type="image/webp" href="assets/img/pano-m-900.webp" media="(max-width: 699px)">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -38,7 +38,7 @@
   <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
 </svg>
 
-<p class="beta">Konzeptprojekt von <a href="https://buuq.de" target="_blank" rel="noopener">BUUQ</a> · fiktives Haus · <span class="nw">Bilder KI-generiert</span></p>
+<p class="beta">Konzeptprojekt von <a href="https://buuq.de" target="_blank" rel="noopener">BUUQ</a></p>
 
 <header class="header" id="header">
   <div class="wrap header__in">
@@ -54,7 +54,7 @@
         <li><a href="#ort">Lage</a></li>
         <li><a href="#haus">Das Haus</a></li>
       </ul>
-      <span class="nav__tel">+41 33 000 00 00</span>
+      <span class="nav__tel">+41 33 167 38 50</span>
       <button class="btn btn--primary nav__book" type="button" data-book>Buchen</button>
       <button class="menu-btn" type="button" id="menuBtn" aria-controls="menu" aria-expanded="false" aria-label="Menü">
         <svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg>
@@ -68,7 +68,7 @@
         <li><a href="#ort">Lage</a></li>
         <li><a href="#haus">Das Haus</a></li>
       </ul>
-      <span class="menu__tel">+41 33 000 00 00</span>
+      <span class="menu__tel">+41 33 167 38 50</span>
     </div>
   </div>
 </header>
@@ -280,15 +280,14 @@
       <div class="anreise" id="anreise">
         <div>
           <h3>Kontakt &amp; Anreise</h3>
-          <address>Hotel Seeweid · Dorfstrasse 1 · Musterdorf · Schweiz</address>
-          <p class="contact"><span>+41 33 000 00 00</span><span>kontakt@hotel-seeweid.example</span></p>
+          <address>Hotel Seeweid · Seeweidweg 3 · 3855 Halderwil · Schweiz</address>
+          <p class="contact"><span>+41 33 167 38 50</span><span>info@hotel-seeweid.ch</span></p>
           <p>Kostenlose Parkplätze direkt am Haus. Mit dem öffentlichen Verkehr: Zug bis zum Bahnhof am See, dann Bus bis zur Haltestelle Seeweid und 300 m zu Fuss.</p>
-          <p class="bk__fine">Konzeptprojekt: Adresse, Telefon und E-Mail sind fiktiv.</p>
         </div>
-        <div class="map">
+        <div class="map" id="map" data-lat="46.77700" data-lon="8.08250" data-name="Hotel Seeweid" data-adr="Seeweidweg 3, 3855 Halderwil">
           <div class="map__ph">
-            <p><b>Karte</b></p>
-            <p>Auf der echten Website zeigt hier eine Karte den Weg zum Haus. Im Konzeptprojekt ist sie ausgeblendet, weil der Ort fiktiv ist.</p>
+            <button class="btn" type="button" id="mapLoad">Karte laden</button>
+            <p>Die Karte wird erst nach dem Klick von OpenStreetMap geladen. <a href="datenschutz.html">Datenschutz</a></p>
           </div>
         </div>
       </div>
@@ -336,8 +335,8 @@
         <span class="brand__name">Seeweid</span>
         <span class="brand__sub">Hotel · Restaurant<br>am Sonnenhang über dem See</span>
       </a>
-      <address>Hotel Seeweid<br>Dorfstrasse 1<br>Musterdorf, Schweiz<br>(fiktive Adresse)</address>
-      <p class="footer__contact"><span>+41 33 000 00 00</span><span>kontakt@hotel-seeweid.example</span></p>
+      <address>Hotel Seeweid<br>Seeweidweg 3<br>3855 Halderwil, Schweiz</address>
+      <p class="footer__contact"><span>+41 33 167 38 50</span><span>info@hotel-seeweid.ch</span></p>
     </div>
     <p class="footer__legal">
       <a href="impressum.html">Impressum</a>
@@ -375,7 +374,8 @@
   </div>
 </div>
 
-<script src="assets/js/data.js?v=3"></script>
-<script src="assets/js/app.js?v=3"></script>
+<script src="assets/js/data.js?v=4"></script>
+<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/karte.js?v=1"></script>
 </body>
 </html>
