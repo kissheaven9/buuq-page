@@ -90,3 +90,46 @@ body.ru .lang-de{display:none}
 .gcard li{color:rgba(255,255,255,.75);font-size:14px;line-height:1.55;padding-left:16px;position:relative;margin-bottom:5px}
 .gcard li::before{content:"·";color:#FFABF8;position:absolute;left:2px;font-weight:700}
 .callout{border-left:3px solid #FFABF8;padding:4px 0 4px 18px;margin:26px 0;color:rgba(255,255,255,.9);font-size:clamp(16px,1.3vw,18px);font-weight:300}
+
+/* ===================== v4: график, таблица, карточка v2, CTA v2 ===================== */
+.bars{margin:20px 0 4px}
+.bar{margin-bottom:13px}
+.bar .bl{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;color:rgba(255,255,255,.85);margin-bottom:5px}
+.bar .bl b{color:#fff;font-weight:600}
+.bar .tr{height:14px;border-radius:4px;background:rgba(255,255,255,.09);overflow:hidden}
+.bar .fl{height:100%;background:#D557B8;border-radius:4px}
+.bars-cap{font-size:12.5px;color:var(--muted);margin-top:10px}
+.btab{width:100%;border-collapse:collapse;margin:24px 0 4px;font-size:14.5px}
+.btab th{text-align:left;color:var(--muted);font-weight:500;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.18)}
+.btab td{padding:11px 10px;border-bottom:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.85);vertical-align:top}
+.btab td.c{white-space:nowrap}
+.dots{color:#D557B8;letter-spacing:2.5px;font-size:12px}
+.tab-cap{font-size:12.5px;color:var(--muted);margin-top:10px}
+/* карточка v2 */
+.demo-card{overflow:visible}
+.dc-photo{border-radius:18px 18px 0 0;position:relative}
+.dc-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:36%;background:linear-gradient(to top,rgba(10,8,14,.35),transparent)}
+.dc-row{position:relative}
+.dc-row .dc-pin{position:absolute;right:-34px;top:50%;transform:translateY(-50%);margin:0;width:26px;height:26px;font-size:13px;box-shadow:0 0 0 3px rgba(255,255,255,.95),0 6px 18px rgba(171,42,244,.55)}
+.dc-titlerow{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.dc-rate{font-size:13.5px;color:#17171c;font-weight:600;white-space:nowrap}
+.dc-rate .st{color:#E8A33D}
+.dc-rate small{color:#8a8794;font-weight:400}
+.dc-chip svg{width:15px;height:15px;stroke:#5a5763;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px;margin-right:5px}
+.dc-storno{text-align:center;font-size:12.5px;color:#8a8794;margin-top:7px}
+@media (max-width:560px){.dc-row .dc-pin{right:-15px}}
+/* CTA v2 */
+.cta2{border:1.5px solid rgba(255,171,248,.5);background:linear-gradient(135deg,rgba(171,42,244,.17),rgba(239,166,101,.10));border-radius:20px;padding:clamp(22px,4vw,32px);margin-top:46px;text-align:center}
+.cta2 h2{margin:0 0 6px;font-size:clamp(20px,2vw,25px);font-weight:500}
+.cta2 .sub{color:rgba(255,255,255,.75);font-size:14.5px;max-width:52ch;margin:0 auto}
+.cta2 ul{list-style:none;margin:16px auto 20px;padding:0;display:inline-flex;flex-direction:column;gap:7px;text-align:left}
+.cta2 li{padding-left:26px;position:relative;color:rgba(255,255,255,.88);font-size:14.5px}
+.cta2 li::before{content:"✓";position:absolute;left:0;color:#FFABF8;font-weight:700}
+.cta2 .pill{font-size:15.5px;padding:14px 30px;font-weight:600;box-shadow:0 10px 34px rgba(171,42,244,.55)}
+.cta2 .mini{display:block;margin-top:10px;font-size:12.5px;color:var(--muted)}
+/* продолжить чтение */
+.more{margin-top:44px;border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
+.more h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 12px}
+.more a{display:block;color:#FFABF8;margin-bottom:9px;font-size:15.5px}
+.more a:hover{text-decoration:underline}
+.see{color:#FFABF8;font-size:13px;white-space:nowrap}
