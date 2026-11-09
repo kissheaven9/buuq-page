@@ -133,3 +133,8 @@ body.ru .lang-de{display:none}
 .more a{display:block;color:#FFABF8;margin-bottom:9px;font-size:15.5px}
 .more a:hover{text-decoration:underline}
 .see{color:#FFABF8;font-size:13px;white-space:nowrap}
+
+/* кнопки-пилюли внутри .legal: текст белый, без подчёркивания (правило .legal a их перекрашивало) */
+.legal a.pill{color:#fff;text-decoration:none}
+.legal a.pill:hover{color:#fff}
+.more a,.legal.artikel .more a{text-decoration:none}
