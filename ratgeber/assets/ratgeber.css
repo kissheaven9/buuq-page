@@ -170,3 +170,15 @@ body.ru .lang-de{display:none}
 .sc-leg b{display:block;color:#fff;font-size:15px;margin-bottom:2px}
 .sc-leg .tx{color:rgba(255,255,255,.7);font-size:13.5px;line-height:1.5}
 @media (max-width:940px){.showcase{grid-template-columns:1fr;width:100%;left:0;transform:none}}
+
+/* ===================== v7: широкая вёрстка раздела (10–12 колонок) ===================== */
+.legal.artikel{max-width:1160px}
+.legal.artikel>p,.legal.artikel>h1,.legal.artikel>h2,
+.legal.artikel .steps,.legal.artikel .callout,.legal.artikel .faq,
+.legal.artikel .more,.legal.artikel .art-autor{max-width:820px;margin-left:auto;margin-right:auto}
+.legal.artikel .faq h2{max-width:none}
+.stat,.vchart,.bars-cap,.grp,.btab,.tab-cap,.cta2{max-width:none}
+.showcase{left:auto;transform:none;width:100%}
+.demo-note{max-width:640px}
+.rg-main{max-width:1240px}
+.vtrack{max-width:72px;height:210px}
