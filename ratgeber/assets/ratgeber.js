@@ -47,8 +47,20 @@
 /* «показать ещё» для рядов карточек */
 (function () {
   document.querySelectorAll('.more-toggle').forEach(function (b) {
-    var grid = b.closest('.more') && b.closest('.more').querySelector('.rg-cards');
+    var host = b.closest('.more') || b.closest('.rg-sec') || b.parentElement;
+    var grid = host && host.querySelector('.rg-cards');
     if (!grid || !grid.querySelector('.hid')) { b.hidden = true; return; }
     b.addEventListener('click', function () { grid.classList.add('open'); b.hidden = true; });
   });
+})();
+
+/* анимация 2D-схем при появлении */
+(function () {
+  var figs = document.querySelectorAll('.fig');
+  if (!figs.length) return;
+  if (!('IntersectionObserver' in window)) { figs.forEach(function (f) { f.classList.add('go'); }); return; }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('go'); io.unobserve(e.target); } });
+  }, { threshold: 0.3 });
+  figs.forEach(function (f) { io.observe(f); });
 })();

@@ -235,3 +235,29 @@ body.ru .lang-de{display:none}
 
 /* карточки-ссылки внутри .legal: без подчёркиваний */
 .legal a.rg-card, .legal a.rg-card h3, .legal a.rg-card p, .legal a.rg-card .k, .legal a.rg-card .mehr{text-decoration:none}
+
+/* ===================== v10: карточки крупнее, 4 в ряд ===================== */
+.rg-main{max-width:1360px}
+.rg-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.rg-card.has-img .rg-bd{padding:18px 20px 20px;gap:9px}
+.rg-card h3{font-size:19.5px;line-height:1.28}
+.rg-card p{font-size:14.8px}
+.rg-sec .more-toggle{margin-top:18px}
+@media (max-width:1140px){.rg-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.rg-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.rg-cards{grid-template-columns:1fr}}
+.rg-cards .hid{display:none}
+.rg-cards.open .hid{display:flex}
+
+/* ===================== v10b: анимация 2D-схем ===================== */
+.fig svg .box,.fig svg .box2{opacity:0;transform:translateY(10px);transform-box:fill-box;transition:opacity .6s ease,transform .6s ease}
+.fig svg text{opacity:0;transition:opacity .7s ease .35s}
+.fig svg .arr,.fig svg .arr2{stroke-dasharray:420 420;stroke-dashoffset:420;transition:stroke-dashoffset 1.1s cubic-bezier(.3,.7,.3,1) .45s}
+.fig svg .rb{transform:scaleX(0);transform-origin:left center;transform-box:fill-box;transition:transform .9s cubic-bezier(.22,.75,.25,1) .3s}
+.fig svg rect:nth-of-type(2n) .noop{}
+.fig.go svg .box,.fig.go svg .box2{opacity:1;transform:none}
+.fig.go svg text{opacity:1}
+.fig.go svg .arr,.fig.go svg .arr2{stroke-dashoffset:0}
+.fig.go svg .rb{transform:scaleX(1)}
+.fig svg .box2{transition-delay:.15s}
+@media (prefers-reduced-motion:reduce){.fig svg .box,.fig svg .box2,.fig svg text,.fig svg .arr,.fig svg .arr2,.fig svg .rb{transition:none;opacity:1;transform:none;stroke-dashoffset:0}}
