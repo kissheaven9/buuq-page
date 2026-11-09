@@ -16,30 +16,3 @@
     });
   });
 })();
-
-/* анимированные столбики: рост при появлении + бегущие цифры */
-(function () {
-  var charts = document.querySelectorAll('.vchart');
-  if (!charts.length) return;
-  function countUp(el) {
-    var n = parseInt(el.getAttribute('data-n'), 10) || 0, t0 = null, dur = 1100;
-    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { el.firstChild.nodeValue = n; return; }
-    function tick(ts) {
-      if (!t0) t0 = ts;
-      var k = Math.min(1, (ts - t0) / dur); k = 1 - Math.pow(1 - k, 3);
-      el.firstChild.nodeValue = Math.round(n * k);
-      if (k < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  if (!('IntersectionObserver' in window)) { charts.forEach(function (c) { c.classList.add('go'); c.querySelectorAll('[data-n]').forEach(function (e) { e.firstChild.nodeValue = e.getAttribute('data-n'); }); }); return; }
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      e.target.classList.add('go');
-      e.target.querySelectorAll('[data-n]').forEach(countUp);
-      io.unobserve(e.target);
-    });
-  }, { threshold: 0.35 });
-  charts.forEach(function (c) { io.observe(c); });
-})();
