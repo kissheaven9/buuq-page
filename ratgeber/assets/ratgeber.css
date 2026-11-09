@@ -270,3 +270,9 @@ body.ru .lang-de{display:none}
 .shot img{width:100%;border-radius:14px;border:1px solid rgba(255,255,255,.14);display:block}
 .shot figcaption{font-size:12.5px;color:var(--muted);margin-top:9px;text-align:center}
 .cta2-ex img.doc{aspect-ratio:16/10;object-fit:cover;object-position:top}
+
+/* ===================== подвал раздела ===================== */
+.rfoot{border-top:1px solid rgba(255,255,255,.12);margin-top:64px;padding:26px var(--pad) 34px;color:var(--muted);font-size:13.5px}
+.rfin{max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:center}
+.rfoot a{color:rgba(255,255,255,.75)}
+.rfoot a:hover{color:#fff}
