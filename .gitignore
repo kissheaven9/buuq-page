@@ -13,3 +13,6 @@ Website-Audit*.pdf
 .DS_Store
 BUUQ_ALL_IN_ONE/
 _unterlagen_crm/
+
+# Sandbox-Temp-Dateien
+*.sb-*
