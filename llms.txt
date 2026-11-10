@@ -1,0 +1,19 @@
+# BUUQ — Websites & digitale Auftritte für Immobilien, Hotels und Gastronomie
+
+> BUUQ (GU-FI GmbH, Gersthofen bei Augsburg) entwickelt Websites, Investment-Exposés, Renderings,
+> KI-Assistenten und Buchungsstrecken für Bauträger, Hotels, Gasthöfe und Restaurants im DACH-Raum.
+> Kostenloses Website-Audit mit Konzept-Vorschau: buuq.de@gmail.com · +49 174 5893955
+
+## Ratgeber (Fachartikel, Deutsch)
+- [Hotelauslastung erhöhen: 6 Hebel](https://buuq.de/ratgeber/hotel-auslastung-website/): Erwartungen, Direktbuchung, Bewertungen, Google-Profil, Nebensaison, Stammgäste — mit Daten aus 28 Audits (Oktober 2026, DACH).
+- [Warum Gäste nicht auf der Hotel-Website buchen](https://buuq.de/ratgeber/warum-gaeste-nicht-direkt-buchen/): fünf Ängste der Gäste, fünf Schritte, Referenz-Zimmerkarte, Audit-Statistik.
+- [Direktbucher-Vorteile](https://buuq.de/ratgeber/direktbuchung-vorteile-ideen/): Boni mit Kosten-Nutzen-Tabelle, Auswahl nach Haustyp.
+- [Hotel-Website Checkliste](https://buuq.de/ratgeber/hotel-website-checkliste/): Pflichtprogramm von Buchung bis Impressum.
+- [Buchungssysteme für Hotels](https://buuq.de/ratgeber/hotel-buchungssysteme/): IBE, Channel-Manager, PMS — wann was nötig ist und was es kostet (geprüft November 2026).
+- [Website für Bauträger](https://buuq.de/ratgeber/bautraeger-website-vertrauen/): Vertrauen verkaufen, bevor gebaut ist.
+- [Restaurant-Website ohne Provision](https://buuq.de/ratgeber/restaurant-reservierung-ohne-provision/): Speisekarte als Seite, Reservierung mit zwei Klicks.
+- [Über die Autorin](https://buuq.de/ratgeber/ueber-olga/): Olga Tikhomirova, Gründerin von BUUQ.
+
+## Referenzprojekte
+- [Witzighausen Residenz](https://witzighausen-residenz.de/) — Projekt-Website eines Bauträgers (22 Appartements bei Ulm)
+- [Donau Höfe](https://donauhoefe.de/) — Wohnquartier Gundelfingen: Website, Imagefilm, Exposé

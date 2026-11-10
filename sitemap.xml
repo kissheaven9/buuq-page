@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://buuq.de/</loc><lastmod>2026-11-10</lastmod><priority>1.0</priority></url>
-  <url><loc>https://buuq.de/ratgeber/</loc><lastmod>2026-11-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://buuq.de/ratgeber/bautraeger-website-vertrauen/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://buuq.de/ratgeber/direktbuchung-vorteile-ideen/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://buuq.de/ratgeber/hotel-auslastung-website/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://buuq.de/ratgeber/hotel-buchungssysteme/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://buuq.de/ratgeber/hotel-website-checkliste/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://buuq.de/ratgeber/restaurant-reservierung-ohne-provision/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://buuq.de/ratgeber/ueber-olga/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://buuq.de/ratgeber/warum-gaeste-nicht-direkt-buchen/</loc><lastmod>2026-11-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://buuq.de/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/hotel-auslastung-website/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/warum-gaeste-nicht-direkt-buchen/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/direktbuchung-vorteile-ideen/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/hotel-website-checkliste/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/hotel-buchungssysteme/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/bautraeger-website-vertrauen/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/restaurant-reservierung-ohne-provision/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/ratgeber/ueber-olga/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/impressum.html</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://buuq.de/datenschutz.html</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>
