@@ -213,6 +213,11 @@ a{color:inherit;text-decoration:none}
 .foot-contact address{font-style:normal;color:var(--muted);font-size:14.5px;line-height:1.75;margin-bottom:20px}
 .foot-contact address strong{color:#fff;font-weight:500}
 .foot-contact address a:hover{color:#fff}
+.foot-col .foot-contact address a,.foot-contact address a{display:inline;margin:0}
+.foot-msg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.foot-col .foot-msg a{display:inline-flex;margin:0;color:#fff;padding:9px 12px}
+.foot-msg svg{width:17px;height:17px;flex:none}
+.foot-msg-nr{color:var(--muted);font-size:13px;margin-bottom:20px}
 .foot-legal{
   display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   margin-top:clamp(40px,5vw,64px);padding-top:22px;border-top:1px solid rgba(255,255,255,.08);
