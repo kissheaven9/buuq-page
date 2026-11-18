@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seite nicht gefunden — BUUQ</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
+<style>
+:root{
+  --bg:#000; --ink:#fff; --muted:rgba(255,255,255,.6);
+  --grad:linear-gradient(94deg,#AB2AF4 0%,#FFABF8 51%,#EFA665 100%);
+  --glass:rgba(255,255,255,.09); --glass-brd:rgba(255,255,255,.14);
+  --font:'Archivo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--font);
+  display:flex;flex-direction:column;min-height:100svh;
+  overflow-x:hidden;position:relative;
+}
+.aurora{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;filter:blur(70px) saturate(1.15)}
+.blob{position:absolute;display:block;border-radius:50%;mix-blend-mode:screen;opacity:.5}
+.b1{width:46vw;height:46vw;left:-12vw;top:-14vw;background:radial-gradient(circle at 35% 35%,#AB2AF4,transparent 68%)}
+.b2{width:40vw;height:40vw;right:-10vw;top:8vh;background:radial-gradient(circle at 60% 40%,#EB61C7,transparent 66%)}
+.b3{width:44vw;height:44vw;left:22vw;bottom:-18vw;background:radial-gradient(circle at 50% 50%,#EFA665,transparent 64%)}
+@media (max-width:700px){.b1,.b2,.b3{width:90vw;height:90vw}}
+.hdr{position:relative;z-index:2;display:flex;align-items:center;padding:22px clamp(20px,6.6vw,96px)}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand-tx{font-weight:700;font-size:21px;letter-spacing:.06em}
+main{
+  position:relative;z-index:2;flex:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:40px clamp(20px,6.6vw,96px) 60px;
+}
+.code{
+  font-weight:800;font-size:clamp(96px,24vw,220px);line-height:1;letter-spacing:.02em;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+h1{font-weight:700;font-size:clamp(22px,4.6vw,34px);margin:18px 0 10px}
+.sub{color:var(--muted);font-size:clamp(15px,2.4vw,18px);max-width:34em;line-height:1.55}
+.acts{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 28px;border-radius:999px;font-family:var(--font);font-size:16px;
+  text-decoration:none;color:#fff;border:1px solid transparent;transition:transform .15s ease,opacity .15s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-grad{background:var(--grad);color:#120017;font-weight:600}
+.btn-glass{background:var(--glass);border-color:var(--glass-brd);backdrop-filter:blur(8px)}
+.hint{margin-top:40px;color:var(--muted);font-size:14px}
+.hint a{color:#FFABF8;text-decoration:none}
+.hint a:hover{text-decoration:underline}
+.foot{
+  position:relative;z-index:2;padding:22px clamp(20px,6.6vw,96px);
+  color:var(--muted);font-size:13px;text-align:center;
+}
+</style>
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+</div>
+
+<header class="hdr">
+  <a class="brand" href="/" aria-label="BUUQ Startseite">
+    <span class="brand-ic" aria-hidden="true">
+      <svg viewBox="0 0 28 29" width="30" height="30">
+        <path d="M2.7 16.3 A10.5 10.5 0 0 0 23.7 16.3" fill="none" stroke="#FFABF8" stroke-width="3.97" stroke-linecap="round"/><circle cx="12.28" cy="5.84" r="1.95" fill="#FFABF8"/><circle cx="17.64" cy="6.78" r="1.95" fill="#FFABF8"/><circle cx="21.47" cy="9.84" r="1.95" fill="#FFABF8"/><circle cx="23.34" cy="13.58" r="1.95" fill="#FFABF8"/>
+      </svg>
+    </span>
+    <span class="brand-tx">BUUQ</span>
+  </a>
+</header>
+
+<main>
+  <div class="code" aria-hidden="true">404</div>
+  <h1>Diese Seite gibt es nicht — oder nicht mehr.</h1>
+  <p class="sub">Vielleicht wurde die Adresse falsch eingegeben, oder die Seite wurde verschoben.
+    Projektvorschauen sind nur für eine begrenzte Zeit online.</p>
+  <div class="acts">
+    <a class="btn btn-grad" href="/">Zur Startseite</a>
+    <a class="btn btn-glass" href="/ratgeber/">Zum Ratgeber</a>
+  </div>
+  <p class="hint">Sie haben einen Link von uns bekommen, der nicht mehr funktioniert?<br>
+    Schreiben Sie an <a href="mailto:buuq.de@gmail.com">buuq.de@gmail.com</a> oder rufen Sie an:
+    <a href="tel:+491745893955">+49&nbsp;174&nbsp;5893955</a>.</p>
+</main>
+
+<footer class="foot">
+  BUUQ ist ein Angebot der GU-FI GmbH · Röntgenstraße 40a · 86368 Gersthofen ·
+  <a href="/impressum.html" style="color:inherit">Impressum</a> ·
+  <a href="/datenschutz.html" style="color:inherit">Datenschutz</a>
+</footer>
+
+</body>
+</html>
