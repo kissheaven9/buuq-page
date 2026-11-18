@@ -583,7 +583,7 @@ main > section + section { border-top: 2px solid var(--line-strong); }
   .menu__side .tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-left-color: transparent; }
   .menu__side .tabs button[aria-selected="true"] small { color: var(--bg); }
   .menu__side .chips { padding-top: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
-  .contact .map, .jobs__pic { position: static; }
+  .contact .map, .jobs__pic { position: relative; top: auto; }
 }
 @media (max-width: 640px) {
   .header { grid-template-columns: auto 1fr; }
