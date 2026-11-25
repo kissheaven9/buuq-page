@@ -320,7 +320,7 @@ em { font-family: var(--serif); font-style: italic; font-size: 1.08em; }
 .arrival__info dt { font-weight: 600; margin-bottom: 4px; }
 .arrival__info dd { color: var(--ink-2); line-height: 1.55; font-size: var(--fs-small); }
 .arrival__info a { text-underline-offset: .3em; text-decoration-thickness: 1px; }
-.map { position: relative; min-height: clamp(320px, 36vw, 520px); background: var(--wood); overflow: hidden; }
+.map { position: relative; isolation: isolate; min-height: clamp(320px, 36vw, 520px); background: var(--wood); overflow: hidden; } /* isolate: Leaflet/map__link (z-index 1000) nicht über Modale (24.11.2026, Fix aus schwarzberg) */
 .map__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .35; }
 .map__consent { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 16px; padding: 24px; text-align: center; font-size: var(--fs-small); }
 .map__consent p { margin: 0; max-width: 30em; }
