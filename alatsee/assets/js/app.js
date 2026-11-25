@@ -289,12 +289,19 @@
       '<p class="cal__hint" aria-live="polite">' + hint + (state.from ? ' <button type="button" class="link" data-cal-reset>' + t('cal.reset') + '</button>' : '') + '</p>' +
       '<ul class="cal__legend"><li class="lg-free">' + t('cal.free') + '</li><li class="lg-busy">' + t('cal.busy') + '</li><li class="lg-sel">' + t('cal.sel') + '</li></ul>';
   }
+  function dmy(d) { return ('0' + d.getDate()).slice(-2) + '.' + ('0' + (d.getMonth() + 1)).slice(-2) + '.' + d.getFullYear(); }
+  function syncBookline() {
+    var a = document.getElementById('bl-in'), b = document.getElementById('bl-out');
+    if (a) a.value = state.from ? dmy(state.from) : '';
+    if (b) b.value = state.to ? dmy(state.to) : '';
+  }
   function pickDay(s) {
     var d = parseYmd(s);
     if (!state.from || state.to || d <= state.from || rangeHasFull(state.from, d)) {
       if (houseFull(d)) return;
       state.from = d; state.to = null;
     } else state.to = d;
+    syncBookline();
     renderCal(); renderRoomList();
     typo($('#bookBody'));
     refocusIn('#bookBody', '[data-day="' + s + '"]');
@@ -413,17 +420,15 @@
     var f = $('#bookline');
     if (!f) return;
     var inp = $('#bl-in'), out = $('#bl-out');
-    inp.min = ymd(TODAY); out.min = ymd(addDays(TODAY, 1));
-    inp.addEventListener('change', function () {
-      if (inp.value) { var d = parseYmd(inp.value); out.min = ymd(addDays(d, 1)); if (out.value && out.value <= inp.value) out.value = ymd(addDays(d, 1)); }
+    // Datumsfelder ohne type="date": der native Platzhalter folgt der Browsersprache und zeigt sonst kyrillische Kürzel.
+    [inp, out].forEach(function (x) {
+      x.addEventListener('mousedown', function (e) { e.preventDefault(); x.blur(); state.adults = +$('#bl-guests').value; state.kids = []; openBooking(null); });
+      x.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); state.adults = +$('#bl-guests').value; state.kids = []; openBooking(null); } });
     });
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       var err = $('#bl-err');
-      var ok = inp.value && out.value && out.value > inp.value && inp.value >= ymd(TODAY);
-      err.hidden = !!ok; err.textContent = ok ? '' : t('bl.err');
-      if (!ok) { (inp.value ? out : inp).focus(); return; }
-      state.from = parseYmd(inp.value); state.to = parseYmd(out.value);
+      if (err) { err.hidden = true; err.textContent = ''; }   // Daten werden im Kalender gewählt – die Leiste braucht keine Fehlermeldung
       state.adults = +$('#bl-guests').value; state.kids = [];
       openBooking(null);
     });
@@ -472,7 +477,7 @@
       state.month = new Date(state.month.getFullYear(), state.month.getMonth() + (+el.getAttribute('data-cal')), 1);
       renderCal(); refocusIn('#bookBody', '[data-cal="' + el.getAttribute('data-cal') + '"]'); return;
     }
-    if (e.target.closest('[data-cal-reset]')) { state.from = state.to = null; renderCal(); renderRoomList(); typo($('#bookBody')); return; }
+    if (e.target.closest('[data-cal-reset]')) { state.from = state.to = null; syncBookline(); renderCal(); renderRoomList(); typo($('#bookBody')); return; }
     if ((el = e.target.closest('[data-step]'))) {
       var key = el.getAttribute('data-step'), dir = +el.getAttribute('data-dir');
       if (key === 'adults') state.adults = Math.min(3, Math.max(1, state.adults + dir));

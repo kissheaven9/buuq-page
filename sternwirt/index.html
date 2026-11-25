@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className += ' js';</script>
   <title>Landhotel Sternwirt · Wellnesshotel in der Frankenalb zwischen Nürnberg und Amberg</title>
   <meta name="description" content="Familiengeführtes Landhotel in Weigendorf-Högen: zwei Wellnessbereiche SkySPA und TerraSPA (1 200 m²), fränkische Küche vom Holzofen, 131 km Wanderwege ab Haus. Zimmer ab 90 € pro Person und Nacht mit Halbpension. Falstaff Hotel Guide 2025: 89 Punkte.">
   <!-- Beta-Vorschau unter buuq.de/sternwirt/: nicht indexieren. Beim Umzug auf landhotel-sternwirt.de canonical/OG/hreflang umstellen -->
@@ -31,7 +32,7 @@
   <link rel="preload" href="assets/fonts/Archivo-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-m-900.webp" media="(max-width: 639px)">
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/hero-1200.webp 1200w, assets/img/hero-1600.webp 1600w" imagesizes="100vw" media="(min-width: 640px)">
-  <link rel="stylesheet" href="assets/css/styles.css?v=1">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2">
 
   <script type="application/ld+json">
   {
@@ -92,10 +93,10 @@
     <span class="brand__sub" data-i18n="brand.sub">Landhotel · Weigendorf-Högen</span>
   </a>
   <nav class="nav" aria-label="Hauptnavigation">
-    <a href="#lage" data-i18n="nav.place">Lage</a>
+    <a href="#haus" data-i18n="nav.haus">Das Haus</a>
     <a href="#zimmer" data-i18n="nav.rooms">Zimmer</a>
-    <a href="#halbpension" data-i18n="nav.board">Halbpension &amp; Küche</a>
-    <a href="#wellness-aktiv" data-i18n="nav.season">Wellness &amp; Aktiv</a>
+    <a href="#kueche" data-i18n="nav.kueche">Küche</a>
+    <a href="#wellness" data-i18n="nav.wellness">Wellness</a>
     <a href="#gaeste" data-i18n="nav.guests">Gäste</a>
     <a href="#anreise" data-i18n="nav.arrival">Anreise</a>
   </nav>
@@ -114,10 +115,11 @@
 
 <div class="menu" id="menu" hidden>
   <nav class="menu__nav" aria-label="Menü">
-    <a href="#lage" data-i18n="nav.place">Lage</a>
+    <a href="#haus" data-i18n="nav.haus">Das Haus</a>
     <a href="#zimmer" data-i18n="nav.rooms">Zimmer</a>
-    <a href="#halbpension" data-i18n="nav.board">Halbpension &amp; Küche</a>
-    <a href="#wellness-aktiv" data-i18n="nav.season">Wellness &amp; Aktiv</a>
+    <a href="#angebote" data-i18n="nav.offers">Arrangements</a>
+    <a href="#kueche" data-i18n="nav.kueche">Küche</a>
+    <a href="#wellness" data-i18n="nav.wellness">Wellness</a>
     <a href="#gaeste" data-i18n="nav.guests">Gäste</a>
     <a href="#gastgeber" data-i18n="nav.hosts">Gastgeber</a>
     <a href="#anreise" data-i18n="nav.arrival">Anreise</a>
@@ -133,7 +135,7 @@
 
 <main id="top">
 
-  <!-- 1 · Erster Bildschirm: das Luftbild mit Rand -->
+  <!-- 1 · Erster Bildschirm: das Luftbild mit Rand (von Olga freigegeben, bleibt) -->
   <section class="hero" aria-label="Landhotel Sternwirt">
     <div class="hero__top">
       <h1 class="hero__name"><small data-i18n="hero.small">Landhotel &amp; Wellnesshotel · Weigendorf-Högen</small>Sternwirt</h1>
@@ -153,213 +155,297 @@
     </div>
   </section>
 
-  <!-- 2 · Lage -->
-  <section class="col sec" id="lage">
-    <h2 data-i18n="place.title">Im Högenbachtal, zwischen Nürnberg und Amberg.</h2>
-    <p class="lead" data-i18n="place.lead">Der Sternwirt steht seit 1874 in Högen, einem Dorf im Högenbachtal – heute ein familiengeführtes Landhotel am Rande der Naturparks Frankenalb und Oberpfälzer Jura, die Hersbrucker Alb liegt vor der Tür. Wanderwege führen direkt ab Haus, die beiden Wellnessbereiche schauen über das Tal.</p>
-    <figure class="fig fig--right fig--tall" style="margin-left: auto;">
-      <picture>
-        <source type="image/webp" srcset="assets/img/skyspa-terrasse-600.webp 600w, assets/img/skyspa-terrasse-1000.webp 1000w" sizes="(min-width: 816px) 640px, 100vw">
-        <img src="assets/img/skyspa-terrasse-1000.jpg" srcset="assets/img/skyspa-terrasse-600.jpg 600w, assets/img/skyspa-terrasse-1000.jpg 1000w" sizes="(min-width: 816px) 640px, 100vw"
-             width="1000" height="1250" loading="lazy" data-i18n-alt="place.alt1" alt="Liegeterrasse des SkySPA mit Daybeds, blauen Kissen und Blick auf die bewaldeten Hügel">
-      </picture>
-      <figcaption data-i18n="place.cap1">Die Liegeterrasse des SkySPA.</figcaption>
-    </figure>
-    <dl class="facts">
-      <div><dt data-i18n="place.f1">Gegründet als Land-Schankwirtschaft</dt><dd>1874</dd></div>
-      <div><dt data-i18n="place.f2">Generationen der Familie</dt><dd>6</dd></div>
-      <div><dt data-i18n="place.f3">Betten im Haus</dt><dd>58</dd></div>
-      <div><dt data-i18n="place.f4">Wellnessfläche SkySPA &amp; TerraSPA</dt><dd>1 200 m²</dd></div>
-      <div><dt data-i18n="place.f5">Markierte Wanderwege im Tal</dt><dd>131 km</dd></div>
-      <div><dt data-i18n="place.f6">Högener Erzweg-Schlaufe</dt><dd>16 km</dd></div>
-    </dl>
-    <p class="small muted" style="margin-top: 10px;" data-i18n="place.src">Angaben laut landhotel-sternwirt.de (Stand November 2026).</p>
+  <!-- 2 · Stat-Zeile -->
+  <section class="stats" aria-label="Das Haus in Zahlen">
+    <div class="stats__in" data-rv-group>
+      <div class="stat rv"><b>1874</b><span data-i18n="st.1">gegründet als Land-Schankwirtschaft</span></div>
+      <div class="stat rv"><b>6</b><span data-i18n="st.2">Generationen einer Familie</span></div>
+      <div class="stat rv"><b>58</b><span data-i18n="st.3">Betten – und je eine Innen- und Außenliege pro Gast</span></div>
+      <div class="stat rv"><b>1 200 m²</b><span data-i18n="st.4">Wellness in zwei SPA-Bereichen</span></div>
+      <div class="stat rv"><b>131 km</b><span data-i18n="st.5">markierte Wanderwege ab Haus</span></div>
+    </div>
   </section>
 
-  <!-- 3 · Zimmer -->
-  <section class="col sec" id="zimmer">
-    <h2 data-i18n="rooms.title">Zimmer und Preise</h2>
-    <p data-i18n="rooms.text">Neun Kategorien – vom Einzelzimmer Classic bis zur Wellness-Suite Penthouse. Alle Preise gelten pro Person und Nacht und enthalten Halbpension sowie beide Wellnessbereiche; die Unterschiede ergeben sich nur aus Lage, Größe und Ausstattung der Zimmer.</p>
-    <div class="rooms" id="rooms"></div>
-    <ul class="terms">
-      <li><b data-i18n="terms.1t">Kinder</b> <span data-i18n="terms.1">Ermäßigung vom Erwachsenenpreis (ab zwei Vollzahlern): 1–5 Jahre 30–42 %, 6–10 Jahre 42–52 %, 11–15 Jahre 52–60 %</span></li>
-      <li><b data-i18n="terms.2t">Ortstaxe</b> <span data-i18n="terms.2">1 € pro Person und Tag</span></li>
-      <li><b data-i18n="terms.3t">Hund</b> <span data-i18n="terms.3">14 € pro Tag (in ausgewählten Kategorien, ohne Futter)</span></li>
-      <li><b data-i18n="terms.4t">An- und Abreise</b> <span data-i18n="terms.4">Anreise ab 14.30 Uhr, Abreise bis 11.00 Uhr</span></li>
-      <li><b data-i18n="terms.5t">Zuschläge</b> <span data-i18n="terms.5">in den Wochen um Ostern, Weihnachten und Silvester möglich</span></li>
-      <li><b data-i18n="terms.6t">Storno</b> <span data-i18n="terms.6">nur schriftlich; unter 6 Wochen 50 %, unter 14 Tagen 70 % der gebuchten Summe</span></li>
+  <!-- 3 · Das Haus -->
+  <section class="wrap sec" id="haus">
+    <p class="label rv"><b>01</b> <span data-i18n="hs.lbl">Das Haus</span></p>
+    <div class="duo">
+      <div data-rv-group>
+        <h2 class="rv" data-i18n="hs.title">Im Högenbachtal, zwischen Nürnberg und Amberg.</h2>
+        <p class="lead rv" data-i18n="hs.lead">Die Straßen von Högen laufen sternförmig auf das alte Gasthaus zu – daher der Name Sternwirt. Seit 1874 wirtet hier dieselbe Familie, heute in sechster Generation.</p>
+        <p class="rv" data-i18n="hs.p1">Aus der Land-Schankwirtschaft von Wilhelmine und Georg Märtl ist ein Landhotel am Rande der Naturparks Frankenalb und Oberpfälzer Jura geworden: das Gasthaus der Familie Haas, der neue Anbau mit Rezeption und zwei Wellnessbereichen über dem Tal, dazu ein Entspannungsgarten mit Kneippbecken und Ruheliegen.</p>
+        <p class="rv" data-i18n="hs.p2">Wanderwege beginnen an der Haustür – 131 km sind im Tal markiert, darunter der Qualitätswanderweg Erzweg. Nürnberg und Amberg liegen auf beiden Seiten, das Haus selbst abseits der Hauptrouten.</p>
+        <p class="small muted rv" data-i18n="hs.src">Angaben laut landhotel-sternwirt.de (Stand November 2026).</p>
+      </div>
+      <figure class="duo__media is-sticky rv">
+        <picture>
+          <source type="image/webp" srcset="assets/img/skyspa-terrasse-600.webp 600w, assets/img/skyspa-terrasse-1000.webp 1000w" sizes="(min-width: 1024px) 40vw, 100vw">
+          <img src="assets/img/skyspa-terrasse-1000.jpg" srcset="assets/img/skyspa-terrasse-600.jpg 600w, assets/img/skyspa-terrasse-1000.jpg 1000w" sizes="(min-width: 1024px) 40vw, 100vw"
+               width="1000" height="1250" loading="lazy" data-i18n-alt="hs.alt1" alt="Liegeterrasse des SkySPA mit Daybeds, blauen Kissen und Blick auf die bewaldeten Hügel">
+        </picture>
+        <figcaption data-i18n="hs.cap1">Die Liegeterrasse des SkySPA.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4 · Full-bleed: SkyPool am Abend -->
+  <figure class="bleed">
+    <picture>
+      <source type="image/webp" srcset="assets/img/skypool-abend-900.webp 900w, assets/img/skypool-abend-1600.webp 1600w" sizes="100vw">
+      <img src="assets/img/skypool-abend-1600.jpg" srcset="assets/img/skypool-abend-900.jpg 900w, assets/img/skypool-abend-1600.jpg 1600w" sizes="100vw"
+           width="1600" height="1030" loading="lazy" data-i18n-alt="bl1.alt" alt="Der beleuchtete Infinity-SkyPool auf der Dachterrasse unter einem rot-violetten Abendhimmel über dem Högenbachtal">
+    </picture>
+    <figcaption data-i18n="bl1.cap">Der beheizte Infinity-SkyPool auf der Dachterrasse – im Halbpensionspreis enthalten.</figcaption>
+  </figure>
+
+  <!-- 5 · Zimmer -->
+  <section class="wrap sec" id="zimmer">
+    <p class="label rv"><b>02</b> <span data-i18n="rm.lbl">Zimmer &amp; Preise</span></p>
+    <div class="text">
+      <h2 class="rv" data-i18n="rooms.title">Zehn Kategorien, ein Preis fürs Ganze.</h2>
+      <p class="rv" data-i18n="rooms.text">Vom Einzelzimmer Classic bis zur Wellness-Suite Penthouse: Alle Preise gelten pro Person und Nacht und enthalten Halbpension sowie beide Wellnessbereiche – die Unterschiede ergeben sich nur aus Lage, Größe und Ausstattung der Zimmer.</p>
+    </div>
+    <div class="rooms" id="rooms" data-rv-group></div>
+    <ul class="terms" data-rv-group>
+      <li class="rv"><b data-i18n="terms.1t">Kinder</b> <span data-i18n="terms.1">Ermäßigung vom Erwachsenenpreis (ab zwei Vollzahlern): 1–5 Jahre 30–42 %, 6–10 Jahre 42–52 %, 11–15 Jahre 52–60 %</span></li>
+      <li class="rv"><b data-i18n="terms.2t">Ortstaxe</b> <span data-i18n="terms.2">1 € pro Person und Tag</span></li>
+      <li class="rv"><b data-i18n="terms.3t">Hund</b> <span data-i18n="terms.3">14 € pro Tag (in ausgewählten Kategorien, ohne Futter)</span></li>
+      <li class="rv"><b data-i18n="terms.4t">An- und Abreise</b> <span data-i18n="terms.4">Anreise ab 14.30 Uhr, Abreise bis 11.00 Uhr; Rezeption täglich ab 9.00 Uhr</span></li>
+      <li class="rv"><b data-i18n="terms.5t">Zuschläge</b> <span data-i18n="terms.5">in den Wochen um Ostern, Weihnachten und Silvester möglich</span></li>
+      <li class="rv"><b data-i18n="terms.6t">Storno</b> <span data-i18n="terms.6">nur schriftlich; unter 6 Wochen 50 %, unter 14 Tagen 70 % der gebuchten Summe</span></li>
     </ul>
-    <figure class="fig fig--left">
-      <picture>
-        <source type="image/webp" srcset="assets/img/suite-penthouse-800.webp 800w, assets/img/suite-penthouse-1400.webp 1400w" sizes="(min-width: 816px) 1100px, 100vw">
-        <img src="assets/img/suite-penthouse-1400.jpg" srcset="assets/img/suite-penthouse-800.jpg 800w, assets/img/suite-penthouse-1400.jpg 1400w" sizes="(min-width: 816px) 1100px, 100vw"
-             width="1400" height="933" loading="lazy" data-i18n-alt="rooms.alt1" alt="Schlafzimmer der Wellness-Suite Penthouse mit bodentiefen Fenstern, blauem Sofa und Balkon über den Dächern des Dorfs">
-      </picture>
-      <figcaption data-i18n="rooms.cap1">Die Wellness-Suite Penthouse mit Sonnenterrasse.</figcaption>
-    </figure>
-    <div class="fig fig--pair">
-      <figure>
-        <picture>
-          <source type="image/webp" srcset="assets/img/familiensuite-600.webp 600w, assets/img/familiensuite-900.webp 900w" sizes="(min-width: 816px) 350px, 50vw">
-          <img src="assets/img/familiensuite-900.jpg" srcset="assets/img/familiensuite-600.jpg 600w, assets/img/familiensuite-900.jpg 900w" sizes="(min-width: 816px) 350px, 50vw"
-               width="900" height="1125" loading="lazy" data-i18n-alt="rooms.alt2" alt="Schlafzimmer der Familiensuite Hot Tube mit Boxspringbetten und warmem Holz">
-        </picture>
-        <figcaption data-i18n="rooms.cap2">Schlafzimmer in der Familiensuite Hot Tube.</figcaption>
-      </figure>
-      <figure>
-        <picture>
-          <source type="image/webp" srcset="assets/img/rezeption-600.webp 600w, assets/img/rezeption-900.webp 900w" sizes="(min-width: 816px) 350px, 50vw">
-          <img src="assets/img/rezeption-900.jpg" srcset="assets/img/rezeption-600.jpg 600w, assets/img/rezeption-900.jpg 900w" sizes="(min-width: 816px) 350px, 50vw"
-               width="900" height="1125" loading="lazy" data-i18n-alt="rooms.alt3" alt="Rezeption des Landhotels Sternwirt mit leuchtendem Sternlogo, Naturstein und Sternenhimmel-Decke">
-        </picture>
-        <figcaption data-i18n="rooms.cap3">Die Rezeption im neuen Anbau.</figcaption>
-      </figure>
-    </div>
   </section>
 
-  <!-- 4 · Halbpension und Küche -->
-  <section class="col sec" id="halbpension">
-    <h2 data-i18n="board.title">Halbpension: Büfett am Morgen, Tellerservice am Abend.</h2>
-    <p data-i18n="board.text1">Die Halbpension ist in jedem Zimmerpreis enthalten: morgens ein reichhaltiges Frühstücksbüfett mit Kaffeespezialitäten und frischem Orangensaft (7.45–10.30 Uhr) – abends hausgemachte Suppe, bunter Beilagensalatteller, drei Hauptgerichte zur Wahl und ein Dessertteller (17.45–20.00 Uhr).</p>
-    <p data-i18n="board.text2">Die Küche verbindet fränkische Hausmannskost mit moderner Crossover-Küche: Schäufele, Rouladen und Krautwickel, Wild und Lamm, dazu Fisch und vegetarische Gerichte. Das Fleisch kommt aus umliegenden Metzgereien, das Gemüse aus dem Knoblauchsland, die Kräuter aus dem eigenen Garten – und gekocht wird seit 1967 auf einem traditionellen Holzofen.</p>
-    <figure class="fig fig--right fig--wide">
-      <picture>
-        <source type="image/webp" srcset="assets/img/gasthaus-900.webp 900w, assets/img/gasthaus-1600.webp 1600w" sizes="(min-width: 816px) 1100px, 100vw">
-        <img src="assets/img/gasthaus-1600.jpg" srcset="assets/img/gasthaus-900.jpg 900w, assets/img/gasthaus-1600.jpg 1600w" sizes="(min-width: 816px) 1100px, 100vw"
-             width="1600" height="500" loading="lazy" data-i18n-alt="board.alt1" alt="Gäste an gedeckten Tischen im Restaurant Sternwirt am Abend">
-      </picture>
-      <figcaption data-i18n="board.cap1">Abendessen im Restaurant.</figcaption>
-    </figure>
-    <table class="price">
-      <thead><tr><th data-i18n="board.h1">Extras laut Preisliste</th><th data-i18n="board.h2">pro Person</th></tr></thead>
-      <tbody>
-        <tr><td><span data-i18n="board.r1">4-Gang-Candlelight-Dinner</span><small data-i18n="board.r1s">Aufpreis zur Halbpension, pro Tag</small></td><td data-i18n="board.r1v">28 €</td></tr>
-        <tr><td data-i18n="board.r2">Bademantel-Leihgebühr</td><td data-i18n="board.r2v">5 €</td></tr>
-        <tr><td data-i18n="board.r3">Fahrradverleih (City-/Trekkingrad)</td><td data-i18n="board.r3v">12 € / Tag</td></tr>
-        <tr><td data-i18n="board.r4">E-Mountainbike „Fully“</td><td data-i18n="board.r4v">30 € / Tag</td></tr>
-      </tbody>
-    </table>
-    <p class="small muted" style="margin-top: 10px;" data-i18n="board.note">Tagesgäste sind im Gasthaus willkommen: warme Küche Di–Fr 17.30–20.00 Uhr, Sa/So 11.30–14.30 und 17.30–20.00 Uhr; Sa/So 14.30–17.00 Uhr hausgemachte Kuchen, Torten und die berühmten Windbeutel. Um Tischreservierung wird gebeten.</p>
-    <div class="fig fig--pair">
-      <figure>
-        <picture>
-          <source type="image/webp" srcset="assets/img/restaurant-600.webp 600w, assets/img/restaurant-900.webp 900w" sizes="(min-width: 816px) 350px, 50vw">
-          <img src="assets/img/restaurant-900.jpg" srcset="assets/img/restaurant-600.jpg 600w, assets/img/restaurant-900.jpg 900w" sizes="(min-width: 816px) 350px, 50vw"
-               width="900" height="1125" loading="lazy" data-i18n-alt="board.alt2" alt="Ein Paar stößt mit Rotwein an einem Tisch mit Kerze im Restaurant an">
-        </picture>
-        <figcaption data-i18n="board.cap2">Im Restaurant.</figcaption>
-      </figure>
-      <figure>
-        <picture>
-          <source type="image/webp" srcset="assets/img/teller-500.webp 500w, assets/img/teller-800.webp 800w" sizes="(min-width: 816px) 350px, 50vw">
-          <img src="assets/img/teller-800.jpg" srcset="assets/img/teller-500.jpg 500w, assets/img/teller-800.jpg 800w" sizes="(min-width: 816px) 350px, 50vw"
-               width="800" height="1000" loading="lazy" data-i18n-alt="board.alt3" alt="Vorspeise auf grauem Teller: Bruschetta, Salat, gegrillter Ziegenkäse und Rote Bete">
-        </picture>
-        <figcaption data-i18n="board.cap3">Aus der Küche.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 5 · Wellness und Aktiv -->
-  <section class="col sec" id="wellness-aktiv">
-    <h2 data-i18n="season.title">Wellness und Aktiv</h2>
-    <div class="two">
-      <div>
-        <h3 data-i18n="season.s">Wellness</h3>
-        <dl class="facts" style="margin-top: 12px;">
-          <div><dt data-i18n="season.s1">Wellnessbereiche SkySPA &amp; TerraSPA</dt><dd>1 200 m²</dd></div>
-          <div><dt data-i18n="season.s2">Pools</dt><dd data-i18n="season.s2v">2<small>beheizter Infinity-SkyPool außen, Erlebnisbecken innen</small></dd></div>
-          <div><dt data-i18n="season.s3">Saunen</dt><dd>4</dd></div>
-          <div><dt data-i18n="season.s4">Innen- und Außenliegen</dt><dd data-i18n="season.s4v">58 + 58<small>eine Liege je Gast, bei 58 Betten</small></dd></div>
-        </dl>
+  <!-- 6 · Arrangements -->
+  <section class="band" id="angebote">
+    <div class="wrap">
+      <p class="label rv"><b>03</b> <span data-i18n="of.lbl">Arrangements</span></p>
+      <div class="text">
+        <h2 class="rv" data-i18n="of.title">Drei Pauschalen des Hauses</h2>
+        <p class="rv" data-i18n="of.text">Für den kurzen Weg aus dem Alltag: drei Arrangements mit Halbpension und beiden Wellnessbereichen, buchbar vom 1. Januar bis 19. Dezember 2026.</p>
       </div>
-      <div>
-        <h3 data-i18n="season.w">Aktiv</h3>
-        <dl class="facts" style="margin-top: 12px;">
-          <div><dt data-i18n="season.w1">Wanderwege im Tal</dt><dd data-i18n="season.w1v">131 km<small>ab Haus, u. a. Qualitätswanderweg Erzweg</small></dd></div>
-          <div><dt data-i18n="season.w2">Fahrradverleih im Haus</dt><dd data-i18n="season.w2v">12 € / Tag</dd></div>
-          <div><dt data-i18n="season.w3">E-Mountainbike „Fully“</dt><dd data-i18n="season.w3v">30 € / Tag</dd></div>
-          <div><dt data-i18n="season.w4">Fitnessraum, Billard, Tischtennis</dt><dd data-i18n="season.w4v">inklusive</dd></div>
-        </dl>
+      <div class="offers" data-rv-group>
+        <article class="offer rv">
+          <h3 data-i18n="of.1n">2-Tages-Arrangement</h3>
+          <p class="offer__nights" data-i18n="of.1s">2 Nächte mit Halbpension</p>
+          <p class="offer__price">ab 361 €<small data-i18n="of.pp">pro Person</small></p>
+        </article>
+        <article class="offer rv">
+          <h3 data-i18n="of.2n">3 Kurz-weg-Tage</h3>
+          <p class="offer__nights" data-i18n="of.2s">3 Nächte mit Halbpension</p>
+          <p class="offer__price">ab 453 €<small data-i18n="of.pp">pro Person</small></p>
+        </article>
+        <article class="offer rv">
+          <h3 data-i18n="of.3n">5 Schnuppertage</h3>
+          <p class="offer__nights" data-i18n="of.3s">5 Nächte, buchbar Sonntag bis Freitag</p>
+          <p class="offer__price">ab 618 €<small data-i18n="of.pp">pro Person</small></p>
+        </article>
+      </div>
+      <p class="small muted rv" style="margin-top: 16px;" data-i18n="of.note">Preise laut landhotel-sternwirt.de (Stand November 2026). Details und Buchung der Arrangements direkt beim Haus: +49 9663 425 · info@landhotel-sternwirt.de</p>
+    </div>
+  </section>
+
+  <!-- 7 · Küche & Halbpension -->
+  <section class="wrap sec" id="kueche">
+    <p class="label rv"><b>04</b> <span data-i18n="ku.lbl">Küche &amp; Halbpension</span></p>
+    <div class="duo duo--flip">
+      <div data-rv-group>
+        <h2 class="rv" data-i18n="board.title">Büfett am Morgen, Tellerservice am Abend.</h2>
+        <p class="rv" data-i18n="board.text1">Die Halbpension ist in jedem Zimmerpreis enthalten. Morgens (7.45–10.30 Uhr): Müslibar, Milch und Joghurt aus der Region, Brot vom regionalen Bäcker, frisch zubereitete Pancakes, Kaffeespezialitäten und Orangensaft aus der Saftpresse. Abends (17.45–20.00 Uhr): hausgemachte Suppe, bunter Salatteller, drei Hauptgerichte zur Wahl und ein Dessert.</p>
+        <p class="rv" data-i18n="board.text2">Gekocht wird fränkisch mit modernen Akzenten: Schäufele, Rouladen, Krautwickel und Ochsenbäckchen, dazu Wild, Lamm, Fisch und Vegetarisches. Das Fleisch kommt aus umliegenden Metzgereien, das Gemüse aus dem Knoblauchsland, die Kräuter aus dem eigenen Garten – und seit 1967 steht in der Küche ein traditioneller Holzofen.</p>
+        <table class="price rv">
+          <thead><tr><th data-i18n="board.h1">Extras laut Preisliste</th><th data-i18n="board.h2">pro Person</th></tr></thead>
+          <tbody>
+            <tr><td><span data-i18n="board.r1">4-Gang-Candlelight-Dinner</span><small data-i18n="board.r1s">Aufpreis zur Halbpension, pro Tag</small></td><td data-i18n="board.r1v">28 €</td></tr>
+            <tr><td data-i18n="board.r2">Bademantel-Leihgebühr</td><td data-i18n="board.r2v">5 €</td></tr>
+            <tr><td data-i18n="board.r3">Frühstück für externe Gäste</td><td data-i18n="board.r3v">28 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="duo__media is-sticky" data-rv-group>
+        <figure class="rv">
+          <picture>
+            <source type="image/webp" srcset="assets/img/restaurant-600.webp 600w, assets/img/restaurant-900.webp 900w" sizes="(min-width: 1024px) 40vw, 100vw">
+            <img src="assets/img/restaurant-900.jpg" srcset="assets/img/restaurant-600.jpg 600w, assets/img/restaurant-900.jpg 900w" sizes="(min-width: 1024px) 40vw, 100vw"
+                 width="900" height="1125" loading="lazy" data-i18n-alt="board.alt2" alt="Ein Paar stößt mit Rotwein an einem Tisch mit Kerze im Restaurant an">
+          </picture>
+          <figcaption data-i18n="board.cap2">Abend im Restaurant – drei Hauptgerichte zur Wahl.</figcaption>
+        </figure>
       </div>
     </div>
-    <div class="fig fig--pair">
-      <figure>
-        <picture>
-          <source type="image/webp" srcset="assets/img/skypool-600.webp 600w, assets/img/skypool-900.webp 900w" sizes="(min-width: 816px) 350px, 50vw">
-          <img src="assets/img/skypool-900.jpg" srcset="assets/img/skypool-600.jpg 600w, assets/img/skypool-900.jpg 900w" sizes="(min-width: 816px) 350px, 50vw"
-               width="900" height="1125" loading="lazy" data-i18n-alt="season.alt1" alt="Ein Paar entspannt mit Getränken im beheizten SkyPool, Dampf steigt vom Wasser auf">
-        </picture>
-        <figcaption data-i18n="season.cap1">Der beheizte Infinity-SkyPool.</figcaption>
-      </figure>
-      <figure>
-        <picture>
-          <source type="image/webp" srcset="assets/img/panoramasauna-600.webp 600w, assets/img/panoramasauna-900.webp 900w" sizes="(min-width: 816px) 350px, 50vw">
-          <img src="assets/img/panoramasauna-900.jpg" srcset="assets/img/panoramasauna-600.jpg 600w, assets/img/panoramasauna-900.jpg 900w" sizes="(min-width: 816px) 350px, 50vw"
-               width="900" height="1125" loading="lazy" data-i18n-alt="season.alt2" alt="Panoramasauna mit warmem Holz, hängender Aufgussschale und Fenster zum Abendhimmel">
-        </picture>
-        <figcaption data-i18n="season.cap2">Die Panoramasauna.</figcaption>
-      </figure>
+    <figure class="rv" style="margin-top: clamp(32px, 5vw, 64px);">
+      <picture>
+        <source type="image/webp" srcset="assets/img/gasthaus-900.webp 900w, assets/img/gasthaus-1600.webp 1600w" sizes="(min-width: 1248px) 1200px, 100vw">
+        <img src="assets/img/gasthaus-1600.jpg" srcset="assets/img/gasthaus-900.jpg 900w, assets/img/gasthaus-1600.jpg 1600w" sizes="(min-width: 1248px) 1200px, 100vw"
+             width="1600" height="500" loading="lazy" data-i18n-alt="board.alt1" alt="Gäste an gedeckten Tischen im Gasthaus Sternwirt am Abend">
+      </picture>
+      <figcaption class="figc" data-i18n="board.cap1">Das Gasthaus der Familie Haas – auch für Tagesgäste geöffnet.</figcaption>
+    </figure>
+    <div class="text" style="margin-top: clamp(24px, 3.4vw, 40px);">
+      <p class="small muted rv" data-i18n="board.note">Tagesgäste sind im Gasthaus willkommen: warme Küche Di–Fr 17.30–20.00 Uhr, Sa/So 11.30–14.30 und 17.30–20.00 Uhr; Sa/So 14.30–17.00 Uhr hausgemachte Kuchen, Torten und die berühmten Windbeutel. Im Bistro an der Rezeption gibt es tagsüber Snacks wie Avocado-Brot, Strammer Max und Salatbowls. Um Tischreservierung wird gebeten: +49 9663 425.</p>
     </div>
-    <p class="small muted" style="margin-top: 14px;" data-i18n="season.src">Leistungen laut landhotel-sternwirt.de: beide Wellnessbereiche, Fitnessraum, Billard und Tischtennis sind im Halbpensionspreis enthalten; Radverleih über die Rezeption.</p>
   </section>
 
-  <!-- 6 · Gäste -->
-  <section class="col" id="gaeste">
-    <figure class="quote">
+  <!-- 8 · Zitat-Zwischenruf -->
+  <section class="wrap sec" aria-label="Gästestimme">
+    <figure class="quote rv">
+      <blockquote data-i18n="rev.q3">„Es gab nichts zu bemängeln. Zimmer sauber, Essen vorzüglich, Spa-Bereich prima – die Torten waren ein Genuss! Wir kommen wieder.“</blockquote>
+      <figcaption><b>Gerhard Winter</b>, Bad Hersfeld · <span data-i18n="rev.c3">Gästebuch auf landhotel-sternwirt.de, Februar 2025</span></figcaption>
+    </figure>
+  </section>
+
+  <!-- 9 · Wellness (dunkles Band) -->
+  <section class="band band--dark" id="wellness">
+    <div class="wrap">
+      <p class="label rv"><b>05</b> <span data-i18n="wl.lbl">Wellness</span></p>
+      <div class="duo">
+        <div data-rv-group>
+          <h2 class="rv" data-i18n="wl.title">SkySPA und TerraSPA: 1 200 m² über dem Tal.</h2>
+          <p class="lead rv" data-i18n="wl.lead">Zwei Wellnessbereiche gehören zu jedem Aufenthalt – ohne Aufpreis, für Hausgäste reserviert.</p>
+          <p class="rv" data-i18n="wl.text">Oben der SkySPA mit beheiztem Infinity-SkyPool auf der Dachterrasse, Panoramasauna und Ruheraum mit Hängeliegen; unten der mediterrane TerraSPA mit Hallenbad, Dampfbad und Teebar. Dazu Fitnessraum, Billard und Tischtennis – alles im Halbpensionspreis enthalten.</p>
+          <dl class="facts rv">
+            <div><dt data-i18n="wl.f1">Pools</dt><dd data-i18n="wl.f1v">2<small>beheizter Infinity-SkyPool außen, Erlebnisbecken innen</small></dd></div>
+            <div><dt data-i18n="wl.f2">Saunen</dt><dd>4</dd></div>
+            <div><dt data-i18n="wl.f3">Innen- und Außenliegen</dt><dd data-i18n="wl.f3v">58 + 58<small>eine Liege je Gast, bei 58 Betten</small></dd></div>
+            <div><dt data-i18n="wl.f4">Wellness am An- oder Abreisetag</dt><dd data-i18n="wl.f4v">20 €<small>pro Person, mit Reservierung</small></dd></div>
+          </dl>
+        </div>
+        <div class="duo__media is-sticky" data-rv-group>
+          <figure class="rv">
+            <picture>
+              <source type="image/webp" srcset="assets/img/skypool-600.webp 600w, assets/img/skypool-900.webp 900w" sizes="(min-width: 1024px) 40vw, 100vw">
+              <img src="assets/img/skypool-900.jpg" srcset="assets/img/skypool-600.jpg 600w, assets/img/skypool-900.jpg 900w" sizes="(min-width: 1024px) 40vw, 100vw"
+                   width="900" height="1125" loading="lazy" data-i18n-alt="wl.alt1" alt="Ein Paar entspannt mit Getränken im beheizten SkyPool, Dampf steigt vom Wasser auf">
+            </picture>
+            <figcaption data-i18n="wl.cap1">Im beheizten SkyPool.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="collage" data-rv-group>
+        <figure class="rv">
+          <picture>
+            <source type="image/webp" srcset="assets/img/panoramasauna-600.webp 600w, assets/img/panoramasauna-900.webp 900w" sizes="(min-width: 720px) 50vw, 100vw">
+            <img src="assets/img/panoramasauna-900.jpg" srcset="assets/img/panoramasauna-600.jpg 600w, assets/img/panoramasauna-900.jpg 900w" sizes="(min-width: 720px) 50vw, 100vw"
+                 width="900" height="1125" loading="lazy" data-i18n-alt="wl.alt2" alt="Panoramasauna mit warmem Holz, hängender Aufgussschale und Fenster zum Abendhimmel">
+          </picture>
+          <figcaption data-i18n="wl.cap2">Die Panoramasauna.</figcaption>
+        </figure>
+        <figure class="rv">
+          <picture>
+            <source type="image/webp" srcset="assets/img/sauna-paar-600.webp 600w, assets/img/sauna-paar-1000.webp 1000w" sizes="(min-width: 720px) 50vw, 100vw">
+            <img src="assets/img/sauna-paar-1000.jpg" srcset="assets/img/sauna-paar-600.jpg 600w, assets/img/sauna-paar-1000.jpg 1000w" sizes="(min-width: 720px) 50vw, 100vw"
+                 width="1000" height="665" loading="lazy" data-i18n-alt="wl.alt3" alt="Zwei Gäste entspannen auf den Holzbänken der Sauna mit Blick nach draußen">
+          </picture>
+          <figcaption data-i18n="wl.cap3">Vier Saunen, innen und außen.</figcaption>
+        </figure>
+        <figure class="rv">
+          <picture>
+            <source type="image/webp" srcset="assets/img/ruheraum-600.webp 600w, assets/img/ruheraum-1000.webp 1000w" sizes="(min-width: 720px) 50vw, 100vw">
+            <img src="assets/img/ruheraum-1000.jpg" srcset="assets/img/ruheraum-600.jpg 600w, assets/img/ruheraum-1000.jpg 1000w" sizes="(min-width: 720px) 50vw, 100vw"
+                 width="1000" height="665" loading="lazy" data-i18n-alt="wl.alt4" alt="Gast im Bademantel im Ruheraum, dahinter schaut ein Schwimmer durch das Unterwasserfenster des Pools">
+          </picture>
+          <figcaption data-i18n="wl.cap4">Ruheraum am Pool-Fenster.</figcaption>
+        </figure>
+        <figure class="rv">
+          <picture>
+            <source type="image/webp" srcset="assets/img/haengeliegen-600.webp 600w, assets/img/haengeliegen-1000.webp 1000w" sizes="(min-width: 720px) 50vw, 100vw">
+            <img src="assets/img/haengeliegen-1000.jpg" srcset="assets/img/haengeliegen-600.jpg 600w, assets/img/haengeliegen-1000.jpg 1000w" sizes="(min-width: 720px) 50vw, 100vw"
+                 width="1000" height="665" loading="lazy" data-i18n-alt="wl.alt5" alt="Hängeliege an Seilen im Ruheraum, daneben breite Relaxliegen mit türkisfarbenen Kissen">
+          </picture>
+          <figcaption data-i18n="wl.cap5">Hängeliegen im Ruheraum.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · Aktiv -->
+  <section class="wrap sec" id="aktiv">
+    <p class="label rv"><b>06</b> <span data-i18n="ak.lbl">Aktiv</span></p>
+    <div class="text" data-rv-group>
+      <h2 class="rv" data-i18n="ak.title">Wandern und Radfahren ab der Haustür.</h2>
+      <p class="rv" data-i18n="ak.text">Im Högenbachtal sind 131 km Wanderwege markiert, darunter der Qualitätswanderweg Erzweg und die Högener Erzweg-Schlaufe (16 km). Räder leiht das Haus selbst aus; nach der Tour warten Kneippbecken und Entspannungsgarten.</p>
+      <dl class="facts rv">
+        <div><dt data-i18n="ak.f1">Markierte Wanderwege im Tal</dt><dd data-i18n="ak.f1v">131 km</dd></div>
+        <div><dt data-i18n="ak.f2">Högener Erzweg-Schlaufe</dt><dd data-i18n="ak.f2v">16 km</dd></div>
+        <div><dt data-i18n="ak.f3">Fahrradverleih (City-/Trekkingrad)</dt><dd data-i18n="ak.f3v">12 € / Tag</dd></div>
+        <div><dt data-i18n="ak.f4">E-Mountainbike „Fully“</dt><dd data-i18n="ak.f4v">30 € / Tag</dd></div>
+        <div><dt data-i18n="ak.f5">Fahrradgarage mit Ladestation</dt><dd data-i18n="ak.f5v">inklusive</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11 · Gäste -->
+  <section class="wrap sec" id="gaeste">
+    <p class="label rv"><b>07</b> <span data-i18n="g.lbl">Gäste</span></p>
+    <figure class="quote rv">
       <blockquote data-i18n="rev.q1">„Von der ersten Sekunde bis zur letzten Sekunde wirklich alles absolut perfekt. Diesen exzellenten Service kann niemand toppen. Personal, Service, Sauberkeit, Essen – alles hervorragend.“</blockquote>
       <figcaption><b>Hans-Peter Niewierra</b>, Amberg · <span data-i18n="rev.c1">Gästebuch auf landhotel-sternwirt.de, August 2026</span></figcaption>
     </figure>
-    <div class="score">
+    <div class="score rv">
       <p class="score__num">89</p>
-      <p class="score__of"><span data-i18n="rev.of">Punkte im Falstaff Hotel Guide 2025</span><br><span class="small muted" data-i18n="rev.date">Laut landhotel-sternwirt.de, Stand November 2026</span></p>
-      <dl>
-        <div><dt data-i18n="rev.s1">Relax Guide</dt><dd data-i18n="rev.s1v">Spa Award 2025</dd></div>
-      </dl>
+      <p class="score__of"><span data-i18n="rev.of">Punkte im Falstaff Hotel Guide 2025</span> · <span data-i18n="rev.s1v">Relax Guide Spa Award 2025</span><br><span class="small muted" data-i18n="rev.date">Laut landhotel-sternwirt.de, Stand November 2026</span></p>
     </div>
-    <div class="quotes-more">
+    <div class="quotes-more rv">
       <figure>
         <blockquote data-i18n="rev.q2">„Es ist jedesmal sehr schön hier. Sehr schön modern renoviert und hergerichtet, sehr freundliches Personal, sehr netter Chef. Zimmer schön, Essen sehr lecker, Massagen und Behandlungen toll.“</blockquote>
         <figcaption><b>Franzi und Christine</b>, Penzberg &amp; Donauwörth · <span data-i18n="rev.c2">Gästebuch, Juli 2026</span></figcaption>
       </figure>
-      <figure>
-        <blockquote data-i18n="rev.q3">„Es gab nichts zu bemängeln. Zimmer sauber, Essen vorzüglich, Spa-Bereich prima – die Torten waren ein Genuss! Wir kommen wieder.“</blockquote>
-        <figcaption><b>Gerhard Winter</b>, Bad Hersfeld · <span data-i18n="rev.c3">Gästebuch, Februar 2025</span></figcaption>
+    </div>
+  </section>
+
+  <!-- 12 · Gastgeber & Geschichte -->
+  <section class="wrap sec" id="gastgeber">
+    <p class="label rv"><b>08</b> <span data-i18n="gh.lbl">Gastgeber</span></p>
+    <div class="duo">
+      <div data-rv-group>
+        <h2 class="rv" data-i18n="gh.title">Eine Familie, sechs Generationen.</h2>
+        <p class="rv" data-i18n="gh.text">Jürgen Haas leitet das Landhotel seit 2006, Hans-Werner Haas das Gasthaus. Auf dem Holzofen von 1967 wird bis heute gekocht. Fragen vor der Anreise beantwortet das Haus per Telefon oder E-Mail.</p>
+        <dl class="tl rv">
+          <div><dt>1874–1903</dt><dd>Wilhelmine &amp; Georg Märtl<small data-i18n="tl.1">Gründer der Land-Schankwirtschaft</small></dd></div>
+          <div><dt>1903–1932</dt><dd>Dorothea &amp; Johann Märtl</dd></div>
+          <div><dt>1952–1983</dt><dd>Walburga &amp; Georg Pilhofer</dd></div>
+          <div><dt data-i18n="tl.4t">seit 1983</dt><dd>Hans &amp; Brigitte Haas<small>Gasthaus Sternwirt</small></dd></div>
+          <div><dt data-i18n="tl.5t">seit 2006</dt><dd>Jürgen Haas<small>Landhotel Sternwirt</small></dd></div>
+        </dl>
+        <p class="rv" style="margin-top: 16px;"><a href="tel:+499663425">+49 9663 425</a> · <a href="mailto:info@landhotel-sternwirt.de">info@landhotel-sternwirt.de</a></p>
+      </div>
+      <figure class="duo__media is-sticky rv">
+        <picture>
+          <source type="image/webp" srcset="assets/img/rezeption-600.webp 600w, assets/img/rezeption-900.webp 900w" sizes="(min-width: 1024px) 40vw, 100vw">
+          <img src="assets/img/rezeption-900.jpg" srcset="assets/img/rezeption-600.jpg 600w, assets/img/rezeption-900.jpg 900w" sizes="(min-width: 1024px) 40vw, 100vw"
+               width="900" height="1125" loading="lazy" data-i18n-alt="gh.alt1" alt="Rezeption des Landhotels Sternwirt mit leuchtendem Sternlogo, Naturstein und Sternenhimmel-Decke">
+        </picture>
+        <figcaption data-i18n="gh.cap1">Die Rezeption im neuen Anbau – täglich ab 9.00 Uhr besetzt.</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- 7 · Gastgeber -->
-  <section class="col sec" id="gastgeber">
-    <h2>Jürgen Haas <span data-i18n="and">und</span> Familie</h2>
-    <div class="host">
-      <p data-i18n="host.text">führen den Sternwirt seit 1874 – heute in sechster Generation. Jürgen Haas leitet das Landhotel seit 2006, Hans-Werner Haas das Gasthaus. Fragen vor der Anreise beantwortet das Haus per Telefon oder E-Mail.</p>
-      <p><a href="tel:+499663425">+49 9663 425</a> · <a href="mailto:info@landhotel-sternwirt.de">info@landhotel-sternwirt.de</a></p>
-    </div>
-  </section>
-
-  <!-- 8 · Anreise -->
-  <section class="col sec" id="anreise">
-    <h2 data-i18n="arr.title">Anreise</h2>
-    <dl class="arr">
-      <div><dt data-i18n="arr.1t">Adresse</dt><dd data-i18n="arr.1">Landhotel Sternwirt, Schlossplatz 3–4, 91249 Weigendorf, Ortsteil Högen (Landkreis Amberg-Sulzbach, Bayern)</dd></div>
-      <div><dt data-i18n="arr.2t">Mit dem Auto</dt><dd data-i18n="arr.2">Das Hotel liegt im Högenbachtal zwischen Nürnberg und Amberg, abseits der Hauptrouten. Parkplatz am Haus; Fahrradgarage mit E-Bike-Ladestation.</dd></div>
-      <div><dt data-i18n="arr.3t">Check-in und Check-out</dt><dd data-i18n="arr.3">Anreise ab 14.30 Uhr, Abreise bis 11.00 Uhr. Am An- und Abreisetag lässt sich der Wellnessbereich für 20 € pro Person verlängern (Reservierung erforderlich).</dd></div>
-    </dl>
-    <div class="map" id="map">
-      <div class="map__consent" id="mapConsent">
-        <p data-i18n="map.text">Die Karte wird von OpenStreetMap geladen. Dabei wird Ihre IP-Adresse an die Server der OpenStreetMap Foundation übertragen.</p>
-        <button class="btn" type="button" id="mapLoad" data-i18n="map.btn">Karte laden</button>
-        <a href="datenschutz.html" data-i18n="map.more">Mehr dazu in der Datenschutzerklärung</a>
+  <!-- 13 · Anreise -->
+  <section class="wrap sec" id="anreise">
+    <p class="label rv"><b>09</b> <span data-i18n="arr.title">Anreise</span></p>
+    <div class="text" data-rv-group>
+      <dl class="arr rv">
+        <div><dt data-i18n="arr.1t">Adresse</dt><dd data-i18n="arr.1">Landhotel Sternwirt, Schlossplatz 3–4, 91249 Weigendorf, Ortsteil Högen (Landkreis Amberg-Sulzbach, Bayern)</dd></div>
+        <div><dt data-i18n="arr.2t">Mit dem Auto</dt><dd data-i18n="arr.2">Das Hotel liegt im Högenbachtal zwischen Nürnberg und Amberg, abseits der Hauptrouten. Parkplatz am Haus; Fahrradgarage mit E-Bike-Ladestation.</dd></div>
+        <div><dt data-i18n="arr.3t">Check-in und Check-out</dt><dd data-i18n="arr.3">Anreise ab 14.30 Uhr, Abreise bis 11.00 Uhr. Am An- und Abreisetag lässt sich der Wellnessbereich für 20 € pro Person verlängern (Reservierung erforderlich).</dd></div>
+      </dl>
+      <div class="map" id="map">
+        <div class="map__consent" id="mapConsent">
+          <p data-i18n="map.text">Die Karte wird von OpenStreetMap geladen. Dabei wird Ihre IP-Adresse an die Server der OpenStreetMap Foundation übertragen.</p>
+          <button class="btn" type="button" id="mapLoad" data-i18n="map.btn">Karte laden</button>
+          <a href="datenschutz.html" data-i18n="map.more">Mehr dazu in der Datenschutzerklärung</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 9 · Buchung noch einmal -->
-  <section class="col again" aria-label="Buchung">
-    <h2 data-i18n="again.title">Direkt buchen</h2>
-    <div class="bw" data-bw></div>
-    <p class="small muted"><span data-i18n="again.text">Oder per Telefon und E-Mail:</span> <a href="tel:+499663425">+49 9663 425</a> · <a href="mailto:info@landhotel-sternwirt.de">info@landhotel-sternwirt.de</a></p>
+  <!-- 14 · Buchung noch einmal -->
+  <section class="wrap sec again" aria-label="Buchung">
+    <div class="text">
+      <h2 data-i18n="again.title">Direkt buchen</h2>
+      <div class="bw" data-bw></div>
+      <p class="small muted" style="margin-top: 12px;"><span data-i18n="again.text">Oder per Telefon und E-Mail:</span> <a href="tel:+499663425">+49 9663 425</a> · <a href="mailto:info@landhotel-sternwirt.de">info@landhotel-sternwirt.de</a></p>
+    </div>
   </section>
 </main>
 
@@ -402,7 +488,7 @@
   </div>
 </div>
 
-<script src="assets/js/i18n.js?v=1"></script>
-<script src="assets/js/app.js?v=1"></script>
+<script src="assets/js/i18n.js?v=2"></script>
+<script src="assets/js/app.js?v=2"></script>
 </body>
 </html>

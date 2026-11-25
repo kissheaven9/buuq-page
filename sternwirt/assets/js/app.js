@@ -186,19 +186,31 @@
   }
   function nightsLabel(n) { return n + '\u00a0' + (n === 1 ? t('night1') : t('nightN')); }
 
-  /* ---------- Zimmerliste auf der Seite ---------- */
+  /* ---------- Zimmerkarten auf der Seite (Foto je Kategorie, Fotos vom Haus) ---------- */
+  function roomPicture(r) {
+    var l = L(r), base = 'assets/img/' + r.img + '-';
+    var webp = r.w.map(function (w) { return base + w + '.webp ' + w + 'w'; }).join(', ');
+    var jpg = r.w.map(function (w) { return base + w + '.jpg ' + w + 'w'; }).join(', ');
+    var sizes = '(min-width: 1248px) 584px, (min-width: 720px) 50vw, 100vw';
+    var big = r.w[r.w.length - 1];
+    return '<picture><source type="image/webp" srcset="' + webp + '" sizes="' + sizes + '">' +
+      '<img src="' + base + big + '.jpg" srcset="' + jpg + '" sizes="' + sizes + '" width="' + big +
+      '" height="' + r.ih + '" loading="lazy" alt="' + esc(l.alt) + '"></picture>';
+  }
   function renderRooms() {
     $('#rooms').innerHTML = ROOMS.map(function (r) {
       var l = L(r);
       var price = r.price === null
         ? '<p class="room__price"><b>' + t('room.ask') + '</b><span>+49 9663 425</span></p>'
         : '<p class="room__price"><b>' + t('room.from') + ' ' + fmtMoney(r.price) + '</b><span>' + t('room.pp') + '</span></p>';
-      return '<article class="room">' +
-        '<div><h3>' + esc(l.name) + '</h3><p class="room__meta">' + esc(l.meta) + '</p></div>' +
-        price +
+      return '<article class="room rv">' + roomPicture(r) +
+        '<div class="room__body">' +
+        '<h3>' + esc(l.name) + '</h3><p class="room__meta">' + esc(l.meta) + '</p>' +
+        '<div class="room__foot">' + price +
         '<button class="btn btn--ghost btn--small" type="button" data-book data-room="' + r.id + '">' + t('room.book') + '</button>' +
-        '</article>';
+        '</div></div></article>';
     }).join('');
+    rvScan();
   }
 
   /* ---------- Buchungszeile ---------- */
@@ -557,6 +569,25 @@
     trapFocus(e);
   });
   window.addEventListener('resize', function () { if (window.innerWidth >= 1100) toggleMenu(false); });
+
+  /* ---------- Reveal beim Scrollen (einmalig; ohne JS oder IO ist alles sichtbar) ---------- */
+  var rvIO = ('IntersectionObserver' in window)
+    ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('rv--in'); rvIO.unobserve(en.target); }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' })
+    : null;
+  function rvScan() {
+    $$('[data-rv-group]').forEach(function (g) {
+      $$('.rv', g).forEach(function (el, i) { el.style.transitionDelay = Math.min(i * 80, 400) + 'ms'; });
+    });
+    $$('.rv').forEach(function (el) {
+      if (el._rv) return;
+      el._rv = true;
+      if (rvIO) rvIO.observe(el); else el.classList.add('rv--in');
+    });
+  }
 
   /* ---------- Start ---------- */
   rememberGerman();
