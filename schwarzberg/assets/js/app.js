@@ -584,6 +584,40 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', function () { if (window.innerWidth >= 1200) toggleMenu(false); });
 
+  /* ---------- Reveal beim Scrollen (leichte Animation, einheitlich; Stand 25.11.2026) ----------
+     Klassen .rv/.rv--in wirken nur unter html.js; prefers-reduced-motion schaltet alles ab. */
+  var revealId = 0;
+  function reveal() {
+    var els = $$('.rv');
+    if (!els.length) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('rv--in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      var groups = {};
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        var g = en.target.closest('[data-rv-group]');
+        var key = g ? (g._rvId || (g._rvId = 'g' + (++revealId))) : 's' + (++revealId);
+        (groups[key] = groups[key] || []).push(en.target);
+      });
+      Object.keys(groups).forEach(function (k) {
+        groups[k].forEach(function (el, i) {
+          el.style.transitionDelay = (i * 75) + 'ms';
+          el.classList.add('rv--in');
+          el.addEventListener('transitionend', function te() {
+            el.style.transitionDelay = '';
+            el.removeEventListener('transitionend', te);
+          });
+        });
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
   /* ---------- Start ---------- */
   rememberGerman();
   var q = /[?&]lang=(de|en)/.exec(window.location.search);
@@ -591,4 +625,5 @@
   if (q) store('schwarzberg-lang', lang);
   applyLang();
   onScroll();
+  reveal();
 })();

@@ -517,11 +517,33 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', function () { if (window.innerWidth >= 1000) toggleMenu(false); });
 
+  /* ---------- Leichte Animation: Reveal beim Scrollen (REDESIGN-BRIEF 25.11.2026) ----------
+     Versteckt wird nur unter html.js (Inline-Skript im <head>); ohne JS ist alles sichtbar.
+     prefers-reduced-motion: alles sofort einblenden, keine Bewegung. */
+  function initReveal() {
+    var all = $$('.rv');
+    if (!all.length) return;
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      all.forEach(function (el) { el.classList.add('rv--in'); });
+      return;
+    }
+    $$('[data-rv-group]').forEach(function (g) {
+      $$('.rv', g).forEach(function (el, i) { el.style.transitionDelay = Math.min(i * 70, 420) + 'ms'; });
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('rv--in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+    all.forEach(function (el) { io.observe(el); });
+  }
+
   /* ---------- Start ---------- */
   initBookline();
   renderOpen();
   renderSun();
   typo(document.body);
   onScroll();
+  initReveal();
   setInterval(renderOpen, 60000);
 })();

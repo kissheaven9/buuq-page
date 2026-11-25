@@ -15,7 +15,7 @@
   var ROOMS = [
     {
       id: 'land', adults: 3, kids: 2, busy: 3,
-      imgs: ['zimmer-dz-900', 'zimmer-dz2-900', 'zimmer-ez-900', 'zimmer-fam-900', 'zimmer-fenster-900', 'bad-900'],
+      imgs: ['zimmer-dz-900', 'zimmer-dz2-900', 'zimmer-ez-900', 'zimmer-fam-900', 'zimmer-wasch-505', 'zimmer-fenster-900', 'bad-900'],
       name: 'Landhauszimmer', cap: '1–3 Personen · Waschbecken im Zimmer · Dusche/Bad auf der Etage',
       text: 'Gästezimmer im gemütlichen Landhausstil: Betten aus hellem Holz, Waschbecken im Zimmer, vor dem Fenster der Wald. Die Duschen und Bäder auf der Etage wurden 2011 komplett renoviert. Es gibt Zimmer für eine, zwei oder drei Personen.',
       equip: ['Waschbecken im Zimmer', 'Dusche/Bad auf der Etage (renoviert 2011)', 'Landhausmöbel aus Holz', 'Frühstück inklusive', 'Haustiere willkommen (9 € pro Nacht)', 'Sportstudio Füssen kostenlos'],
@@ -23,6 +23,7 @@
         'Doppelzimmer mit Holzbett, roten Teppichboden und Fenster mit rosa Vorhängen',
         'Einzelzimmer mit Bett, Kleiderschrank und Waschbecken mit Spiegel',
         'Dreibettzimmer mit Doppelbett und separatem Einzelbett am Fenster',
+        'Zimmer mit Einzelbett, Holztür und eigenem Waschbecken',
         'Zimmerfenster mit Blick in den Wald, davor Tisch mit Wasserflaschen',
         'Renoviertes Duschbad auf der Etage mit Waschbecken und Handtüchern']
     },

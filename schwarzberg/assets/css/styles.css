@@ -156,6 +156,11 @@ em { font-family: var(--serif); font-style: italic; font-size: 1.08em; }
   .brand__sub { display: none; }
   .top .btn { padding: 8px 16px; }
 }
+@media (max-width: 359px) {
+  .top { padding: 0 14px; gap: 8px; }
+  .top .btn { padding: 8px 10px; }
+  .top .brand__name { font-size: 1.4rem; }
+}
 
 .menu {
   position: fixed; inset: 0; z-index: 40; background: var(--paper); overflow-y: auto;
@@ -216,8 +221,28 @@ em { font-family: var(--serif); font-style: italic; font-size: 1.08em; }
   .bw .btn { grid-column: 1 / -1; min-height: 50px; margin: 12px 0; }
 }
 
+/* ---------- Stat-Zeile: Zahlen des Hauses im Preisaushang-Stil ---------- */
+.stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 var(--gap); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.stats > div { display: grid; grid-template-rows: auto 1fr; align-content: start; gap: 6px; padding: clamp(18px, 2.2vw, 30px) 0; }
+.stats > div + div { border-left: 1px solid var(--line); padding-left: var(--gap); margin-left: calc(var(--gap) * -1); }
+.stats dd { font-family: var(--serif); font-size: clamp(1.75rem, 1.2rem + 1.8vw, 3rem); line-height: 1; letter-spacing: -.015em; font-variation-settings: 'opsz' 48; }
+.stats dt { font-size: var(--fs-small); color: var(--ink-2); line-height: 1.45; max-width: 15em; }
+@media (max-width: 1099px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 0; }
+  .stats > div { border-bottom: 1px solid var(--line); }
+  .stats > div + div { border-left: 0; padding-left: 0; margin-left: 0; }
+  .stats > div:nth-child(odd) { padding-right: var(--gap); border-right: 1px solid var(--line); }
+  .stats > div:last-child:nth-child(odd) { border-right: 0; }
+  .stats > div:nth-child(even) { padding-left: var(--gap); }
+}
+@media (max-width: 479px) {
+  .stats { grid-template-columns: 1fr; }
+  .stats > div:nth-child(odd) { padding-right: 0; border-right: 0; }
+  .stats > div:nth-child(even) { padding-left: 0; }
+}
+
 /* ---------- Abschnitte ---------- */
-.cols > *, .app > *, .arrival > *, .zimmer__head > *, .score > *, .hero__text > *, .footer__grid > *, .pics > * { min-width: 0; }
+.cols > *, .app > *, .arrival > *, .zimmer__head > *, .score > *, .hero__text > *, .footer__grid > *, .pics > *, .stats > *, .roomgrid > *, .room > * { min-width: 0; }
 .sec { max-width: var(--wrap); margin: 0 auto; padding: var(--sec) var(--pad) 0; }
 .sec--tight { padding-top: clamp(40px, 5vw, 72px); }
 .cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 4vw, 72px) var(--gap); align-items: start; }
@@ -251,8 +276,24 @@ em { font-family: var(--serif); font-style: italic; font-size: 1.08em; }
 .pic--wide img { aspect-ratio: 16 / 9; }
 @media (max-width: 899px) { .pics--3 picture:nth-child(3) { padding-top: 0; } }
 
+/* Zimmer: Kategorien mit Foto */
+.roomgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(40px, 5vw, 72px) var(--gap); }
+.room { display: flex; flex-direction: column; border-top: 1px solid var(--ink); padding-top: var(--gap); }
+.room__pic { order: -1; margin-bottom: clamp(18px, 2vw, 26px); }
+.room__pic img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.room__head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 20px; flex-wrap: wrap; }
+.room__head h3 { font-size: clamp(1.375rem, 1.2rem + .8vw, 1.875rem); }
+.room__occ { margin: 0; font-size: var(--fs-small); color: var(--ink-2); white-space: nowrap; }
+.room__short { margin: 6px 0 0; font-size: var(--fs-small); color: var(--ink-2); max-width: 34em; }
+.room__price { margin: 14px 0 0; font-family: var(--serif); font-size: 1.375rem; line-height: 1.15; color: var(--plum); font-variation-settings: 'opsz' 36; }
+.room__price span { display: inline-block; margin-left: 10px; font-family: var(--sans); font-size: .8125rem; color: var(--ink-2); }
+.room__act { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: 14px; }
+@media (max-width: 899px) { .roomgrid { grid-template-columns: 1fr; } }
+
 /* Zitate: dort, wo sie etwas belegen */
 .quote { margin: clamp(32px, 4vw, 56px) 0 0; max-width: 30em; }
+.quote--solo { margin: 0 auto; max-width: 26em; }
+.quote--solo blockquote { font-size: clamp(1.625rem, 1.2rem + 1.8vw, 2.625rem); }
 .quote blockquote { font-family: var(--serif); font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem); line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; font-variation-settings: 'opsz' 48; }
 .quote figcaption { margin-top: 12px; font-size: var(--fs-small); color: var(--ink-2); }
 .cols__text .quote { max-width: 24em; }
@@ -519,7 +560,18 @@ select, input, textarea { font: inherit; color: var(--ink); letter-spacing: inhe
 .legal .note { margin-top: 3em; padding: 18px 22px; background: #fbf0d9; color: #6f5621; font-size: var(--fs-small); line-height: 1.6; }
 .footer [aria-current=page] { border-color: currentColor; }
 
+/* ---------- Leichte Animation (einheitlich für alle Vorschauen, Stand 25.11.2026) ----------
+   Versteck-Stile NUR unter html.js (Klasse setzt das Inline-Skript im <head>) — ohne JS bleibt alles sichtbar. */
+html.js .rv { opacity: 0; transform: translateY(14px); transition: opacity .5s ease-out, transform .5s ease-out; }
+html.js .rv--in { opacity: 1; transform: none; }
+.hero .band { overflow: hidden; }
+html.js .hero .band img { animation: hero-zoom 1.6s ease-out both; }
+@keyframes hero-zoom { from { transform: scale(1.05); } to { transform: none; } }
+/* Sticky-Spalte: die kürzere Seite einer Zwei-Spalten-Sektion läuft mit (nur Desktop) */
+@media (min-width: 1024px) { .cols__sticky { position: sticky; top: 96px; } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  html.js .rv { opacity: 1; transform: none; }
 }

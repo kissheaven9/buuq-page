@@ -249,9 +249,21 @@
     'ku.alt4': 'The parlour with wooden ceiling, corner benches and lamps above the laid tables',
     'ku.cap': 'The parlour: plenty of wood, corner benches and the view through the lattice windows into the valley.',
 
+    'st.1n': 'Around&nbsp;200', 'st.1': 'seats in the beer garden under three old chestnut trees',
+    'st.2n': 'Around&nbsp;140', 'st.2': 'seats in the parlour with its tiled stove',
+    'st.3n': '20', 'st.3': 'rooms, completely renovated',
+    'st.4n': '8.5&thinsp;/&thinsp;10', 'st.4': 'KAYAK average from 1,251 reviews',
+    'st.5n': '3&nbsp;hrs', 'st.5': 'private sauna – reserved exclusively for you',
+
+    'zi.r1a': 'Single room with single bed, desk and warm lamplight',
+    'zi.r2a': 'Double room with light wood, double bed and mountain photo above the headboard',
+    'zi.r3a': 'Superior double room with desk and balcony door with mountain view',
+    'zi.r4a': 'Triple room with double bed, single bed and light wooden wardrobe',
+    'zi.r5a': 'Family room with double bed and window towards the mountains',
+    'zi.r6a': 'Kitchen of the apartment with dining area and window front',
+
     'zi.title': 'Rooms',
     'zi.lead': 'All rooms are completely renovated, with a modern bathroom, smart TV and free Wi-Fi. Breakfast included, dogs very welcome. The house confirms prices on request.',
-    'zi.th1': 'Category', 'zi.th2': 'Occupancy', 'zi.th3': 'Price per night',
     'zi.details': 'Photos & details', 'zi.book': 'Enquire', 'zi.req': 'on request', 'room.bf': 'incl. breakfast',
     'zi.r1': 'Standard single room', 'zi.r1s': 'Completely renovated, bathroom with shower/WC, TV', 'zi.r1o': '1 guest',
     'zi.r2': 'Standard & deluxe double room', 'zi.r2s': 'Modern bathroom, smart TV, some with balcony', 'zi.r2o': '2 guests',
